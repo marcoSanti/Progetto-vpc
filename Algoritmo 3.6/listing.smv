@@ -62,6 +62,6 @@ ASSIGN
 
 FAIRNESS running; --verifico assenza di starvation individuale
 SPEC AG( stato=l2 -> AF stato=l3 );  --assenza di deadlock (ovvero se faccio richeista prima o poi nel futuro entro ) 
-SPEC AG(stato=l4 -> !((identita=p & want_q=FALSE) | (identita=q & want_p=FALSE)) ); --mutua esclusione
+SPEC AG(stato=l4 -> ((identita=p & want_q=FALSE) & (identita=q & want_p=FALSE)) ); --mutua esclusione
 
 
