@@ -1,0 +1,65 @@
+MODULE main
+VAR
+    want_p: boolean;
+    want_q: boolean;
+    process_ids: {p,q};
+
+    proc_p: process proc(p, want_p, want_q);
+    proc_q: process proc(q, want_p, want_q);
+
+ASSIGN
+    init(want_p):=FALSE;
+    init(want_q):=FALSE;
+
+
+
+
+MODULE proc(identita, want_p, want_q)
+VAR 
+    stato : {l1, l2, l3, l4, l5}; --l come linea del codice equivalente
+ASSIGN
+    init(stato) := l1;
+    next(stato) :=
+        case
+            stato=l1: {l1, l2};
+            stato=l2: --in attesa di altro processo che non vuole entrare in sezione critica
+                case
+                    identita=p & want_q=FALSE: l3;
+                    identita=q & want_p=FALSE: l3;
+                    TRUE: stato;
+                esac;
+            
+            stato=l3: l4; --sezione critica e qua vado a settare la mia want_ a true
+            stato=l4: l5; --sezione critica
+            stato=l5: l1; --esco da sezione critica con want_ a false
+            TRUE: stato;
+        esac;
+    
+    next(want_p) :=
+        case
+            identita=p:
+                case    
+                    stato=l3:TRUE; --se in ingresso di sezione critica metto la mia want_ a true
+                    stato=l5: FALSE; --finita la sezione critica mi tolgo dalla richiesta di volerci entrare
+                    TRUE:want_p;
+                esac;
+            TRUE: want_p; --se non sono in uno stato in cui devo aggiornare la variabile non faccio nulla
+        esac;
+
+
+    next(want_q) :=
+        case
+            identita=q:
+                case    
+                    stato=l3:TRUE;
+                    stato=l5: FALSE;
+                    TRUE:want_q;
+                esac;
+            TRUE: want_q;
+        esac;
+
+
+FAIRNESS running;
+
+
+
