@@ -1,0 +1,56 @@
+--questo sicuro che va in deadlock...
+
+MODULE main
+VAR
+    want_p_var: boolean;
+    want_q_var: boolean;
+    process_ids: {p,q};
+    proc_p : process proc(p, want_p_var, want_q_var);
+    proc_q : process proc(q, want_p_var, want_q_var);
+
+ASSIGN
+    init(want_p_var) := FALSE;
+    init(want_q_var) := FALSE;
+
+
+MODULE proc(identita, want_p, want_q)
+VAR
+    stato : {l1, l2, l3, l4, l5};
+ASSIGN 
+    init(stato) := l1;
+    next(stato) :=
+        case
+            stato=l1 : {l1, l2};
+            stato=l2 : l3;
+            stato=l3: case
+                        identita=p & want_q=FALSE: l4;
+                        identita=q & want_p=FALSE: l4;
+                        TRUE:stato;
+                      esac;
+            stato=l4: l5;
+            stato=l5: l1;
+            TRUE:stato;
+        esac;
+
+    next(want_p) :=
+        case 
+            identita=p & stato=l2: TRUE;
+            identita=p & stato=l5: FALSE;
+            TRUE: want_p;
+        esac;
+    
+    next(want_q) :=
+        case 
+            identita=q & stato=l2: TRUE;
+            identita=q & stato=l5: TRUE;
+            TRUE: want_q;
+        esac;
+
+FAIRNESS running; --verifico assenza di starvation individuale
+SPEC AG( stato=l3 -> AF stato=l4 );  --assenza di deadlock (ovvero se faccio richeista prima o poi nel futuro entro ) 
+
+--mutua esclusione. cosi sembra scontato ma se sono p, e sono in l4 allowa want_p e TRUE, e quindi automaticamente 
+--want_q e' FALSE! verifico inoltre che want_p sia diverso da want_q per scongiurare il caso in cui entrambi 
+--entrano in sezione critica (non dovrebbe mai accadere ma si sa mai)
+
+SPEC AG(stato=l4 -> (((identita=p & want_p=FALSE) | (identita=q & want_q=FALSE)) & !(want_p=want_q) )); 
