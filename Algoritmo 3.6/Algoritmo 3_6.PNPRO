@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="want_p" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="200">
+    <nodes>
+      <place label-x="1.5" label-y="0.0" name="T" x="9.0" y="5.0"/>
+      <place label-x="-1.5" label-y="0.0" marking="1" name="F" x="16.0" y="5.0"/>
+      <transition label-x="1.0" label-y="-1.0" name="T1" nservers-x="0.5" superpos-x="3.0" superpos-y="0.0" superposition-tags="isWantpFalse" type="EXP" x="20.55" y="5.0"/>
+      <transition label-y="1.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="0.5" superpos-y="-1.0" superposition-tags="setWantpFalse" type="EXP" x="12.55" y="3.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWantpTrue" type="EXP" x="12.55" y="8.0"/>
+    </nodes>
+    <edges>
+      <arc head="T1" kind="INPUT" tail="F">
+        <point x="20.0" y="8.5"/>
+        <point x="21.0" y="8.5"/>
+      </arc>
+      <arc head="F" kind="OUTPUT" tail="T1">
+        <point x="21.0" y="4.0"/>
+        <point x="19.5" y="4.0"/>
+      </arc>
+      <arc head="T2" kind="INPUT" tail="T">
+        <point x="10.0" y="4.0"/>
+      </arc>
+      <arc head="F" kind="OUTPUT" tail="T2">
+        <point x="16.5" y="4.0"/>
+        <point x="17.0" y="4.0"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="F">
+        <point x="17.0" y="9.0"/>
+      </arc>
+      <arc head="T" kind="OUTPUT" tail="T3">
+        <point x="10.0" y="9.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="want_q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="200">
+    <nodes>
+      <place label-x="1.5" label-y="0.0" name="T" x="18.0" y="5.0"/>
+      <place label-x="-1.5" label-y="0.0" marking="1" name="F" x="11.0" y="5.0"/>
+      <transition label-x="-1.0" label-y="0.0" name="T1" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-1.5" superpos-y="1.5" superposition-tags="isWantqFalse" type="EXP" x="6.55" y="5.0"/>
+      <transition label-y="1.0" name="T2" nservers-x="0.5" rotation="4.71238898038469" superpos-x="0.5" superpos-y="-1.5" superposition-tags="setWantqFalse" type="EXP" x="14.55" y="7.0"/>
+      <transition label-y="-1.0" name="T3" nservers-x="0.5" rotation="4.71238898038469" superpos-y="1.5" superposition-tags="setWantqTrue" type="EXP" x="14.55" y="2.0"/>
+    </nodes>
+    <edges>
+      <arc head="T1" kind="INPUT" tail="F">
+        <point x="9.0" y="3.5000000000000004"/>
+        <point x="7.5" y="3.5"/>
+      </arc>
+      <arc head="F" kind="OUTPUT" tail="T1">
+        <point x="8.0" y="8.0"/>
+        <point x="9.5" y="8.0"/>
+      </arc>
+      <arc head="T2" kind="INPUT" tail="T">
+        <point x="19.0" y="8.0"/>
+      </arc>
+      <arc head="F" kind="OUTPUT" tail="T2">
+        <point x="12.0" y="8.0"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="F">
+        <point x="12.0" y="3.0000000000000004"/>
+      </arc>
+      <arc head="T" kind="OUTPUT" tail="T3">
+        <point x="19.0" y="3.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="process_p" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="150">
+    <nodes>
+      <place label-x="2.0" label-y="0.0" marking="1" name="P0" x="7.0" y="4.0"/>
+      <transition alt-name-fn="PLAIN" label-x="2.5" label-y="0.0" name="nonCritP" nservers-x="0.5" type="EXP" x="1.55" y="4.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="isWantqFalse" type="EXP" x="7.55" y="9.0"/>
+      <place label-x="2.0" label-y="0.0" name="P1" x="7.0" y="13.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpTrue" type="EXP" x="7.55" y="17.0"/>
+      <place label-x="2.0" label-y="0.0" name="P2" superpos-x="-3.0" superpos-y="0.0" superposition-tags="sezCritica" x="7.0" y="22.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpFalse" type="EXP" x="7.55" y="26.0"/>
+    </nodes>
+    <edges>
+      <arc head="nonCritP" kind="INPUT" tail="P0">
+        <point x="2.0" y="8.0"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" tail="nonCritP">
+        <point x="2.0" y="2.5"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="P2"/>
+      <arc head="P0" kind="OUTPUT" tail="T2">
+        <point x="8.0" y="30.0"/>
+        <point x="1.0" y="30.0"/>
+        <point x="1.0" y="1.5"/>
+        <point x="8.0" y="1.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="process_q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="150">
+    <nodes>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="Q0" x="6.0" y="4.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-2.5" label-y="0.0" name="nonCritQ" nservers-x="0.5" type="EXP" x="12.55" y="4.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.5" superpos-y="0.0" superposition-tags="isWantpFalse" type="EXP" x="6.55" y="9.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q1" x="6.0" y="13.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqTrue" type="EXP" x="6.55" y="17.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q2" superpos-x="3.0" superpos-y="0.0" superposition-tags="sezCritica" x="6.0" y="22.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqFalse" type="EXP" x="6.55" y="26.0"/>
+    </nodes>
+    <edges>
+      <arc head="nonCritQ" kind="INPUT" tail="Q0">
+        <point x="13.0" y="8.0"/>
+      </arc>
+      <arc head="Q0" kind="OUTPUT" tail="nonCritQ">
+        <point x="13.0" y="2.5"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="Q0"/>
+      <arc head="Q1" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="Q1"/>
+      <arc head="Q2" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="Q2"/>
+      <arc head="Q0" kind="OUTPUT" tail="T2">
+        <point x="7.0" y="30.0"/>
+        <point x="13.5" y="30.0"/>
+        <point x="14.0" y="1.5"/>
+        <point x="7.0" y="1.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <algebra2 align-dx="30" align-dy="0" alignment="CUSTOM" name="process_p_process_q" policy="UNARY_CONJUGATED_ALL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags/>
+    <subnet netname="process_p"/>
+    <subnet netname="process_q"/>
+  </algebra2>
+  <algebra2 align-dy="5" alignment="CUSTOM" name="process_p_process_q_want_p" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setWantpFalse"/>
+      <tag name="setWantpTrue"/>
+      <tag name="isWantpFalse"/>
+    </transition-tags>
+    <subnet netname="process_p_process_q"/>
+    <subnet netname="want_p"/>
+  </algebra2>
+  <gspn name="process_p_process_q_want_p_readable" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="0.0" marking="1" name="P0" x="7.0" y="4.0"/>
+      <place label-x="2.0" label-y="0.0" name="P1" x="7.0" y="13.0"/>
+      <place label-x="2.0" label-y="0.0" name="P2" superpos-x="-3.0" superpos-y="0.0" superposition-tags="sezCritica" x="7.0" y="22.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="Q0" x="43.0" y="4.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q1" x="43.0" y="14.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q2" superpos-x="3.0" superpos-y="0.0" superposition-tags="sezCritica" x="43.0" y="22.0"/>
+      <place label-x="-1.0" name="T" x="35.0" y="10.0"/>
+      <place label-x="-1.5" label-y="0.0" marking="1" name="F" x="39.0" y="10.0"/>
+      <transition alt-name-fn="PLAIN" label-x="2.5" label-y="0.0" name="nonCritP" nservers-x="0.5" type="EXP" x="1.55" y="4.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="isWantqFalse" type="EXP" x="7.55" y="9.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-2.5" label-y="0.0" name="nonCritQ" nservers-x="0.5" type="EXP" x="49.55" y="4.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="T1_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqTrue" type="EXP" x="43.55" y="17.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="T2_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqFalse" type="EXP" x="43.55" y="26.0"/>
+      <transition label-x="-3.5" label-y="1.0" name="setWantpFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpFalse" type="EXP" x="7.55" y="25.0"/>
+      <transition label-x="-3.5" label-y="1.0" name="setWantpTrue" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpTrue" type="EXP" x="7.55" y="17.0"/>
+      <transition label-x="3.5" label-y="-1.0" name="isWantpFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.5" superpos-y="0.0" superposition-tags="isWantpFalse" type="EXP" x="43.55" y="10.0"/>
+    </nodes>
+    <edges>
+      <arc head="setWantpFalse" kind="INPUT" tail="P2"/>
+      <arc head="nonCritP" kind="INPUT" tail="P0">
+        <point x="2.0" y="8.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T0"/>
+      <arc head="Q0" kind="OUTPUT" tail="T2_0">
+        <point x="44.0" y="30.0"/>
+        <point x="50.5" y="30.0"/>
+        <point x="51.0" y="1.5"/>
+        <point x="44.0" y="1.5"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" tail="nonCritP">
+        <point x="2.0" y="2.5"/>
+      </arc>
+      <arc head="T1_0" kind="INPUT" tail="Q1"/>
+      <arc head="setWantpTrue" kind="INPUT" tail="P1"/>
+      <arc head="nonCritQ" kind="INPUT" tail="Q0">
+        <point x="50.0" y="8.0"/>
+      </arc>
+      <arc head="T" kind="OUTPUT" mult-k="0.74951171875" tail="setWantpTrue">
+        <point x="33.0" y="18.0"/>
+        <point x="33.0" y="11.0"/>
+      </arc>
+      <arc head="F" kind="OUTPUT" tail="setWantpFalse">
+        <point x="34.5" y="26.0"/>
+        <point x="40.0" y="26.0"/>
+      </arc>
+      <arc head="Q0" kind="OUTPUT" tail="nonCritQ">
+        <point x="50.0" y="2.5"/>
+      </arc>
+      <arc head="setWantpFalse" kind="INPUT" mult-k="0.80556640625" tail="T">
+        <point x="36.0" y="25.0"/>
+        <point x="8.0" y="25.0"/>
+      </arc>
+      <arc head="T2_0" kind="INPUT" tail="Q2"/>
+      <arc head="T0" kind="INPUT" tail="P0"/>
+      <arc head="P0" kind="OUTPUT" tail="setWantpFalse">
+        <point x="8.0" y="30.0"/>
+        <point x="1.0" y="30.0"/>
+        <point x="1.0" y="1.5"/>
+        <point x="8.0" y="1.5"/>
+      </arc>
+      <arc head="isWantpFalse" kind="INPUT" tail="Q0"/>
+      <arc head="Q2" kind="OUTPUT" tail="T1_0"/>
+      <arc head="P2" kind="OUTPUT" tail="setWantpTrue"/>
+      <arc head="isWantpFalse" kind="INPUT" tail="F">
+        <point x="40.0" y="9.0"/>
+        <point x="44.0" y="9.0"/>
+      </arc>
+      <arc head="F" kind="OUTPUT" mult-x="1.5782230966812847" mult-y="1.156446193362573" tail="isWantpFalse">
+        <point x="44.0" y="13.0"/>
+        <point x="40.0" y="13.0"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="isWantpFalse"/>
+      <arc head="setWantpTrue" kind="INPUT" mult-k="0.50009765625" tail="F">
+        <point x="40.0" y="9.0"/>
+        <point x="32.0" y="9.0"/>
+        <point x="32.0" y="16.5"/>
+        <point x="8.0" y="16.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <algebra2 align-dx="5" align-dy="5" alignment="CUSTOM" name="process_p_process_q_want_p_want_q" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="isWantqFalse"/>
+      <tag name="setWantqFalse"/>
+      <tag name="setWantqTrue"/>
+    </transition-tags>
+    <subnet netname="process_p_process_q_want_p_readable"/>
+    <subnet netname="want_q"/>
+  </algebra2>
+  <gspn name="process_p_process_q_want_p_want_q_readable" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
+    <nodes>
+      <place label-x="2.0" label-y="0.0" marking="1" name="P0" x="7.0" y="4.0"/>
+      <place label-x="2.0" label-y="0.0" name="P1" x="7.0" y="14.0"/>
+      <place label-x="2.0" label-y="0.0" name="P2" superpos-x="-3.0" superpos-y="0.0" superposition-tags="sezCritica" x="7.0" y="22.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="Q0" x="43.0" y="4.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q1" x="43.0" y="14.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q2" superpos-x="3.0" superpos-y="0.0" superposition-tags="sezCritica" x="43.0" y="22.0"/>
+      <place label-x="-1.0" name="pT" x="35.0" y="10.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="pF" x="39.0" y="10.0"/>
+      <place label-x="1.5" label-y="1.0" name="qT" x="16.0" y="10.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="qF" x="13.0" y="10.0"/>
+      <transition alt-name-fn="PLAIN" label-x="2.5" label-y="0.0" name="nonCritP" nservers-x="0.5" type="EXP" x="1.55" y="4.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-2.5" label-y="0.0" name="nonCritQ" nservers-x="0.5" type="EXP" x="49.55" y="4.0"/>
+      <transition label-x="-3.5" label-y="1.0" name="setWantpFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpFalse" type="EXP" x="7.55" y="26.0"/>
+      <transition label-x="-3.5" label-y="1.0" name="setWantpTrue" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpTrue" type="EXP" x="7.55" y="18.0"/>
+      <transition label-x="3.5" label-y="-1.0" name="isWantpFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.5" superpos-y="0.0" superposition-tags="isWantpFalse" type="EXP" x="43.55" y="10.0"/>
+      <transition label-x="-3.5" label-y="1.5" name="isWantqFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="isWantqFalse" type="EXP" x="7.55" y="10.0"/>
+      <transition label-x="3.0" label-y="1.0" name="setWantqFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqFalse" type="EXP" x="43.55" y="26.0"/>
+      <transition label-x="3.5" label-y="1.0" name="setWantqTrue" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqTrue" type="EXP" x="43.55" y="18.0"/>
+    </nodes>
+    <edges>
+      <arc head="setWantqTrue" kind="INPUT" mult-k="0.50009765625" tail="qF">
+        <point x="14.0" y="9.0"/>
+        <point x="22.5" y="9.0"/>
+        <point x="22.5" y="19.0"/>
+      </arc>
+      <arc head="setWantqFalse" kind="INPUT" tail="Q2"/>
+      <arc head="P2" kind="OUTPUT" tail="setWantpTrue"/>
+      <arc head="setWantpTrue" kind="INPUT" tail="P1"/>
+      <arc head="setWantqFalse" kind="INPUT" mult-k="0.50009765625" tail="qT">
+        <point x="17.0" y="24.5"/>
+        <point x="44.0" y="24.5"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="isWantqFalse"/>
+      <arc head="pF" kind="OUTPUT" tail="setWantpFalse">
+        <point x="8.0" y="29.0"/>
+        <point x="40.0" y="29.0"/>
+      </arc>
+      <arc head="pF" kind="OUTPUT" tail="isWantpFalse">
+        <point x="44.0" y="13.0"/>
+        <point x="40.0" y="13.0"/>
+      </arc>
+      <arc head="qT" kind="OUTPUT" mult-k="0.50009765625" tail="setWantqTrue">
+        <point x="44.0" y="20.0"/>
+        <point x="21.0" y="20.0"/>
+        <point x="21.0" y="11.0"/>
+        <point x="19.0" y="11.0"/>
+      </arc>
+      <arc head="Q0" kind="OUTPUT" tail="setWantqFalse">
+        <point x="44.0" y="30.0"/>
+        <point x="50.5" y="30.0"/>
+        <point x="51.0" y="1.5"/>
+        <point x="44.0" y="1.5"/>
+      </arc>
+      <arc head="pT" kind="OUTPUT" mult-k="2.4106445312499996" tail="setWantpTrue">
+        <point x="11.5" y="19.0"/>
+        <point x="11.5" y="18.0"/>
+        <point x="33.0" y="18.0"/>
+        <point x="33.0" y="11.0"/>
+      </arc>
+      <arc head="nonCritP" kind="INPUT" mult-k="0.5012695312500001" tail="P0">
+        <point x="8.0" y="8.0"/>
+        <point x="2.0" y="8.0"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" mult-k="0.50009765625" tail="nonCritP">
+        <point x="2.0" y="2.5"/>
+        <point x="8.0" y="2.5"/>
+      </arc>
+      <arc head="isWantpFalse" kind="INPUT" tail="Q0"/>
+      <arc head="setWantpFalse" kind="INPUT" tail="P2"/>
+      <arc head="Q0" kind="OUTPUT" mult-k="0.50009765625" tail="nonCritQ">
+        <point x="50.0" y="2.5"/>
+        <point x="44.0" y="2.5"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="setWantqTrue"/>
+      <arc head="isWantpFalse" kind="INPUT" tail="pF">
+        <point x="40.0" y="9.0"/>
+        <point x="44.0" y="9.0"/>
+      </arc>
+      <arc head="nonCritQ" kind="INPUT" mult-k="1.21884765625" tail="Q0">
+        <point x="44.0" y="8.0"/>
+        <point x="50.0" y="8.0"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="isWantpFalse"/>
+      <arc head="isWantqFalse" kind="INPUT" tail="P0"/>
+      <arc head="setWantqTrue" kind="INPUT" tail="Q1"/>
+      <arc head="setWantpTrue" kind="INPUT" tail="pF">
+        <point x="40.0" y="9.0"/>
+        <point x="32.0" y="9.0"/>
+        <point x="32.0" y="16.5"/>
+        <point x="8.0" y="16.5"/>
+      </arc>
+      <arc head="qF" kind="OUTPUT" tail="isWantqFalse">
+        <point x="8.0" y="13.0"/>
+        <point x="14.0" y="13.0"/>
+      </arc>
+      <arc head="qF" kind="OUTPUT" mult-k="1.2684570312499996" tail="setWantqFalse">
+        <point x="35.0" y="27.0"/>
+        <point x="14.0" y="27.0"/>
+      </arc>
+      <arc head="setWantpFalse" kind="INPUT" tail="pT">
+        <point x="36.0" y="25.0"/>
+        <point x="8.0" y="25.0"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" tail="setWantpFalse">
+        <point x="8.0" y="30.0"/>
+        <point x="1.0" y="30.0"/>
+        <point x="1.0" y="1.5"/>
+        <point x="8.0" y="1.5"/>
+      </arc>
+      <arc head="isWantqFalse" kind="INPUT" tail="qF">
+        <point x="14.0" y="9.0"/>
+        <point x="8.0" y="9.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="reduced_final_net" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
+    <nodes>
+      <place label-x="2.0" label-y="0.0" marking="1" name="P0" x="7.0" y="4.0"/>
+      <place label-x="2.0" label-y="0.0" name="P1" x="7.0" y="14.0"/>
+      <place label-x="2.0" label-y="0.0" name="P2" superpos-x="-3.0" superpos-y="0.0" superposition-tags="sezCritica" x="7.0" y="22.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="Q0" x="43.0" y="4.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q1" x="43.0" y="14.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q2" superpos-x="3.0" superpos-y="0.0" superposition-tags="sezCritica" x="43.0" y="22.0"/>
+      <place label-x="-1.0" name="pT" x="35.0" y="10.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="pF" x="39.0" y="10.0"/>
+      <place label-x="1.5" label-y="1.0" name="qT" x="16.0" y="10.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="qF" x="13.0" y="10.0"/>
+      <transition alt-name-fn="PLAIN" label-x="2.5" label-y="0.0" name="nonCritP" nservers-x="0.5" type="EXP" x="1.55" y="4.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-2.5" label-y="0.0" name="nonCritQ" nservers-x="0.5" type="EXP" x="49.55" y="4.0"/>
+      <transition label-x="-3.5" label-y="1.0" name="setWantpFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpFalse" type="EXP" x="7.55" y="26.0"/>
+      <transition label-x="-3.5" label-y="1.0" name="setWantpTrue" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setWantpTrue" type="EXP" x="7.55" y="18.0"/>
+      <transition label-x="3.5" label-y="-1.0" name="isWantpFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.5" superpos-y="0.0" superposition-tags="isWantpFalse" type="EXP" x="43.55" y="10.0"/>
+      <transition label-x="-3.5" label-y="1.5" name="isWantqFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="isWantqFalse" type="EXP" x="7.55" y="10.0"/>
+      <transition label-x="3.0" label-y="1.0" name="setWantqFalse" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqFalse" type="EXP" x="43.55" y="26.0"/>
+      <transition label-x="3.5" label-y="1.0" name="setWantqTrue" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="0.0" superposition-tags="setWantqTrue" type="EXP" x="43.55" y="18.0"/>
+    </nodes>
+    <edges>
+      <arc head="setWantqTrue" kind="INPUT" mult-k="0.50009765625" tail="qF">
+        <point x="14.0" y="9.0"/>
+        <point x="22.5" y="9.0"/>
+        <point x="22.5" y="19.0"/>
+      </arc>
+      <arc head="setWantqFalse" kind="INPUT" tail="Q2"/>
+      <arc head="P2" kind="OUTPUT" tail="setWantpTrue"/>
+      <arc head="setWantpTrue" kind="INPUT" tail="P1"/>
+      <arc head="setWantqFalse" kind="INPUT" mult-k="0.50009765625" tail="qT">
+        <point x="17.0" y="24.5"/>
+        <point x="44.0" y="24.5"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="isWantqFalse"/>
+      <arc head="pF" kind="OUTPUT" tail="setWantpFalse">
+        <point x="8.0" y="29.0"/>
+        <point x="40.0" y="29.0"/>
+      </arc>
+      <arc head="pF" kind="OUTPUT" tail="isWantpFalse">
+        <point x="44.0" y="13.0"/>
+        <point x="40.0" y="13.0"/>
+      </arc>
+      <arc head="qT" kind="OUTPUT" mult-k="0.50009765625" tail="setWantqTrue">
+        <point x="44.0" y="20.0"/>
+        <point x="21.0" y="20.0"/>
+        <point x="21.0" y="11.0"/>
+        <point x="19.0" y="11.0"/>
+      </arc>
+      <arc head="Q0" kind="OUTPUT" tail="setWantqFalse">
+        <point x="44.0" y="30.0"/>
+        <point x="50.5" y="30.0"/>
+        <point x="51.0" y="1.5"/>
+        <point x="44.0" y="1.5"/>
+      </arc>
+      <arc head="pT" kind="OUTPUT" mult-k="2.4106445312499996" tail="setWantpTrue">
+        <point x="11.5" y="19.0"/>
+        <point x="11.5" y="18.0"/>
+        <point x="33.0" y="18.0"/>
+        <point x="33.0" y="11.0"/>
+      </arc>
+      <arc head="nonCritP" kind="INPUT" mult-k="0.5012695312500001" tail="P0">
+        <point x="8.0" y="8.0"/>
+        <point x="2.0" y="8.0"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" mult-k="0.50009765625" tail="nonCritP">
+        <point x="2.0" y="2.5"/>
+        <point x="8.0" y="2.5"/>
+      </arc>
+      <arc head="isWantpFalse" kind="INPUT" tail="Q0"/>
+      <arc head="setWantpFalse" kind="INPUT" tail="P2"/>
+      <arc head="Q0" kind="OUTPUT" mult-k="0.50009765625" tail="nonCritQ">
+        <point x="50.0" y="2.5"/>
+        <point x="44.0" y="2.5"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="setWantqTrue"/>
+      <arc head="isWantpFalse" kind="INPUT" tail="pF">
+        <point x="40.0" y="9.0"/>
+        <point x="44.0" y="9.0"/>
+      </arc>
+      <arc head="nonCritQ" kind="INPUT" mult-k="1.21884765625" tail="Q0">
+        <point x="44.0" y="8.0"/>
+        <point x="50.0" y="8.0"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="isWantpFalse"/>
+      <arc head="isWantqFalse" kind="INPUT" tail="P0"/>
+      <arc head="setWantqTrue" kind="INPUT" tail="Q1"/>
+      <arc head="setWantpTrue" kind="INPUT" tail="pF">
+        <point x="40.0" y="9.0"/>
+        <point x="32.0" y="9.0"/>
+        <point x="32.0" y="16.5"/>
+        <point x="8.0" y="16.5"/>
+      </arc>
+      <arc head="qF" kind="OUTPUT" tail="isWantqFalse">
+        <point x="8.0" y="13.0"/>
+        <point x="14.0" y="13.0"/>
+      </arc>
+      <arc head="qF" kind="OUTPUT" mult-k="1.2684570312499996" tail="setWantqFalse">
+        <point x="35.0" y="27.0"/>
+        <point x="14.0" y="27.0"/>
+      </arc>
+      <arc head="setWantpFalse" kind="INPUT" tail="pT">
+        <point x="36.0" y="25.0"/>
+        <point x="8.0" y="25.0"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" tail="setWantpFalse">
+        <point x="8.0" y="30.0"/>
+        <point x="1.0" y="30.0"/>
+        <point x="1.0" y="1.5"/>
+        <point x="8.0" y="1.5"/>
+      </arc>
+      <arc head="isWantqFalse" kind="INPUT" tail="qF">
+        <point x="14.0" y="9.0"/>
+        <point x="8.0" y="9.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="want_p" name="basic statistic" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+  <measures gspn-name="process_p_process_q_want_p_want_q_readable" log-uuid="c17c5861-132e-4193-b6a2-4409469acb53" name="property of verifications" simplified-UI="false">
+    <assignments/>
+    <rgmedd2/>
+    <formulas>
+      <formula comment="Valutazione delle formule di liveness  per processo P e del processo Q" comment-shown="true" expr="A F (#P0 == 1)  &amp;&amp; A F (#Q0 ==1)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Valutazione della mutua esclusione andando a dire che la somma dei token nella sezione critica è sempre minore di 2" comment-shown="true" expr="AG(#Q2 + #P2 &lt; 2)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Valutazione della assenza di starvation individuale (prima o poi entro sempre in sez. critica)" comment-shown="true" expr="AG(#P1 == 1 -&gt; AG EF #P2 ==1) &amp;&amp; AG(#Q1 == 1 -&gt; AG EF #Q2 ==1)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <resource-list>
+    <document-log uuid="c17c5861-132e-4193-b6a2-4409469acb53">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAMV0APUbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vRFNQTi1Ub29sIiAtbG9hZCAiL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuNi9BbGdvcml0bW8gM182LXByb3BlcnR5IG9mIHZlcmlmaWNhdGlvbnMuc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3JlYWRhYmxlIiAtcGJhc2lzIC1kZXRlY3QtZXhwIC1wc2ZsIC1ibmQgCnQAvBtbMW0bWzRtTE9BRElORyBQRVRSSSBORVQgL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuNi9BbGdvcml0bW8gM182LXByb3BlcnR5IG9mIHZlcmlmaWNhdGlvbnMuc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3JlYWRhYmxlIChuZXQvZGVmKS4uLhtbMjJtG1syNG0KdAAPTUFSS0lORyBQQVI6IDAKdAAQUExBQ0VTOiAgICAgIDEwCnQAD1JBVEUgUEFSOiAgICAwCnQAD1RSQU5TSVRJT05TOiA4CnQAD01FQVNVUkVTOiAgICAwCnQAKExPQURJTkcgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0AAEKdAABCnQAHkNPTVBVVElORyBQTEFDRSBGTE9XIEJBU0lTLi4uCnQAEU09OCwgTj0xMCwgTjA9MTAKdAA3Q29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogc3RlcCAxLzgsIHxLfD04LCBwcm9kdWN0cz0xCnQAUxtbMUEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKdABSG1sxQUNvbXB1dGF0aW9uIG9mIEZsb3cgYmFzaXM6IGNvbXBsZXRlZCBpbiA0IHN0ZXBzLCB8S3w9Ni4gICAgICAgICAgICAgICAgICAgICAgCnQAQEZPVU5EIDYgVkVDVE9SUyBJTiBUSEUgUExBQ0UgRkxPVyBCQVNJUyAoNCBzZW1pZmxvd3MsIDIgZmxvd3MpLgp0AAEKdAABCnQAJ0FsbCBwbGFjZXMgYXJlIGNvdmVyZWQgYnkgc29tZSBQLWZsb3cuCnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAJ0FWT0lEIEVYUE9ORU5USUFMIEdST1dUSCBPRiBTRU1JRkxPV1MuCnQAHUNPTVBVVElORyBQTEFDRSBTRU1JRkxPV1MuLi4KdAARTT04LCBOPTEwLCBOMD0xMAp0AClHZW5lcmF0aW9uIG9mIFNlbWlmbG93czogc3RlcCAxLzgsIHxLfD04CnQAUxtbMUEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKdABQG1sxQUdlbmVyYXRpb24gb2YgU2VtaWZsb3dzOiBjb21wbGV0ZWQgaW4gNCBzdGVwcywgfEt8PTguICAgICAgICAgICAgICAgICAgICAgIAp0ABlGT1VORCA4IFBMQUNFIFNFTUlGTE9XUy4KdAABCnQAAQp0ACtBbGwgcGxhY2VzIGFyZSBjb3ZlcmVkIGJ5IHNvbWUgUC1zZW1pZmxvdy4KdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAsQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBGUk9NIFAtU0VNSUZMT1dTIC4uLgp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp0APQbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vRFNQTi1Ub29sIiAtbG9hZCAiL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuNi9BbGdvcml0bW8gM182LXByb3BlcnR5IG9mIHZlcmlmaWNhdGlvbnMuc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3JlYWRhYmxlIiAtbG9hZC1ibmQgLXRpbWVvdXQgNSAtaWxwLWJuZCAKdAC8G1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy42L0FsZ29yaXRtbyAzXzYtcHJvcGVydHkgb2YgdmVyaWZpY2F0aW9ucy5zb2x1dGlvbi9wcm9jZXNzX3BfcHJvY2Vzc19xX3dhbnRfcF93YW50X3FfcmVhZGFibGUgKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgMTAKdAAPUkFURSBQQVI6ICAgIDAKdAAPVFJBTlNJVElPTlM6IDgKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAVTE9BRElORyBCTkQgRklMRSAuLi4KdAAgU2NoZWR1bGVkIHRpbWVvdXQgb2YgNSBzZWNvbmRzLgp0ACVDT01QVVRJTkcgUExBQ0UgQk9VTkRTIFVTSU5HIElMUCAuLi4KdAAYQWxsIHBsYWNlcyBhcmUgYm91bmRlZC4KcQB+ACR0ANcbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vUkdNRUREMyIgIi9ob21lL21hcmNvL0Rlc2t0b3AvUHJvZ2V0dG8tdnBjL0FsZ29yaXRtbyAzLjYvQWxnb3JpdG1vIDNfNi1wcm9wZXJ0eSBvZiB2ZXJpZmljYXRpb25zLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV9yZWFkYWJsZSIgLU1FVEEgLUMgCnQAIFJhbmRvbSBzZWVkczogMTY4NjM4NDA4MyA1NjI2NDMKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ABFHcmVhdFNQTi9NZWRkbHkuCnQAOCAgQ29weXJpZ2h0IChDKSAxOTg3LTIwMTgsIFVuaXZlcnNpdHkgb2YgVG9yaW5vLCBJdGFseS4KdAAxICBTZW5kIGZpbGVzIG5ldG5hbWUubmV0LCAuZGVmIHRvIGUtbWFpbCBhZGRyZXNzCnQAKyAgYmVjY3V0aUBkaS51bml0by5pdCBpZiB5b3UgZmluZCBhbnkgYnVnLgp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAH0Jhc2VkIG9uIE1FRERMWSB2ZXJzaW9uIDAuMTYuMAp0AEYgIENvcHlyaWdodCAoQykgMjAwOSwgSW93YSBTdGF0ZSBVbml2ZXJzaXR5IFJlc2VhcmNoIEZvdW5kYXRpb24sIEluYy4KdAApICB3ZWJzaXRlOiBodHRwOi8vbWVkZGx5LnNvdXJjZWZvcmdlLm5ldAp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKVVzaW5nIHBlci1ldmVudCBzYXR1cmF0aW9uIChzYXQtcHJlZ2VuKS4KdAAbVXNpbmcgZmFzdCBOU0YgZ2VuZXJhdGlvbi4KdAARUHJvY2VzcyBJRDogOTUxOAp0AJdNT0RFTCBOQU1FOiAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy42L0FsZ29yaXRtbyAzXzYtcHJvcGVydHkgb2YgdmVyaWZpY2F0aW9ucy5zb2x1dGlvbi9wcm9jZXNzX3BfcHJvY2Vzc19xX3dhbnRfcF93YW50X3FfcmVhZGFibGUKdAAcICAxMCBwbGFjZXMsIDggdHJhbnNpdGlvbnMuCnQAJ1VzZWQgTWVtb3J5IGZvciBlbmNvZGluZyBuZXQ6IDMyNjIwMEtCCnQAoU9wZW5pbmcgZmlsZTogL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuNi9BbGdvcml0bW8gM182LXByb3BlcnR5IG9mIHZlcmlmaWNhdGlvbnMuc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3JlYWRhYmxlLmJuZCBPSy4KdACkT3BlbmluZyBmaWxlOiAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy42L0FsZ29yaXRtbyAzXzYtcHJvcGVydHkgb2YgdmVyaWZpY2F0aW9ucy5zb2x1dGlvbi9wcm9jZXNzX3BfcHJvY2Vzc19xX3dhbnRfcF93YW50X3FfcmVhZGFibGUuaWxwYm5kIE9LLgp0ABBJTlBVVCBBUkNTOiAgMTAKdAAQT1VUUFVUIEFSQ1M6IDEwCnQAD0lOSElCIEFSQ1M6ICAwCnQAD1RFU1QgQVJDUzogICA0CnQAEFBMQUNFUzogICAgICAxMAp0AA9UUkFOU0lUSU9OUzogOAp0AA9JTlZBUklBTlRTOiAgNgp0AA9QLVNFTUlGTE9XUzogOAp0ABZNQVggSU5WQVJJQU5UIENBUkQ6IDEKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gVkFSSUFCTEUgT1JERVIgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAA8VmFyaWFibGUgb3JkZXIgbWV0aG9kOiBNZXRhLWhldXJpc3RpYyB1c2luZyB3ZWlnaHRlZCBzY29yZS4KdABRICBNRVRIT0QgICAgICAgICAgICAgIFNDT1JFICAgICAgICBTV0lSICAgICAgIFNPVVBTIERJU0NPVU5UICBXRUlHSFQgICAgICAgVElNRSAKdABVICBTTE8gICAgICAgICAgICAgICAgMzcuMDI2ICAgICAgICAgIDMzICAgICAgICAgIDI3ICAgICAgICAxICAgMS4xMjIgICAgNi4xZS0wNSBzZWMuCnQAVSAgU0xPK0ZvcmNlICAgICAgICAgICAyOC4xNiAgICAgICAgICAzMiAgICAgICAgICAyNiAgICAgICAgMSAgICAwLjg4ICAgIDIuMmUtMDUgc2VjLgp0AFUgIFNMTy0xNiAgICAgICAgICAgICAyNi4zMzQgICAgICAgICAgMzMgICAgICAgICAgMjcgICAgICAgIDEgICAwLjc5OCAgICAyLjFlLTA1IHNlYy4KdABVICBTTE8tMTYrRm9yY2UgICAgICAgMjkuMTUyICAgICAgICAgIDMyICAgICAgICAgIDI2ICAgICAgICAxICAgMC45MTEgICAgMS44ZS0wNSBzZWMuCnQAVSAgVE9WMiAgICAgICAgICAgICAgIDMyLjcyNCAgICAgICAgICAzNiAgICAgICAgICAyNyAgICAgICAgMSAgIDAuOTA5ICAgIDEuOWUtMDUgc2VjLgp0AFUgIFRPVjIrRm9yY2UgICAgICAgICAzOC4yMTQgICAgICAgICAgMzMgICAgICAgICAgMjcgICAgICAgIDEgICAxLjE1OCAgICAyLjFlLTA1IHNlYy4KdABVICBOT0FDSzIgICAgICAgICAgICAgNDAuNzE2ICAgICAgICAgIDM2ICAgICAgICAgIDI3ICAgICAgICAxICAgMS4xMzEgICAgMS4yZS0wNSBzZWMuCnQAVSAgTk9BQ0syK0ZvcmNlICAgICAgICAzMi4zNCAgICAgICAgICAzMyAgICAgICAgICAyNyAgICAgICAgMSAgICAwLjk4ICAgIDEuOWUtMDUgc2VjLgp0AFUgIEFDTSAgICAgICAgICAgICAgICAzMy4zNjMgICAgICAgICAgMzMgICAgICAgICAgMjcgICAgICAgIDEgICAxLjAxMSAgICAyLjRlLTA1IHNlYy4KdABVICBBQ00rRm9yY2UgICAgICAgICAgNDIuMTc0ICAgICAgICAgIDMzICAgICAgICAgIDI3ICAgICAgICAxICAgMS4yNzggICAgMS43ZS0wNSBzZWMuCnQAVSAgQ00yICAgICAgICAgICAgICAgIDQyLjA3NSAgICAgICAgICAzMyAgICAgICAgICAyNyAgICAgICAgMSAgIDEuMjc1ICAgIDEuMmUtMDUgc2VjLgp0AFUgIENNMitGb3JjZSAgICAgICAgICAzNi4yNjcgICAgICAgICAgMzMgICAgICAgICAgMjcgICAgICAgIDEgICAxLjA5OSAgICAyLjJlLTA1IHNlYy4KdABVICBQICAgICAgICAgICAgICAgICAgNzguNjc1ICAgICAgICAgIDc1ICAgICAgICAgIDQzICAgICAgICAxICAgMS4wNDkgICAgMS4xZS0wNSBzZWMuCnQAVSAgR1AgICAgICAgICAgICAgICAgIDI3LjkxMiAgICAgICAgICAyNCAgICAgICAgICAyNCAgICAgICAgMSAgIDEuMTYzICAgIDMuNmUtMDUgc2VjLgp0AFUgIEdQK0ZvcmNlICAgICAgICAgICAyNS44NzUgICAgICAgICAgMjMgICAgICAgICAgMjMgICAgICAgIDEgICAxLjEyNSAgICAgIDJlLTA1IHNlYy4KdAA9TWV0YS1oZXVyaXN0aWM6IHNlbGVjdGluZyBtZXRob2QgR1ArRm9yY2Ugd2l0aCBzY29yZTogMjUuODc1CnQAKVRpbWUgdG8gY29tcHV0ZSB2YXJpYWJsZSBvcmRlcjogMC4wMDA2NTcKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gU1RBUlQgRklSSU5HIFJVTEVTIEVOQ09ESU5HID09PT09PT09PT09PT09PT09PT09PT09PT0KdAArRW5jb2RlZCA4IHRyYW5zaXRpb24gaW4gMSBwcmlvcml0eSBncm91cHMuCnQAIVRpbWUgdG8gYnVpbGQgYWxsIE5TRnM6IDAuMDAwMzAzCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFJFQUNIQUJJTElUWSBTRVQgR0VORVJBVElPTiA9PT09PT09PT09PT09PT09PT09PT09PT09CnQAFVNwbGl0OiBTcGxpdFN1YnRyYWN0CnQAHFJTIGdlbmVyYXRpb24gdGltZTogNy4yZS0wNQp0AB1Db21wdXRpbmcgdmFyaWFibGUgYm91bmRzLi4uCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBNRU1PUlkgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKSBUb3RhbCBNZW1vcnkgVXNlZDogICAgICAgMzI2MjAwIEtCeXRlcy4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gQ1RMIEVWQUxVQVRJT04gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAABCnQAnlByb2Nlc3Npbmc6IChub3QgRSBGIChub3QgKCgobm90IChQMSA9IDEpKSBvciAobm90IEUgRiAobm90IEUgRiAoUDIgPSAxKSkpKSBhbmQgKG5vdCBFIEYgKG5vdCAoKG5vdCAoUTEgPSAxKSkg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cQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHeA</document-log>
+  </resource-list>
+</project>
