@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Algoritmo 3.10" version="121">
+  <gspn name="want_p" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="150">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" name="WpT" x="13.0" y="9.0"/>
+      <place label-x="-2.0" label-y="1.0" marking="1" name="WpF" x="20.0" y="9.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T1" nservers-x="0.5" rotation="5.759586531581287" superpos-x="2.0" superpos-y="0.0" superposition-tags="isWpF" type="EXP" x="25.55" y="7.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="0.5" superpos-y="-1.0" superposition-tags="setWpF1" type="EXP" x="16.55" y="6.0"/>
+      <transition label-y="2.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWpT1" type="EXP" x="16.55" y="12.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T4" nservers-x="0.5" rotation="0.5235987755982988" superpos-x="-2.5" superpos-y="0.0" superposition-tags="isWpT" type="EXP" x="8.55" y="7.0"/>
+      <transition label-x="1.0" label-y="0.0" name="T5" nservers-x="0.5" rotation="5.759586531581287" superpos-x="1.5" superpos-y="-1.0" superposition-tags="setWpT3" type="EXP" x="8.55" y="11.0"/>
+      <transition label-x="-1.5" label-y="0.0" name="T6" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-1.5" superpos-y="-1.0" superposition-tags="setWpF3" type="EXP" x="25.55" y="11.0"/>
+      <transition label-x="1.0" label-y="2.0" name="T7" nservers-x="0.5" rotation="4.71238898038469" superpos-x="0.5" superpos-y="1.0" superposition-tags="setWpF2" type="EXP" x="16.55" y="2.0"/>
+      <transition label-x="-1.0" label-y="-2.0" name="T8" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWpT2" type="EXP" x="16.55" y="16.0"/>
+    </nodes>
+    <edges>
+      <arc head="T2" kind="INPUT" tail="WpT">
+        <point x="14.0" y="7.0"/>
+      </arc>
+      <arc head="WpF" kind="OUTPUT" tail="T2">
+        <point x="21.0" y="7.0"/>
+        <point x="21.0" y="8.0"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="WpF">
+        <point x="21.0" y="13.0"/>
+      </arc>
+      <arc head="WpT" kind="OUTPUT" tail="T3">
+        <point x="14.0" y="13.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="WpT">
+        <point x="8.0" y="10.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="WpT">
+        <point x="8.0" y="10.0"/>
+      </arc>
+      <arc head="WpT" kind="OUTPUT" tail="T4">
+        <point x="10.0" y="6.5"/>
+      </arc>
+      <arc head="WpT" kind="OUTPUT" tail="T5">
+        <point x="10.0" y="13.5"/>
+      </arc>
+      <arc head="T6" kind="INPUT" tail="WpF">
+        <point x="27.5" y="10.0"/>
+      </arc>
+      <arc head="T1" kind="INPUT" tail="WpF">
+        <point x="27.5" y="10.0"/>
+      </arc>
+      <arc head="WpF" kind="OUTPUT" tail="T6">
+        <point x="24.5" y="13.5"/>
+      </arc>
+      <arc head="WpF" kind="OUTPUT" tail="T1">
+        <point x="25.0" y="6.0"/>
+      </arc>
+      <arc head="T8" kind="INPUT" tail="WpF">
+        <point x="21.0" y="17.0"/>
+      </arc>
+      <arc head="WpT" kind="OUTPUT" tail="T8">
+        <point x="14.0" y="17.0"/>
+      </arc>
+      <arc head="T7" kind="INPUT" tail="WpT">
+        <point x="14.0" y="3.0"/>
+      </arc>
+      <arc head="WpF" kind="OUTPUT" tail="T7">
+        <point x="21.0" y="3.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="want_q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="150">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" name="WqT" x="15.0" y="11.0"/>
+      <place label-x="-2.0" label-y="1.0" marking="1" name="WqF" x="22.0" y="11.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T1" nservers-x="0.5" rotation="5.759586531581287" superpos-x="2.0" superpos-y="0.0" superposition-tags="isWqF" type="EXP" x="27.55" y="9.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="0.5" superpos-y="-1.0" superposition-tags="setWqF1" type="EXP" x="18.55" y="8.0"/>
+      <transition label-y="2.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWqT1" type="EXP" x="18.55" y="14.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T4" nservers-x="0.5" rotation="0.5235987755982988" superpos-x="-2.5" superpos-y="0.0" superposition-tags="isWqT" type="EXP" x="10.55" y="9.0"/>
+      <transition label-x="1.0" label-y="0.0" name="T5" nservers-x="0.5" rotation="5.759586531581287" superpos-x="1.5" superpos-y="-1.0" superposition-tags="setWqT3" type="EXP" x="10.55" y="13.0"/>
+      <transition label-x="-1.5" label-y="0.0" name="T6" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-1.5" superpos-y="-1.0" superposition-tags="setWqF3" type="EXP" x="27.55" y="13.0"/>
+      <transition label-x="1.0" label-y="2.0" name="T7" nservers-x="0.5" rotation="4.71238898038469" superpos-x="0.5" superpos-y="1.0" superposition-tags="setWqF2" type="EXP" x="18.55" y="4.0"/>
+      <transition label-x="-1.0" label-y="-2.0" name="T8" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWqT2" type="EXP" x="18.55" y="18.0"/>
+    </nodes>
+    <edges>
+      <arc head="T2" kind="INPUT" tail="WqT">
+        <point x="16.0" y="9.0"/>
+      </arc>
+      <arc head="WqF" kind="OUTPUT" tail="T2">
+        <point x="23.0" y="9.0"/>
+        <point x="23.0" y="10.0"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="WqF">
+        <point x="23.0" y="15.0"/>
+      </arc>
+      <arc head="WqT" kind="OUTPUT" tail="T3">
+        <point x="16.0" y="15.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="WqT">
+        <point x="10.0" y="12.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="WqT">
+        <point x="10.0" y="12.0"/>
+      </arc>
+      <arc head="WqT" kind="OUTPUT" tail="T4">
+        <point x="12.0" y="8.5"/>
+      </arc>
+      <arc head="WqT" kind="OUTPUT" tail="T5">
+        <point x="12.0" y="15.5"/>
+      </arc>
+      <arc head="T6" kind="INPUT" tail="WqF">
+        <point x="29.5" y="12.0"/>
+      </arc>
+      <arc head="T1" kind="INPUT" tail="WqF">
+        <point x="29.5" y="12.0"/>
+      </arc>
+      <arc head="WqF" kind="OUTPUT" tail="T6">
+        <point x="26.5" y="15.5"/>
+      </arc>
+      <arc head="WqF" kind="OUTPUT" tail="T1">
+        <point x="27.0" y="8.0"/>
+      </arc>
+      <arc head="T8" kind="INPUT" tail="WqF">
+        <point x="23.0" y="19.0"/>
+      </arc>
+      <arc head="WqT" kind="OUTPUT" tail="T8">
+        <point x="16.0" y="19.0"/>
+      </arc>
+      <arc head="T7" kind="INPUT" tail="WqT">
+        <point x="16.0" y="5.0"/>
+      </arc>
+      <arc head="WqF" kind="OUTPUT" tail="T7">
+        <point x="23.0" y="5.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="turn" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-1.5" label-y="8.881784197001252E-16" marking="1" name="P" x="19.0" y="8.0"/>
+      <place label-x="1.5" label-y="-8.881784197001252E-16" name="Q" x="11.0" y="8.0"/>
+      <transition label-y="-2.0" name="T2" nservers-x="0.5" rotation="4.71238898038469" superpos-y="-1.0" superposition-tags="setQ" type="EXP" x="15.55" y="11.0"/>
+      <transition label-y="1.0" name="T3" nservers-x="0.5" rotation="4.71238898038469" superpos-y="2.0" superposition-tags="setP" type="EXP" x="15.55" y="5.0"/>
+      <transition label-x="-1.5" label-y="0.0" name="T1" nservers-x="0.5" rotation="2.6179938779914944" superpos-x="-1.5" superpos-y="1.0" superposition-tags="isTurnQ" type="EXP" x="6.55" y="10.0"/>
+      <transition label-x="1.5" label-y="-0.5" name="T0" nservers-x="0.5" rotation="3.9269908169872414" superpos-x="2.0" superpos-y="0.5" superposition-tags="isTurnP" type="EXP" x="24.55" y="10.0"/>
+      <transition label-x="-1.0" name="T4" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQ" type="EXP" x="6.55" y="6.0"/>
+      <transition label-x="0.5" name="T5" nservers-x="0.5" rotation="2.356194490192345" superpos-x="2.0" superpos-y="-0.5" superposition-tags="setP" type="EXP" x="24.55" y="6.0"/>
+    </nodes>
+    <edges>
+      <arc head="T2" kind="INPUT" tail="P">
+        <point x="20.0" y="12.0"/>
+      </arc>
+      <arc head="Q" kind="OUTPUT" tail="T2">
+        <point x="12.0" y="12.0"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="Q">
+        <point x="12.0" y="6.0"/>
+      </arc>
+      <arc head="P" kind="OUTPUT" tail="T3">
+        <point x="20.0" y="6.0"/>
+      </arc>
+      <arc head="T1" kind="INPUT" tail="Q">
+        <point x="5.5" y="9.0"/>
+      </arc>
+      <arc head="Q" kind="OUTPUT" tail="T1">
+        <point x="8.5" y="13.5"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="Q">
+        <point x="5.5" y="9.0"/>
+      </arc>
+      <arc head="Q" kind="OUTPUT" tail="T4">
+        <point x="9.0" y="5.0"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P">
+        <point x="26.5" y="9.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="P">
+        <point x="26.5" y="9.0"/>
+      </arc>
+      <arc head="P" kind="OUTPUT" tail="T5">
+        <point x="23.5" y="5.5"/>
+      </arc>
+      <arc head="P" kind="OUTPUT" tail="T0">
+        <point x="23.5" y="13.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="process_p" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
+    <nodes>
+      <place label-x="1.0" label-y="-1.5" name="P1" x="9.0" y="10.0"/>
+      <place label-x="-0.5" label-y="-1.5" name="P2" x="17.0" y="10.0"/>
+      <place label-y="-1.5" name="P3" x="25.0" y="10.0"/>
+      <place label-x="1.0" label-y="-1.5" name="P4" x="32.0" y="10.0"/>
+      <place label-x="0.5" label-y="-1.5" name="P5" x="40.0" y="10.0"/>
+      <place label-x="-1.5" label-y="-1.0" name="P8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="33.0" y="5.0"/>
+      <place label-x="2.0" label-y="0.0" name="P10" x="46.0" y="5.0"/>
+      <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="5.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT1" type="EXP" x="13.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T2" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnQ" type="EXP" x="21.55" y="10.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnP" type="EXP" x="21.55" y="5.0"/>
+      <transition label-x="-0.5" label-y="2.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWpF2" type="EXP" x="28.55" y="2.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T5" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpF1" type="EXP" x="28.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T6" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnP" type="EXP" x="36.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T8" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT2" type="EXP" x="44.55" y="10.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnQ" type="EXP" x="40.55" y="5.0"/>
+    </nodes>
+    <edges>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="P2"/>
+      <arc head="P3" kind="OUTPUT" tail="T2"/>
+      <arc head="T3" kind="INPUT" tail="P2">
+        <point x="18.0" y="6.0"/>
+      </arc>
+      <arc head="P8" kind="OUTPUT" tail="T3">
+        <point x="33.5" y="6.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="P10">
+        <point x="47.0" y="3.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T4">
+        <point x="10.0" y="3.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="P3"/>
+      <arc head="P4" kind="OUTPUT" tail="T5"/>
+      <arc head="T6" kind="INPUT" tail="P4"/>
+      <arc head="P5" kind="OUTPUT" tail="T6"/>
+      <arc head="T8" kind="INPUT" tail="P5"/>
+      <arc head="T7" kind="INPUT" tail="P8"/>
+      <arc head="P10" kind="OUTPUT" tail="T7"/>
+      <arc head="P2" kind="OUTPUT" tail="T8">
+        <point x="47.5" y="11.0"/>
+        <point x="47.5" y="8.0"/>
+        <point x="21.0" y="8.0"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P1">
+        <point x="6.0" y="8.5"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T0">
+        <point x="6.0" y="13.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="process_q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="200">
+    <nodes>
+      <place label-x="1.0" label-y="-1.5" name="Q1" x="9.0" y="10.0"/>
+      <place label-x="-0.5" label-y="-1.5" name="Q2" x="17.0" y="10.0"/>
+      <place name="Q3" x="25.0" y="10.0"/>
+      <place label-x="0.5" name="Q4" x="32.0" y="10.0"/>
+      <place name="Q5" x="40.0" y="10.0"/>
+      <place label-x="-1.5" label-y="-1.0" name="Q8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="30.0" y="16.0"/>
+      <place name="Q10" x="42.0" y="16.0"/>
+      <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="5.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T1" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqT1" type="EXP" x="13.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T2" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnP" type="EXP" x="21.55" y="10.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnQ" type="EXP" x="24.55" y="16.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWqF2" type="EXP" x="33.55" y="19.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T5" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqF1" type="EXP" x="28.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T6" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnQ" type="EXP" x="36.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T8" nservers-x="0.5" superpos-y="1.5" superposition-tags="setWqT2" type="EXP" x="44.55" y="10.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnP" type="EXP" x="36.55" y="16.0"/>
+    </nodes>
+    <edges>
+      <arc head="T1" kind="INPUT" tail="Q1"/>
+      <arc head="Q2" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="Q2"/>
+      <arc head="Q3" kind="OUTPUT" tail="T2"/>
+      <arc head="T3" kind="INPUT" tail="Q2">
+        <point x="18.0" y="17.0"/>
+      </arc>
+      <arc head="Q8" kind="OUTPUT" tail="T3">
+        <point x="28.5" y="17.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" mult-k="0.50009765625" tail="Q10">
+        <point x="47.0" y="17.0"/>
+        <point x="47.0" y="20.0"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="T4">
+        <point x="10.0" y="20.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="Q3"/>
+      <arc head="Q4" kind="OUTPUT" tail="T5"/>
+      <arc head="T6" kind="INPUT" tail="Q4"/>
+      <arc head="Q5" kind="OUTPUT" tail="T6"/>
+      <arc head="T8" kind="INPUT" tail="Q5"/>
+      <arc head="T7" kind="INPUT" tail="Q8"/>
+      <arc head="Q10" kind="OUTPUT" tail="T7"/>
+      <arc head="Q2" kind="OUTPUT" tail="T8">
+        <point x="47.5" y="11.0"/>
+        <point x="47.5" y="14.5"/>
+        <point x="19.5" y="14.5"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="Q1">
+        <point x="6.0" y="8.5"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="T0">
+        <point x="6.0" y="13.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <algebra2 align-dx="0" align-dy="30" alignment="CUSTOM" name="process_p_process_q" policy="UNARY_CONJUGATED_ALL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags/>
+    <subnet netname="process_p"/>
+    <subnet netname="process_q"/>
+  </algebra2>
+  <algebra2 align-dy="15" alignment="CUSTOM" name="process_p_process_q_twant_p" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setWpT2"/>
+      <tag name="setWpT1"/>
+      <tag name="setWpF2"/>
+      <tag name="setWpF1"/>
+    </transition-tags>
+    <subnet netname="process_p_process_q"/>
+    <subnet netname="want_p"/>
+  </algebra2>
+</project>

@@ -80,9 +80,9 @@
       <place label-x="1.5" label-y="-8.881784197001252E-16" name="Q" x="9.0" y="6.000000000000001"/>
       <transition label-y="-2.0" name="T2" nservers-x="0.5" rotation="4.71238898038469" superpos-y="-1.0" superposition-tags="setQ" type="EXP" x="13.55" y="9.0"/>
       <transition label-y="1.0" name="T3" nservers-x="0.5" rotation="4.71238898038469" superpos-y="2.0" superposition-tags="setP" type="EXP" x="13.55" y="3.0"/>
-      <transition label-x="-1.5" label-y="0.0" name="T1" nservers-x="0.5" rotation="2.6179938779914944" superpos-x="-1.5" superpos-y="1.0" superposition-tags="isTurnQ" type="EXP" x="4.55" y="9.0"/>
-      <transition label-x="1.5" label-y="-0.5" name="T0" nservers-x="0.5" rotation="3.9269908169872414" superpos-x="2.0" superpos-y="0.5" superposition-tags="isTurnP" type="EXP" x="22.55" y="9.0"/>
-      <transition label-x="-1.0" name="T4" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQ" type="EXP" x="4.55" y="3.0"/>
+      <transition label-x="-1.5" label-y="0.0" name="T1" nservers-x="0.5" rotation="2.6179938779914944" superpos-x="-1.5" superpos-y="1.0" superposition-tags="isTurnQ" type="EXP" x="4.55" y="8.0"/>
+      <transition label-x="1.5" label-y="-0.5" name="T0" nservers-x="0.5" rotation="3.9269908169872414" superpos-x="2.0" superpos-y="0.5" superposition-tags="isTurnP" type="EXP" x="22.55" y="8.0"/>
+      <transition label-x="-1.0" name="T4" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQ" type="EXP" x="4.55" y="4.0"/>
       <transition label-x="0.5" name="T5" nservers-x="0.5" rotation="2.356194490192345" superpos-x="2.0" superpos-y="-0.5" superposition-tags="setP" type="EXP" x="22.55" y="4.0"/>
     </nodes>
     <edges>
@@ -99,28 +99,28 @@
         <point x="18.0" y="3.9999999999999996"/>
       </arc>
       <arc head="T1" kind="INPUT" tail="Q">
-        <point x="3.5" y="7.5"/>
+        <point x="3.5" y="7.0"/>
       </arc>
       <arc head="Q" kind="OUTPUT" tail="T1">
-        <point x="6.0" y="12.0"/>
+        <point x="6.5" y="11.5"/>
       </arc>
       <arc head="T4" kind="INPUT" tail="Q">
-        <point x="3.5" y="6.5"/>
+        <point x="3.5" y="7.0"/>
       </arc>
       <arc head="Q" kind="OUTPUT" tail="T4">
-        <point x="6.5" y="2.5"/>
+        <point x="7.0" y="3.0"/>
       </arc>
       <arc head="T0" kind="INPUT" tail="P">
-        <point x="25.0" y="8.0"/>
+        <point x="24.5" y="7.0"/>
       </arc>
       <arc head="T5" kind="INPUT" tail="P">
-        <point x="25.0" y="7.0"/>
+        <point x="24.5" y="7.0"/>
       </arc>
       <arc head="P" kind="OUTPUT" tail="T5">
         <point x="21.5" y="3.5"/>
       </arc>
       <arc head="P" kind="OUTPUT" tail="T0">
-        <point x="21.5" y="11.5"/>
+        <point x="21.5" y="11.0"/>
       </arc>
     </edges>
   </gspn>
