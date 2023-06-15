@@ -12,6 +12,12 @@ ASSIGN
     init(want_p_var) := FALSE;
     init(want_q_var) := FALSE;
 
+ --mutua esclusione
+SPEC AG(proc_p.stato=l4 -> (proc_q.stato!=l4)) & AG(proc_q.stato=l4 -> (proc_p.stato!=l4));
+
+--assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
+SPEC AG EF (proc_p.stato=l1) & AG EF (proc_q.stato=l1);
+
 
 MODULE proc(identita, want_p, want_q)
 VAR
@@ -46,11 +52,6 @@ ASSIGN
             TRUE: want_q;
         esac;
 
-FAIRNESS running; --verifico assenza di starvation individuale
-SPEC AG( stato=l3 -> AF stato=l4 );  --assenza di deadlock (ovvero se faccio richeista prima o poi nel futuro entro ) 
+FAIRNESS running; 
+SPEC AG( stato=l3 -> AF stato=l4 );  --assenza di starvation individuale (ovvero se faccio richeista prima o poi nel futuro entro ) 
 
---mutua esclusione. cosi sembra scontato ma se sono p, e sono in l4 allowa want_p e TRUE, e quindi automaticamente 
---want_q e' FALSE! verifico inoltre che want_p sia diverso da want_q per scongiurare il caso in cui entrambi 
---entrano in sezione critica (non dovrebbe mai accadere ma si sa mai)
-
-SPEC AG(stato=l4 -> (((identita=p & want_p=FALSE) | (identita=q & want_q=FALSE)) & !(want_p=want_q) )); 

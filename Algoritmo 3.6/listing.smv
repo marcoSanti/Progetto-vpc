@@ -11,7 +11,11 @@ ASSIGN
     init(want_p_var):=FALSE;
     init(want_q_var):=FALSE;
 
+ --mutua esclusione
+SPEC AG(proc_p.stato=l3 -> proc_q.stato!=l3) & AG(proc_q.stato=l3 -> proc_p.stato!=l3);
 
+--assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
+SPEC AF (proc_p.stato=l1 | proc_q.stato=l1)
 
 
 MODULE proc(identita, want_p, want_q)
@@ -59,8 +63,8 @@ ASSIGN
         esac;
 
 
-FAIRNESS running; --verifico assenza di starvation individuale
-SPEC AG( stato=l2 -> AF stato=l3 );  --assenza di deadlock (ovvero se faccio richeista prima o poi nel futuro entro ) 
-SPEC AG(stato=l4 -> ((identita=p & want_q=FALSE) | (identita=q & want_p=FALSE)) ); --mutua esclusione
+FAIRNESS running; 
+SPEC AG( stato=l2 -> AF stato=l3 );  --assenza di starvation individuale (ovvero se faccio richeista prima o poi nel futuro entro ) 
+
 
 

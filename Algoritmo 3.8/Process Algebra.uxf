@@ -116,7 +116,7 @@ bg=green</panel_attributes>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantp_true)</panel_attributes>
+tau (set_wantp_true)</panel_attributes>
     <additional_attributes>10.0;130.0;10.0;70.0;340.0;70.0;340.0;10.0</additional_attributes>
   </element>
   <element>
@@ -128,7 +128,7 @@ bg=green</panel_attributes>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantq_true)</panel_attributes>
+tau (set_wantq_true)</panel_attributes>
     <additional_attributes>310.0;130.0;310.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -212,7 +212,7 @@ layer=-1</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantq_true)</panel_attributes>
+tau (set_wantq_true)</panel_attributes>
     <additional_attributes>300.0;110.0;300.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -224,7 +224,7 @@ layer=-1</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantp_true)</panel_attributes>
+tau (set_wantp_true)</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;70.0;320.0;70.0;320.0;10.0</additional_attributes>
   </element>
   <element>
@@ -272,7 +272,7 @@ nonCritP</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ(is_want_p_false)</panel_attributes>
+tau(is_want_p_false)</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -344,7 +344,7 @@ nonCritP</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantp_true)</panel_attributes>
+tau (set_wantp_true)</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;40.0;250.0;40.0;250.0;10.0</additional_attributes>
   </element>
   <element>
@@ -380,7 +380,7 @@ bg=green</panel_attributes>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantp_true)</panel_attributes>
+tau (set_wantp_true)</panel_attributes>
     <additional_attributes>20.0;100.0;20.0;30.0;150.0;30.0;150.0;10.0</additional_attributes>
   </element>
   <element>
@@ -404,7 +404,7 @@ critical</panel_attributes>
       <h>520</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ(set_want_q_false)</panel_attributes>
+tau(set_want_q_false)</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0;530.0;10.0;530.0;500.0;400.0;500.0;400.0;470.0</additional_attributes>
   </element>
   <element>
@@ -452,7 +452,7 @@ critical</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ(is_want_q_false)</panel_attributes>
+tau(is_want_q_false)</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -500,7 +500,7 @@ bg=green</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantq_true)</panel_attributes>
+tau (set_wantq_true)</panel_attributes>
     <additional_attributes>220.0;80.0;220.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -536,7 +536,7 @@ critical</panel_attributes>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantq_true)</panel_attributes>
+tau (set_wantq_true)</panel_attributes>
     <additional_attributes>140.0;90.0;140.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -548,7 +548,7 @@ critical</panel_attributes>
       <h>530</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ(set_want_p_false)</panel_attributes>
+tau(set_want_p_false)</panel_attributes>
     <additional_attributes>550.0;60.0;550.0;10.0;10.0;10.0;10.0;510.0;100.0;510.0;100.0;480.0</additional_attributes>
   </element>
   <element>
@@ -560,7 +560,7 @@ critical</panel_attributes>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantp_false)</panel_attributes>
+tau (set_wantp_false)</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -595,7 +595,7 @@ critical</panel_attributes>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-τ (set_wantq_false)</panel_attributes>
+tau (set_wantq_false)</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>

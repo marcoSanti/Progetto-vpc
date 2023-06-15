@@ -7,8 +7,13 @@ ASSIGN
     init(turno) := p;
 
 
---template del mio processo in nusmv
+ --mutua esclusione
+SPEC AG(proc_p.stato=l3 -> (turno=p & proc_q.stato!=l3)) & AG(proc_q.stato=l3 -> (turno=q & proc_p.stato!=l3));
+--assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
+SPEC AF (proc_p.stato=l1 & proc_q.stato=l1)
 
+
+--template del mio processo in nusmv
 MODULE proc(identita, turno)
 VAR
     stato : {l1, l2, l3, l4}; --l1 come per dire linea 1 del codice originale
@@ -18,7 +23,7 @@ ASSIGN
         case
             stato = l1: {l1, l2}; --scelta non deterministica per o rimanere non in sezione critica oppure se procedere a fare richiesta per entrarci
             stato = l2: case
-                            turno = identita: l3;
+                            turno=identita: l3;
                             TRUE: stato;
                         esac;
             stato = l3: l4;
@@ -28,10 +33,11 @@ ASSIGN
 
     next(turno):=
                 case --qua vado a vedere in modo esplicito che tipo di turno ho e lo vado a cambiare!
-                    stato = l4 & turno = identita & identita = p: p;
-                    stato = l4 & turno = identita & identita = q: q;
+                    stato=l4 & turno=identita & identita=p: p;
+                    stato=l4 & turno=identita & identita=q: q;
                     TRUE: turno;
                 esac;
-FAIRNESS running; --verifico assenza di starvation individuale
-SPEC AG(stato=l2 -> AF stato=l3); --assenza di deadlock (ovvero se faccio richeista prima o poi nel futuro entro )
-SPEC AG(stato=l3 -> !((identita=p & turno=q) | (identita=q & turno=p)) ); --mutua esclusione
+FAIRNESS running; 
+ --assenza di starvation individuale (ovvero il processo continua a procedere nella sua evoluzione quando richiede di entrare in sezione critica)
+SPEC AG(stato=l2 -> AF stato=l3);
+
