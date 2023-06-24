@@ -11,6 +11,7 @@ clock ackReciveClock;
 		<location id="id0" x="-442" y="-331">
 			<name x="-433" y="-322">sendMsg</name>
 			<label kind="invariant" x="-501" y="-365">ackReciveClock &lt;= txMaxTime</label>
+			<committed/>
 		</location>
 		<location id="id1" x="-442" y="-195">
 			<name x="-459" y="-178">waitForAck</name>
@@ -60,6 +61,7 @@ clock ackReciveClock;
 		<declaration>clock elpsT;</declaration>
 		<location id="id4" x="-637" y="-306">
 			<name x="-654" y="-357">ready</name>
+			<committed/>
 		</location>
 		<location id="id5" x="-841" y="-263">
 			<name x="-832" y="-289">ack</name>
@@ -119,11 +121,31 @@ c = Channel(send, recive, ackSend, ackRecive, chDelay, txMaxTime);
 system s, c, r;</system>
 	<queries>
 		<query>
+			<formula>A[] not deadlock</formula>
+			<comment></comment>
+		</query>
+		<query>
 			<formula>A[] s.ackReciveClock &lt;= txMaxTime</formula>
 			<comment>Verifica Che il tempo di ritardo introdotto dalla linea sia sempre minore al tempo massimo concesso per la trasmissione</comment>
 		</query>
 		<query>
-			<formula>A&lt;&gt; s.waitForAck imply s.sendMsg</formula>
+			<formula>A[] s.ackReciveClock &lt;= (2*chDelay)</formula>
+			<comment>ricevo il messaggio prima che passi 2 volte il ritardo del canale </comment>
+		</query>
+		<query>
+			<formula>s.sendMsg --&gt; c.msg</formula>
+			<comment>se invio il messaggio in futuro il ricevitore invia un ack</comment>
+		</query>
+		<query>
+			<formula>c.msg --&gt; r.sendAck</formula>
+			<comment>se do un messaggio al canale, questo lo invia sempre</comment>
+		</query>
+		<query>
+			<formula>r.sendAck --&gt; c.ack</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>c.ack --&gt; s.sendMsg</formula>
 			<comment></comment>
 		</query>
 	</queries>
