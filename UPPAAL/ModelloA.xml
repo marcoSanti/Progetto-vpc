@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.6//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_6.dtd'>
 <nta>
 	<declaration>// Place global declarations here.</declaration>
 	<template>
@@ -17,14 +17,14 @@ clock ackReciveClock;
 			<name x="-459" y="-178">waitForAck</name>
 		</location>
 		<init ref="id0"/>
-		<transition>
+		<transition id="id2">
 			<source ref="id1"/>
 			<target ref="id0"/>
 			<label kind="synchronisation" x="-424" y="-212">ackRecive!</label>
 			<nail x="-263" y="-195"/>
 			<nail x="-263" y="-331"/>
 		</transition>
-		<transition>
+		<transition id="id3">
 			<source ref="id0"/>
 			<target ref="id1"/>
 			<label kind="synchronisation" x="-442" y="-280">send!</label>
@@ -34,24 +34,24 @@ clock ackReciveClock;
 	<template>
 		<name>Reciver</name>
 		<parameter>chan &amp;recive, chan &amp;ackSend</parameter>
-		<location id="id2" x="-399" y="-246">
+		<location id="id4" x="-399" y="-246">
 			<name x="-409" y="-280">waitForMessage</name>
 		</location>
-		<location id="id3" x="-399" y="-127">
+		<location id="id5" x="-399" y="-127">
 			<name x="-374" y="-136">sendAck</name>
 			<committed/>
 		</location>
-		<init ref="id2"/>
-		<transition>
-			<source ref="id3"/>
-			<target ref="id2"/>
+		<init ref="id4"/>
+		<transition id="id6">
+			<source ref="id5"/>
+			<target ref="id4"/>
 			<label kind="synchronisation" x="-527" y="-204">ackSend!</label>
 			<nail x="-459" y="-127"/>
 			<nail x="-459" y="-246"/>
 		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id3"/>
+		<transition id="id7">
+			<source ref="id4"/>
+			<target ref="id5"/>
 			<label kind="synchronisation" x="-399" y="-203">recive!</label>
 		</transition>
 	</template>
@@ -59,46 +59,46 @@ clock ackReciveClock;
 		<name>Channel</name>
 		<parameter> chan &amp;send, chan &amp;recive, chan &amp;ackSend, chan &amp;ackRecive, int[1,5] &amp;chDelay, const int &amp;maxDelay</parameter>
 		<declaration>clock elpsT;</declaration>
-		<location id="id4" x="-637" y="-306">
+		<location id="id8" x="-637" y="-306">
 			<name x="-654" y="-357">ready</name>
 			<committed/>
 		</location>
-		<location id="id5" x="-841" y="-263">
+		<location id="id9" x="-841" y="-263">
 			<name x="-832" y="-289">ack</name>
 			<label kind="invariant" x="-917" y="-246">elpsT &lt;=chDelay</label>
 		</location>
-		<location id="id6" x="-433" y="-263">
+		<location id="id10" x="-433" y="-263">
 			<name x="-467" y="-289">msg</name>
 			<label kind="invariant" x="-458" y="-246">elpsT &lt;=chDelay</label>
 		</location>
-		<init ref="id4"/>
-		<transition>
-			<source ref="id5"/>
-			<target ref="id4"/>
+		<init ref="id8"/>
+		<transition id="id11">
+			<source ref="id9"/>
+			<target ref="id8"/>
 			<label kind="guard" x="-807" y="-263">elpsT &lt;= maxDelay</label>
 			<label kind="synchronisation" x="-772" y="-280">ackRecive?</label>
 			<nail x="-815" y="-263"/>
 			<nail x="-653" y="-263"/>
 		</transition>
-		<transition>
-			<source ref="id4"/>
-			<target ref="id5"/>
+		<transition id="id12">
+			<source ref="id8"/>
+			<target ref="id9"/>
 			<label kind="synchronisation" x="-790" y="-374">ackSend?</label>
 			<label kind="assignment" x="-790" y="-391">elpsT=0</label>
 			<nail x="-671" y="-349"/>
 			<nail x="-841" y="-348"/>
 		</transition>
-		<transition>
-			<source ref="id6"/>
-			<target ref="id4"/>
+		<transition id="id13">
+			<source ref="id10"/>
+			<target ref="id8"/>
 			<label kind="guard" x="-620" y="-263">elpsT &lt;= maxDelay</label>
 			<label kind="synchronisation" x="-561" y="-280">recive?</label>
 			<nail x="-450" y="-263"/>
 			<nail x="-620" y="-263"/>
 		</transition>
-		<transition>
-			<source ref="id4"/>
-			<target ref="id6"/>
+		<transition id="id14">
+			<source ref="id8"/>
+			<target ref="id10"/>
 			<label kind="synchronisation" x="-527" y="-374">send?</label>
 			<label kind="assignment" x="-535" y="-391">elpsT=0</label>
 			<nail x="-603" y="-348"/>
@@ -122,31 +122,45 @@ system s, c, r;</system>
 	<queries>
 		<query>
 			<formula>A[] not deadlock</formula>
-			<comment></comment>
+			<comment/>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 		<query>
 			<formula>A[] s.ackReciveClock &lt;= txMaxTime</formula>
 			<comment>Verifica Che il tempo di ritardo introdotto dalla linea sia sempre minore al tempo massimo concesso per la trasmissione</comment>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 		<query>
 			<formula>A[] s.ackReciveClock &lt;= (2*chDelay)</formula>
 			<comment>ricevo il messaggio prima che passi 2 volte il ritardo del canale </comment>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 		<query>
 			<formula>s.sendMsg --&gt; c.msg</formula>
-			<comment>se invio il messaggio in futuro il ricevitore invia un ack</comment>
+			<comment>se invio il messaggio in futuro il ricevitore invia un ack (parte 1/4)</comment>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 		<query>
 			<formula>c.msg --&gt; r.sendAck</formula>
-			<comment>se do un messaggio al canale, questo lo invia sempre</comment>
+			<comment>se invio il messaggio in futuro il ricevitore invia un ack (parte 2/4)</comment>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 		<query>
 			<formula>r.sendAck --&gt; c.ack</formula>
-			<comment></comment>
+			<comment>se invio il messaggio in futuro il ricevitore invia un ack (parte 3/4)</comment>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 		<query>
 			<formula>c.ack --&gt; s.sendMsg</formula>
-			<comment></comment>
+			<comment>se invio il messaggio in futuro il ricevitore invia un ack (parte 4/4)</comment>
+			<result outcome="success" type="quality" timestamp="2023-06-24 21:04:02 +0200">
+			</result>
 		</query>
 	</queries>
 </nta>
