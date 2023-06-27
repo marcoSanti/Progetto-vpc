@@ -12,6 +12,8 @@ SPEC AG(proc_p.stato=l3 -> (turno=p & proc_q.stato!=l3)) & AG(proc_q.stato=l3 ->
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
 SPEC AF (proc_p.stato=l1 & proc_q.stato=l1);
 
+--assenza di deadlock come definita nelle slides
+SPEC AG ( (proc_p.stato=l2 -> AF proc_p.stato=l3 ) | (proc_q.stato=l2 -> AF proc_q.stato=l3 ))
 
 --template del mio processo in nusmv
 MODULE proc(identita, turno)
@@ -21,7 +23,7 @@ ASSIGN
     init(stato) := l1;
     next(stato) :=
         case
-            stato = l1: {l1, l2}; --scelta non deterministica per o rimanere non in sezione critica oppure se procedere a fare richiesta per entrarci
+            stato = l1: {l1, l2}; --scelta non deterministica per o rimanere non in sezione non critica oppure se procedere a fare richiesta per entrarci
             stato = l2: case
                             turno=identita: l3;
                             TRUE: stato;
@@ -40,4 +42,6 @@ ASSIGN
 FAIRNESS running; 
  --assenza di starvation individuale (ovvero il processo continua a procedere nella sua evoluzione quando richiede di entrare in sezione critica)
 SPEC AG(stato=l2 -> AF stato=l3);
+
+
 

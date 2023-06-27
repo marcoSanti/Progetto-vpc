@@ -12,7 +12,7 @@ clock timer1;</declaration>
 			<name x="-612" y="-510">ready</name>
 		</location>
 		<location id="id1" x="-714" y="-331">
-			<name x="-697" y="-348">sent2</name>
+			<name x="-697" y="-348">sent0</name>
 			<label kind="invariant" x="-833" y="-323">timer0&lt;=txMaxTime</label>
 		</location>
 		<location id="id2" x="-484" y="-331">
@@ -133,7 +133,6 @@ clock timer1;</declaration>
 		<declaration>clock elpsT;</declaration>
 		<location id="id7" x="-637" y="-306">
 			<name x="-654" y="-357">ready</name>
-			<committed/>
 		</location>
 		<location id="id8" x="-841" y="-263">
 			<name x="-875" y="-289">ack</name>
@@ -210,28 +209,14 @@ system s, c, r;</system>
 			<comment></comment>
 		</query>
 		<query>
-			<formula>A[] s.ackReciveClock &lt;= txMaxTime</formula>
-			<comment>Verifica Che il tempo di ritardo introdotto dalla linea sia sempre minore al tempo massimo concesso per la trasmissione</comment>
+			<formula>(s.sent0 &amp;&amp; s.seq_num == 0) --&gt; (not s.sent1) </formula>
+			<comment>se invio il messaggio in futuro ricevo un ack. NB: esiste la sequenza infinita in cui il canale perse sempre il messaggio, percui devo vedere che non viene mai mandato un ack per sequenza diversa da quella attuale.
+Quello che ho scritto e' che se il numerop della sequenza e' 0, allora sempre in futuro non viene eseguita una sent1
+</comment>
 		</query>
 		<query>
-			<formula>A[] s.ackReciveClock &lt;= (2*chDelay)</formula>
-			<comment>ricevo il messaggio prima che passi 2 volte il ritardo del canale </comment>
-		</query>
-		<query>
-			<formula>s.sendMsg --&gt; c.msg</formula>
-			<comment>se invio il messaggio in futuro il ricevitore invia un ack</comment>
-		</query>
-		<query>
-			<formula>c.msg --&gt; r.sendAck</formula>
-			<comment>se do un messaggio al canale, questo lo invia sempre</comment>
-		</query>
-		<query>
-			<formula>r.sendAck --&gt; c.ack</formula>
-			<comment></comment>
-		</query>
-		<query>
-			<formula>c.ack --&gt; s.sendMsg</formula>
-			<comment></comment>
+			<formula>(s.sent1 &amp;&amp; s.seq_num == 1) --&gt; (not s.sent0) </formula>
+			<comment>come sopra ma per altro lato di esecuzione</comment>
 		</query>
 	</queries>
 </nta>

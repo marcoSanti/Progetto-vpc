@@ -444,13 +444,14 @@
     <assignments/>
     <rgmedd2/>
     <formulas>
-      <formula comment="Valutazione della assenza di starvation individuale (prima o poi entro sempre in sez. critica)" comment-shown="true" expr="AG(#P1 == 1 -&gt; AF #P2 ==1) &amp;&amp; AG(#Q1 == 1 -&gt; AF #Q2 ==1)" language="CTL">
+      <formula comment="Valutazione della assenza di starvation individuale (prima o poi entro sempre in sez. critica)" comment-shown="true" expr="AG(#P1 == 1 -&gt; AF #P2 ==1)" language="CTL">
         <result-table>
           <mc-result name="MEASURE0" value="false">
             <bindings/>
           </mc-result>
         </result-table>
       </formula>
+      <formula expr="AG(#Q1 == 1 -&gt; AF #Q2 ==1)" language="CTL"/>
       <formula comment="Valutazione della mutua esclusione andando a dire che la somma dei token nella sezione critica è sempre minore di 2" comment-shown="true" expr="AG(#Q2 + #P2 &lt; 2)" language="CTL">
         <result-table>
           <mc-result name="MEASURE1" value="false">
@@ -561,13 +562,14 @@
     <assignments/>
     <rgmedd2/>
     <formulas>
-      <formula comment="Valutazione della assenza di starvation individuale (prima o poi entro sempre in sez. critica)" comment-shown="true" expr="AG(#P1 == 1 -&gt; AF #P2 ==1) &amp;&amp; AG(#Q1 == 1 -&gt; AF #Q2 ==1)" language="CTL">
+      <formula comment="Valutazione della assenza di starvation individuale (prima o poi entro sempre in sez. critica)" comment-shown="true" expr="AG(#P1 == 1 -&gt; AF #P2 ==1)" language="CTL">
         <result-table>
           <mc-result name="MEASURE0" value="false">
             <bindings/>
           </mc-result>
         </result-table>
       </formula>
+      <formula expr="AG(#Q1 == 1 -&gt; AF #Q2 ==1)" language="CTL"/>
       <formula comment="Valutazione della mutua esclusione andando a dire che la somma dei token nella sezione critica è sempre minore di 2" comment-shown="true" expr="AG(#Q2 + #P2 &lt; 2)" language="CTL">
         <result-table>
           <mc-result name="MEASURE1" value="false">

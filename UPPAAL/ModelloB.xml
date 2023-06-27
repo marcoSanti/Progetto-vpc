@@ -11,7 +11,6 @@ clock ackReciveClock;
 		<location id="id0" x="-442" y="-331">
 			<name x="-433" y="-322">sendMsg</name>
 			<label kind="invariant" x="-501" y="-365">ackReciveClock &lt;= txMaxTime</label>
-			<committed/>
 		</location>
 		<location id="id1" x="-442" y="-195">
 			<name x="-459" y="-178">waitForAck</name>
@@ -39,7 +38,6 @@ clock ackReciveClock;
 		</location>
 		<location id="id3" x="-399" y="-127">
 			<name x="-374" y="-136">sendAck</name>
-			<committed/>
 		</location>
 		<init ref="id2"/>
 		<transition>
@@ -61,7 +59,6 @@ clock ackReciveClock;
 		<declaration>clock elpsT;</declaration>
 		<location id="id4" x="-637" y="-306">
 			<name x="-654" y="-357">ready</name>
-			<committed/>
 		</location>
 		<location id="id5" x="-841" y="-263">
 			<name x="-875" y="-289">ack</name>
