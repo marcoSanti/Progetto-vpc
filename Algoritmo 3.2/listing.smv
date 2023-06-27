@@ -10,7 +10,7 @@ ASSIGN
  --mutua esclusione
 SPEC AG(proc_p.stato=l3 -> (turno=p & proc_q.stato!=l3)) & AG(proc_q.stato=l3 -> (turno=q & proc_p.stato!=l3));
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
-SPEC AF (proc_p.stato=l1 & proc_q.stato=l1)
+SPEC AF (proc_p.stato=l1 & proc_q.stato=l1);
 
 
 --template del mio processo in nusmv

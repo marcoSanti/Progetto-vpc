@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
+      <x>120</x>
       <y>0</y>
       <w>270</w>
       <h>100</h>
@@ -23,7 +23,7 @@ P3 = set_wantp_false.P
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
+      <x>400</x>
       <y>0</y>
       <w>270</w>
       <h>100</h>
@@ -42,7 +42,7 @@ Q3 = set_wantq_false.Q
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1460</x>
+      <x>1060</x>
       <y>0</y>
       <w>370</w>
       <h>100</h>
@@ -58,7 +58,7 @@ WQ1 = is_wantq_true.WQ1 + set_wantq_false.WQ
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
+      <x>680</x>
       <y>0</y>
       <w>370</w>
       <h>100</h>
@@ -74,7 +74,7 @@ WP1 = is_wantp_true.WP1 + set_wantp_false.WP
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
+      <x>120</x>
       <y>110</y>
       <w>1310</w>
       <h>1120</h>
@@ -88,43 +88,43 @@ WP1 = is_wantp_true.WP1 + set_wantp_false.WP
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1080</x>
+      <x>680</x>
       <y>260</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P || WP || WQ || Q
+    <panel_attributes>Y1
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>690</x>
+      <x>290</x>
       <y>410</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P1 || WP || WQ || Q
+    <panel_attributes>Y2
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1450</x>
+      <x>1050</x>
       <y>410</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P || WP || WQ || Q1
+    <panel_attributes>Y3
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
+      <x>360</x>
       <y>280</y>
       <w>360</w>
       <h>150</h>
@@ -136,7 +136,7 @@ tau (is_wantq_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1220</x>
+      <x>820</x>
       <y>280</y>
       <w>330</w>
       <h>150</h>
@@ -148,19 +148,19 @@ tau (is_wantp_false)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>690</x>
+      <x>290</x>
       <y>560</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P2 || WP1 || WQ || Q
+    <panel_attributes>Y4
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
+      <x>300</x>
       <y>430</y>
       <w>160</w>
       <h>150</h>
@@ -172,19 +172,19 @@ tau (set_wantp_true)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>690</x>
+      <x>290</x>
       <y>680</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P3 || WP1 || WQ || Q
+    <panel_attributes>Y10
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
+      <x>300</x>
       <y>580</y>
       <w>70</w>
       <h>120</h>
@@ -196,7 +196,7 @@ critical</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
+      <x>240</x>
       <y>170</y>
       <w>510</w>
       <h>590</h>
@@ -208,19 +208,19 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1450</x>
+      <x>1050</x>
       <y>560</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P || WP || WQ1 || Q2
+    <panel_attributes>Y5
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1530</x>
+      <x>1130</x>
       <y>430</y>
       <w>160</w>
       <h>150</h>
@@ -232,7 +232,7 @@ tau (set_wantq_true)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1590</x>
+      <x>1190</x>
       <y>580</y>
       <w>70</w>
       <h>130</h>
@@ -244,19 +244,19 @@ critical</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1450</x>
+      <x>1050</x>
       <y>690</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P || WP || WQ1 || Q3
+    <panel_attributes>Y9
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
+      <x>790</x>
       <y>170</y>
       <w>640</w>
       <h>590</h>
@@ -268,19 +268,19 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1070</x>
+      <x>670</x>
       <y>490</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P1 || WP || WQ || Q1
+    <panel_attributes>Y6
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
+      <x>430</x>
       <y>430</y>
       <w>290</w>
       <h>80</h>
@@ -292,7 +292,7 @@ tau (is_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1210</x>
+      <x>810</x>
       <y>430</y>
       <w>280</w>
       <h>80</h>
@@ -304,31 +304,31 @@ tau (is_wantq_false)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>910</x>
+      <x>510</x>
       <y>620</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P2 || WP1 || WQ || Q1
+    <panel_attributes>Y7
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1180</x>
+      <x>780</x>
       <y>620</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P1 || WP || WQ1 || Q2
+    <panel_attributes>Y8
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>930</x>
+      <x>530</x>
       <y>510</y>
       <w>180</w>
       <h>130</h>
@@ -340,7 +340,7 @@ tau (set_wantp_true)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1210</x>
+      <x>810</x>
       <y>510</y>
       <w>170</w>
       <h>130</h>
@@ -352,19 +352,19 @@ tau (set_wantq_true)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1040</x>
+      <x>640</x>
       <y>750</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P2 || WP1 || WQ1 || Q2
+    <panel_attributes>Y12
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
+      <x>790</x>
       <y>640</y>
       <w>160</w>
       <h>130</h>
@@ -376,7 +376,7 @@ tau (set_wantp_true)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1050</x>
+      <x>650</x>
       <y>640</y>
       <w>160</w>
       <h>130</h>
@@ -388,31 +388,31 @@ tau (set_wantq_true)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>910</x>
+      <x>510</x>
       <y>850</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P3 || WP1 || WQ1 || Q2
+    <panel_attributes>Y14
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1180</x>
+      <x>780</x>
       <y>850</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P2 || WP1 || WQ1 || Q3
+    <panel_attributes>Y15
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1040</x>
+      <x>640</x>
       <y>770</y>
       <w>70</w>
       <h>100</h>
@@ -424,7 +424,7 @@ critical</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
+      <x>790</x>
       <y>770</y>
       <w>70</w>
       <h>100</h>
@@ -436,19 +436,19 @@ critical</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1040</x>
+      <x>640</x>
       <y>950</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P3 || WP1 || WQ1 || Q3
+    <panel_attributes>Y16
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1060</x>
+      <x>660</x>
       <y>870</y>
       <w>70</w>
       <h>100</h>
@@ -460,7 +460,7 @@ critical</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1180</x>
+      <x>780</x>
       <y>870</y>
       <w>70</w>
       <h>100</h>
@@ -472,7 +472,7 @@ critical</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
+      <x>340</x>
       <y>870</y>
       <w>200</w>
       <h>80</h>
@@ -484,7 +484,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>710</x>
+      <x>310</x>
       <y>910</y>
       <w>40</w>
       <h>40</h>
@@ -495,7 +495,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1490</x>
+      <x>1090</x>
       <y>500</y>
       <w>40</w>
       <h>40</h>
@@ -506,7 +506,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1500</x>
+      <x>1100</x>
       <y>530</y>
       <w>30</w>
       <h>50</h>
@@ -517,7 +517,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1320</x>
+      <x>920</x>
       <y>950</y>
       <w>40</w>
       <h>40</h>
@@ -528,7 +528,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
+      <x>350</x>
       <y>510</y>
       <w>150</w>
       <h>70</h>
@@ -539,7 +539,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1330</x>
+      <x>930</x>
       <y>870</y>
       <w>170</w>
       <h>100</h>
@@ -551,7 +551,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>850</x>
+      <x>450</x>
       <y>1000</y>
       <w>40</w>
       <h>40</h>
@@ -562,7 +562,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1380</x>
+      <x>980</x>
       <y>1010</y>
       <w>40</w>
       <h>40</h>
@@ -573,7 +573,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
+      <x>480</x>
       <y>970</y>
       <w>190</w>
       <h>70</h>
@@ -585,7 +585,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1500</x>
+      <x>1100</x>
       <y>620</y>
       <w>40</w>
       <h>40</h>
@@ -596,7 +596,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1510</x>
+      <x>1110</x>
       <y>650</y>
       <w>30</w>
       <h>60</h>
@@ -607,7 +607,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
+      <x>790</x>
       <y>970</y>
       <w>210</w>
       <h>80</h>
@@ -619,7 +619,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>770</x>
+      <x>370</x>
       <y>610</y>
       <w>40</w>
       <h>40</h>
@@ -630,7 +630,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>780</x>
+      <x>380</x>
       <y>640</y>
       <w>30</w>
       <h>60</h>
@@ -641,7 +641,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
+      <x>260</x>
       <y>640</y>
       <w>290</w>
       <h>160</h>
@@ -653,7 +653,7 @@ critical</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1320</x>
+      <x>920</x>
       <y>640</y>
       <w>260</w>
       <h>160</h>
@@ -665,19 +665,19 @@ critical</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>630</x>
+      <x>230</x>
       <y>780</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P3 || WP1 || WQ || Q1
+    <panel_attributes>Y11
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
+      <x>350</x>
       <y>810</y>
       <w>260</w>
       <h>60</h>
@@ -689,7 +689,7 @@ tau (set_wantq_true)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>630</x>
+      <x>230</x>
       <y>880</y>
       <w>40</w>
       <h>40</h>
@@ -700,7 +700,7 @@ tau (set_wantq_true)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
+      <x>240</x>
       <y>800</y>
       <w>170</w>
       <h>100</h>
@@ -712,7 +712,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1560</x>
+      <x>1160</x>
       <y>330</y>
       <w>40</w>
       <h>40</h>
@@ -723,7 +723,7 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1570</x>
+      <x>1170</x>
       <y>360</y>
       <w>30</w>
       <h>70</h>
@@ -734,19 +734,19 @@ tau (set_wantp_false)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1480</x>
+      <x>1080</x>
       <y>780</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>P1 || WP || WQ1 || Q3
+    <panel_attributes>Y13
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1290</x>
+      <x>890</x>
       <y>800</y>
       <w>230</w>
       <h>70</h>
@@ -758,7 +758,7 @@ tau (set_wantp_true)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1610</x>
+      <x>1210</x>
       <y>870</y>
       <w>40</w>
       <h>40</h>
@@ -769,7 +769,7 @@ tau (set_wantp_true)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1620</x>
+      <x>1220</x>
       <y>800</y>
       <w>170</w>
       <h>90</h>
@@ -781,7 +781,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>700</x>
+      <x>300</x>
       <y>330</y>
       <w>40</w>
       <h>40</h>
@@ -792,7 +792,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
+      <x>310</x>
       <y>360</y>
       <w>30</w>
       <h>70</h>
@@ -803,7 +803,7 @@ tau (set_wantq_false)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1380</x>
+      <x>980</x>
       <y>380</y>
       <w>100</w>
       <h>70</h>
@@ -815,7 +815,7 @@ nonCritP</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1380</x>
+      <x>980</x>
       <y>530</y>
       <w>100</w>
       <h>70</h>
@@ -827,7 +827,7 @@ nonCritP</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1380</x>
+      <x>980</x>
       <y>660</y>
       <w>100</w>
       <h>70</h>
@@ -839,7 +839,7 @@ nonCritP</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
+      <x>440</x>
       <y>380</y>
       <w>130</w>
       <h>70</h>
@@ -851,7 +851,7 @@ nonCritQ</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
+      <x>440</x>
       <y>650</y>
       <w>110</w>
       <h>70</h>
@@ -863,7 +863,7 @@ nonCritQ</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
+      <x>440</x>
       <y>530</y>
       <w>130</w>
       <h>70</h>
@@ -875,7 +875,7 @@ nonCritQ</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>860</x>
+      <x>460</x>
       <y>480</y>
       <w>40</w>
       <h>40</h>
@@ -886,7 +886,7 @@ nonCritQ</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1230</x>
+      <x>830</x>
       <y>230</y>
       <w>130</w>
       <h>70</h>
@@ -898,7 +898,7 @@ nonCritQ</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1010</x>
+      <x>610</x>
       <y>230</y>
       <w>100</w>
       <h>70</h>
@@ -910,7 +910,7 @@ nonCritP</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1420</x>
+      <x>1020</x>
       <y>1080</y>
       <w>400</w>
       <h>140</h>
@@ -928,7 +928,7 @@ output pdf. All silen actions are surrounded by "(" and ")"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1430</x>
+      <x>1030</x>
       <y>1110</y>
       <w>40</w>
       <h>20</h>
@@ -939,7 +939,7 @@ output pdf. All silen actions are surrounded by "(" and ")"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1430</x>
+      <x>1030</x>
       <y>1140</y>
       <w>40</w>
       <h>20</h>

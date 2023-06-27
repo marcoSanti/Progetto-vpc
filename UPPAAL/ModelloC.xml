@@ -13,11 +13,11 @@ clock timer1;</declaration>
 		</location>
 		<location id="id1" x="-714" y="-331">
 			<name x="-697" y="-348">sent2</name>
-			<label kind="invariant" x="-833" y="-323">timer0&lt;txMaxTime</label>
+			<label kind="invariant" x="-833" y="-323">timer0&lt;=txMaxTime</label>
 		</location>
 		<location id="id2" x="-484" y="-331">
 			<name x="-535" y="-348">sent1</name>
-			<label kind="invariant" x="-493" y="-323">timer1&lt;txMaxTime</label>
+			<label kind="invariant" x="-493" y="-323">timer1&lt;=txMaxTime</label>
 		</location>
 		<location id="id3" x="-603" y="-238">
 			<name x="-646" y="-229">ackRecived</name>
