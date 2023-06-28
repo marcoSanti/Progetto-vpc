@@ -4,7 +4,7 @@
 	<declaration>// Place global declarations here.</declaration>
 	<template>
 		<name x="5" y="5">Sender</name>
-		<parameter>chan &amp;send, chan &amp;ackRecive, const int &amp;txMaxTime, int[0,1] &amp;seq_num, int[0,1] &amp;ack_num</parameter>
+		<parameter>chan &amp;send, chan &amp;ackRecive, int[1,5]  &amp;chDelay, int[0,1] &amp;seq_num, int[0,1] &amp;ack_num, int&amp; txTimeout</parameter>
 		<declaration>// Place local declarations here.
 clock timer0;
 clock timer1;</declaration>
@@ -13,11 +13,11 @@ clock timer1;</declaration>
 		</location>
 		<location id="id1" x="-714" y="-331">
 			<name x="-697" y="-348">sent0</name>
-			<label kind="invariant" x="-833" y="-323">timer0&lt;=txMaxTime</label>
+			<label kind="invariant" x="-824" y="-323">timer0&lt;=txTimeout</label>
 		</location>
 		<location id="id2" x="-484" y="-331">
 			<name x="-535" y="-348">sent1</name>
-			<label kind="invariant" x="-493" y="-323">timer1&lt;=txMaxTime</label>
+			<label kind="invariant" x="-493" y="-323">timer1&lt;=txTimeout</label>
 		</location>
 		<location id="id3" x="-603" y="-238">
 			<name x="-646" y="-229">ackRecived</name>
@@ -28,8 +28,8 @@ clock timer1;</declaration>
 			<source ref="id0"/>
 			<target ref="id2"/>
 			<label kind="guard" x="-586" y="-416">seq_num == 1</label>
-			<label kind="synchronisation" x="-586" y="-382">send!</label>
-			<label kind="assignment" x="-586" y="-399">timer1 := 0</label>
+			<label kind="synchronisation" x="-569" y="-382">send!</label>
+			<label kind="assignment" x="-577" y="-399">timer1=0</label>
 			<nail x="-595" y="-399"/>
 			<nail x="-484" y="-399"/>
 		</transition>
@@ -37,8 +37,8 @@ clock timer1;</declaration>
 			<source ref="id0"/>
 			<target ref="id1"/>
 			<label kind="guard" x="-697" y="-416">seq_num == 0</label>
-			<label kind="synchronisation" x="-697" y="-382">send!</label>
-			<label kind="assignment" x="-697" y="-399">timer0 := 0</label>
+			<label kind="synchronisation" x="-671" y="-382">send!</label>
+			<label kind="assignment" x="-688" y="-399">timer0=0</label>
 			<nail x="-595" y="-399"/>
 			<nail x="-714" y="-399"/>
 		</transition>
@@ -46,6 +46,7 @@ clock timer1;</declaration>
 			<source ref="id3"/>
 			<target ref="id0"/>
 			<label kind="guard" x="-807" y="-263">seq_num != ack_num</label>
+			<label kind="assignment" x="-799" y="-518">timer0=0, timer1=0</label>
 			<nail x="-833" y="-238"/>
 			<nail x="-833" y="-501"/>
 			<nail x="-620" y="-501"/>
@@ -54,7 +55,9 @@ clock timer1;</declaration>
 			<source ref="id3"/>
 			<target ref="id0"/>
 			<label kind="guard" x="-544" y="-263">seq_num == ack_num</label>
-			<label kind="assignment" x="-552" y="-238">seq_num = 1-seq_num</label>
+			<label kind="assignment" x="-527" y="-238">seq_num = 1-seq_num,
+timer0=0, 
+timer1=0</label>
 			<nail x="-561" y="-238"/>
 			<nail x="-340" y="-238"/>
 			<nail x="-340" y="-501"/>
@@ -69,14 +72,16 @@ clock timer1;</declaration>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id0"/>
-			<label kind="guard" x="-510" y="-476">timer1&gt;=txMaxTime</label>
+			<label kind="guard" x="-510" y="-476">timer1&gt;=txTimeout</label>
+			<label kind="assignment" x="-484" y="-459">timer1=0</label>
 			<nail x="-365" y="-331"/>
 			<nail x="-365" y="-459"/>
 		</transition>
 		<transition>
 			<source ref="id1"/>
 			<target ref="id0"/>
-			<label kind="guard" x="-765" y="-476">timer0&gt;=txMaxTime</label>
+			<label kind="guard" x="-765" y="-476">timer0&gt;=txTimeout</label>
+			<label kind="assignment" x="-756" y="-459">timer0=0</label>
 			<nail x="-790" y="-331"/>
 			<nail x="-790" y="-459"/>
 		</transition>
@@ -92,25 +97,23 @@ clock timer1;</declaration>
 		<parameter>chan &amp;recive, chan &amp;ackSend, int[0,1] &amp;seq_num, int[0,1] &amp;ack_num</parameter>
 		<declaration>int[0,1] expected = 0;</declaration>
 		<location id="id4" x="-892" y="-518">
+			<name x="-902" y="-552">ready</name>
 		</location>
 		<location id="id5" x="-892" y="-382">
 			<committed/>
 		</location>
-		<location id="id6" x="-1088" y="-382">
-		</location>
 		<init ref="id4"/>
 		<transition>
 			<source ref="id5"/>
-			<target ref="id6"/>
-			<label kind="guard" x="-1054" y="-408">seq_num == expected</label>
-			<label kind="assignment" x="-1045" y="-382">ack_num = seq_num</label>
-		</transition>
-		<transition>
-			<source ref="id6"/>
 			<target ref="id4"/>
-			<label kind="synchronisation" x="-1003" y="-544">ackSend!</label>
-			<label kind="assignment" x="-1071" y="-518">expected = 1-expected</label>
-			<nail x="-1088" y="-518"/>
+			<label kind="guard" x="-1105" y="-399">seq_num==expected</label>
+			<label kind="synchronisation" x="-1105" y="-331">ackSend!</label>
+			<label kind="assignment" x="-1105" y="-374">ack_num=seq_num,
+expected = 1-expected</label>
+			<nail x="-918" y="-382"/>
+			<nail x="-1122" y="-382"/>
+			<nail x="-1122" y="-518"/>
+			<nail x="-918" y="-518"/>
 		</transition>
 		<transition>
 			<source ref="id5"/>
@@ -129,57 +132,57 @@ clock timer1;</declaration>
 	</template>
 	<template>
 		<name>Channel</name>
-		<parameter> chan &amp;send, chan &amp;recive, chan &amp;ackSend, chan &amp;ackRecive, int[1,5] &amp;chDelay, const int &amp;maxDelay</parameter>
+		<parameter> chan &amp;send, chan &amp;recive, chan &amp;ackSend, chan &amp;ackRecive, int[1,5] &amp;chDelay, int &amp;maxDelay</parameter>
 		<declaration>clock elpsT;</declaration>
-		<location id="id7" x="-637" y="-306">
+		<location id="id6" x="-637" y="-306">
 			<name x="-654" y="-357">ready</name>
 		</location>
-		<location id="id8" x="-841" y="-263">
+		<location id="id7" x="-841" y="-263">
 			<name x="-875" y="-289">ack</name>
-			<label kind="invariant" x="-917" y="-246">elpsT &lt;=chDelay</label>
+			<label kind="invariant" x="-917" y="-246">elpsT &lt;= maxDelay</label>
 		</location>
-		<location id="id9" x="-433" y="-263">
+		<location id="id8" x="-433" y="-263">
 			<name x="-425" y="-289">msg</name>
-			<label kind="invariant" x="-458" y="-246">elpsT &lt;=chDelay</label>
+			<label kind="invariant" x="-458" y="-246">elpsT &lt;= maxDelay</label>
 		</location>
-		<init ref="id7"/>
+		<init ref="id6"/>
 		<transition>
-			<source ref="id9"/>
-			<target ref="id7"/>
+			<source ref="id8"/>
+			<target ref="id6"/>
 			<nail x="-484" y="-306"/>
 		</transition>
 		<transition>
-			<source ref="id8"/>
-			<target ref="id7"/>
+			<source ref="id7"/>
+			<target ref="id6"/>
 			<nail x="-782" y="-306"/>
 		</transition>
 		<transition>
-			<source ref="id8"/>
-			<target ref="id7"/>
-			<label kind="guard" x="-807" y="-263">elpsT &lt;= maxDelay</label>
+			<source ref="id7"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-807" y="-263">elpsT &gt;= chDelay</label>
 			<label kind="synchronisation" x="-772" y="-280">ackRecive?</label>
 			<nail x="-815" y="-263"/>
 			<nail x="-653" y="-263"/>
 		</transition>
 		<transition>
-			<source ref="id7"/>
-			<target ref="id8"/>
+			<source ref="id6"/>
+			<target ref="id7"/>
 			<label kind="synchronisation" x="-790" y="-374">ackSend?</label>
 			<label kind="assignment" x="-790" y="-391">elpsT := 0</label>
 			<nail x="-671" y="-349"/>
 			<nail x="-841" y="-348"/>
 		</transition>
 		<transition>
-			<source ref="id9"/>
-			<target ref="id7"/>
-			<label kind="guard" x="-620" y="-263">elpsT &lt;= maxDelay</label>
+			<source ref="id8"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-620" y="-263">elpsT &gt;= chDelay</label>
 			<label kind="synchronisation" x="-561" y="-280">recive?</label>
 			<nail x="-450" y="-263"/>
 			<nail x="-620" y="-263"/>
 		</transition>
 		<transition>
-			<source ref="id7"/>
-			<target ref="id9"/>
+			<source ref="id6"/>
+			<target ref="id8"/>
 			<label kind="synchronisation" x="-527" y="-374">send?</label>
 			<label kind="assignment" x="-535" y="-391">elpsT := 0</label>
 			<nail x="-603" y="-348"/>
@@ -191,15 +194,15 @@ chan recive;
 chan ackSend;
 chan ackRecive;
 int[1,5] chDelay=3;
-const int txMaxTime = 6;
+int txTimeout = 6;
 
 int[0,1] seq_num = 0;
 int[0,1] ack_num = 0;
 
 // Place template instantiations here.
-s = Sender(send, ackRecive, txMaxTime, seq_num, ack_num);
+s = Sender(send, ackRecive, chDelay, seq_num,ack_num,txTimeout );
 r = Reciver(recive, ackSend,seq_num, ack_num);
-c = Channel(send, recive, ackSend, ackRecive, chDelay, txMaxTime);
+c = Channel(send, recive, ackSend, ackRecive, chDelay, txTimeout);
 
 // List one or more processes to be composed into a system.
 system s, c, r;</system>
@@ -217,6 +220,14 @@ Quello che ho scritto e' che se il numerop della sequenza e' 0, allora sempre in
 		<query>
 			<formula>(s.sent1 &amp;&amp; s.seq_num == 1) --&gt; (not s.sent0) </formula>
 			<comment>come sopra ma per altro lato di esecuzione</comment>
+		</query>
+		<query>
+			<formula>A[] s.ackRecived imply (s.timer0 &gt;= 2*chDelay || s.timer1 &gt;= 2*chDelay)</formula>
+			<comment>Verifica del tempo minimo di ricezione. in questo caso verificata a 2 chDelay</comment>
+		</query>
+		<query>
+			<formula>A[] ( (s.timer0 &gt; txTimeout &amp;&amp; seq_num==0) || (s.timer1 &gt; txTimeout &amp;&amp; seq_num==1 )) imply (c.ready &amp;&amp; r.ready)</formula>
+			<comment>verifica esistenza timer che se scatta allora sono sicuro che il messaggio e' perso</comment>
 		</query>
 	</queries>
 </nta>
