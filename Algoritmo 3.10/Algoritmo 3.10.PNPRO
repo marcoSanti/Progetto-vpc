@@ -215,39 +215,36 @@
   </gspn>
   <gspn name="process_p" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
     <nodes>
-      <place label-x="1.0" label-y="-1.5" marking="1" name="P1" x="9.0" y="10.0"/>
-      <place label-x="-0.5" label-y="-1.5" name="P2" x="17.0" y="10.0"/>
-      <place label-y="-1.5" name="P3" x="25.0" y="10.0"/>
-      <place label-x="1.0" label-y="-1.5" name="P4" x="32.0" y="10.0"/>
-      <place label-x="0.5" label-y="-1.5" name="P5" x="40.0" y="10.0"/>
-      <place label-x="-1.5" label-y="-1.0" name="P8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="33.0" y="5.0"/>
-      <place label-x="2.0" label-y="0.0" name="P10" x="46.0" y="5.0"/>
-      <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="5.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT1" type="EXP" x="13.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T2" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnQ1" type="EXP" x="21.55" y="10.0"/>
-      <transition label-x="1.5" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnP1" type="EXP" x="21.55" y="5.0"/>
-      <transition label-x="-0.5" label-y="2.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWpF2" type="EXP" x="28.55" y="2.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T5" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpF1" type="EXP" x="28.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T6" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnP2" type="EXP" x="36.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T8" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT2" type="EXP" x="44.55" y="10.0"/>
-      <transition label-x="-1.5" label-y="-1.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnQ" type="EXP" x="40.55" y="5.0"/>
+      <place label-x="1.0" label-y="-1.5" marking="1" name="P1" x="8.0" y="13.0"/>
+      <place label-x="-0.5" label-y="-1.5" name="P2" x="16.0" y="13.0"/>
+      <place label-y="-1.5" name="P3" x="32.0" y="13.0"/>
+      <place label-x="1.0" label-y="-1.5" name="P4" x="40.0" y="13.0"/>
+      <place label-x="0.5" label-y="-1.5" name="P5" x="47.0" y="13.0"/>
+      <place label-x="-1.5" label-y="-1.0" name="P8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="32.0" y="7.0"/>
+      <place label-x="2.0" label-y="0.0" name="P10" x="46.0" y="7.0"/>
+      <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="4.55" y="13.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT1" type="EXP" x="12.55" y="13.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-0.5" superpos-y="-1.5" superposition-tags="isTurnQ1" type="EXP" x="28.55" y="13.0"/>
+      <transition label-x="2.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnP1" type="EXP" x="20.55" y="10.0"/>
+      <transition label-x="-0.5" label-y="2.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWpF2" type="EXP" x="26.55" y="3.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="setWpF1" type="EXP" x="36.55" y="13.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T6" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnP2" type="EXP" x="43.55" y="13.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T8" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT2" type="EXP" x="51.55" y="13.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnQ" type="EXP" x="39.55" y="7.0"/>
+      <transition label-x="-0.5" label-y="2.5" name="T9" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="isWqT" type="EXP" x="20.55" y="13.0"/>
+      <transition label-y="-2.0" name="T10" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superpos-y="-1.5" superposition-tags="isWqF" type="EXP" x="20.55" y="7.0"/>
+      <place name="P0" x="24.0" y="13.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="T11" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnQ1" type="EXP" x="39.55" y="9.0"/>
     </nodes>
     <edges>
       <arc head="T1" kind="INPUT" tail="P1"/>
       <arc head="P2" kind="OUTPUT" tail="T1"/>
-      <arc head="T2" kind="INPUT" tail="P2"/>
       <arc head="P3" kind="OUTPUT" tail="T2"/>
-      <arc head="T3" kind="INPUT" tail="P2">
-        <point x="18.0" y="6.0"/>
-      </arc>
-      <arc head="P8" kind="OUTPUT" tail="T3">
-        <point x="33.5" y="6.0"/>
-      </arc>
       <arc head="T4" kind="INPUT" tail="P10">
-        <point x="47.0" y="3.0"/>
+        <point x="47.0" y="4.0"/>
       </arc>
       <arc head="P1" kind="OUTPUT" tail="T4">
-        <point x="10.0" y="3.0"/>
+        <point x="9.0" y="4.0"/>
       </arc>
       <arc head="T5" kind="INPUT" tail="P3"/>
       <arc head="P4" kind="OUTPUT" tail="T5"/>
@@ -256,55 +253,77 @@
       <arc head="T8" kind="INPUT" tail="P5"/>
       <arc head="T7" kind="INPUT" tail="P8"/>
       <arc head="P10" kind="OUTPUT" tail="T7"/>
-      <arc head="P2" kind="OUTPUT" tail="T8">
-        <point x="47.5" y="11.0"/>
-        <point x="47.5" y="8.0"/>
-        <point x="21.0" y="8.0"/>
-      </arc>
       <arc head="T0" kind="INPUT" tail="P1">
-        <point x="6.0" y="8.5"/>
+        <point x="5.0" y="11.5"/>
       </arc>
       <arc head="P1" kind="OUTPUT" tail="T0">
-        <point x="6.0" y="13.0"/>
+        <point x="5.0" y="16.0"/>
+      </arc>
+      <arc head="T10" kind="INPUT" mult-k="0.6661132812500001" tail="P2">
+        <point x="17.0" y="8.0"/>
+      </arc>
+      <arc head="T9" kind="INPUT" tail="P2"/>
+      <arc head="P0" kind="OUTPUT" tail="T9"/>
+      <arc head="T2" kind="INPUT" tail="P0"/>
+      <arc head="T3" kind="INPUT" tail="P0">
+        <point x="25.0" y="11.0"/>
+      </arc>
+      <arc head="P2" kind="OUTPUT" tail="T3">
+        <point x="18.5" y="11.0"/>
+      </arc>
+      <arc head="P8" kind="OUTPUT" tail="T10"/>
+      <arc head="P2" kind="OUTPUT" tail="T8">
+        <point x="56.0" y="14.0"/>
+        <point x="56.0" y="18.5"/>
+        <point x="17.0" y="18.5"/>
+      </arc>
+      <arc head="T11" kind="INPUT" tail="P8">
+        <point x="37.0" y="10.0"/>
+      </arc>
+      <arc head="P10" kind="OUTPUT" tail="T11">
+        <point x="43.0" y="10.0"/>
       </arc>
     </edges>
   </gspn>
   <gspn name="process_q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
     <nodes>
       <place label-x="1.0" label-y="-1.5" marking="1" name="Q1" x="9.0" y="10.0"/>
-      <place label-x="-0.5" label-y="-1.5" name="Q2" x="17.0" y="10.0"/>
-      <place name="Q3" x="25.0" y="10.0"/>
-      <place label-x="0.5" name="Q4" x="32.0" y="10.0"/>
-      <place name="Q5" x="40.0" y="10.0"/>
-      <place label-x="-1.5" label-y="-1.0" name="Q8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="30.0" y="16.0"/>
-      <place name="Q10" x="42.0" y="16.0"/>
+      <place label-x="-1.0" label-y="-1.5" name="Q2" x="17.0" y="10.0"/>
+      <place name="Q3" x="33.0" y="10.0"/>
+      <place label-x="0.5" name="Q4" x="40.0" y="10.0"/>
+      <place name="Q5" x="48.0" y="10.0"/>
+      <place label-x="-1.5" label-y="-1.0" name="Q8" superpos-x="-0.5" superpos-y="-2.0" superposition-tags="criticalSection" x="30.0" y="18.0"/>
+      <place name="Q10" x="42.0" y="18.0"/>
       <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="5.55" y="10.0"/>
       <transition label-x="1.0" label-y="-0.5" name="T1" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqT1" type="EXP" x="13.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T2" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnP3" type="EXP" x="21.55" y="10.0"/>
-      <transition label-x="1.5" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnQ2" type="EXP" x="24.55" y="16.0"/>
-      <transition label-x="-0.5" label-y="-2.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWqF2" type="EXP" x="33.55" y="19.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T5" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqF1" type="EXP" x="28.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T6" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnQ3" type="EXP" x="36.55" y="10.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="T8" nservers-x="0.5" superpos-y="1.5" superposition-tags="setWqT2" type="EXP" x="44.55" y="10.0"/>
-      <transition label-x="-1.5" label-y="-1.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnP" type="EXP" x="36.55" y="16.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T2" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnP3" type="EXP" x="29.55" y="10.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isWpF" type="EXP" x="21.55" y="18.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWqF2" type="EXP" x="33.55" y="21.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T5" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqF1" type="EXP" x="36.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T6" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnQ3" type="EXP" x="44.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="T8" nservers-x="0.5" superpos-y="1.5" superposition-tags="setWqT2" type="EXP" x="52.55" y="10.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="0.5" superpos-y="-1.0" superposition-tags="setTurnP" type="EXP" x="36.55" y="18.0"/>
+      <transition label-x="-0.5" label-y="2.5" name="copy_T9" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="isWpT" type="EXP" x="21.55" y="10.0"/>
+      <place name="Q6" x="25.0" y="10.0"/>
+      <transition name="T11" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isTurnQ2" type="EXP" x="21.55" y="7.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T9" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="0.5" superpos-y="-1.0" superposition-tags="setTurnP1" type="EXP" x="36.55" y="15.0"/>
     </nodes>
     <edges>
       <arc head="T1" kind="INPUT" tail="Q1"/>
       <arc head="Q2" kind="OUTPUT" tail="T1"/>
-      <arc head="T2" kind="INPUT" tail="Q2"/>
       <arc head="Q3" kind="OUTPUT" tail="T2"/>
       <arc head="T3" kind="INPUT" tail="Q2">
-        <point x="18.0" y="17.0"/>
+        <point x="18.0" y="19.0"/>
       </arc>
       <arc head="Q8" kind="OUTPUT" tail="T3">
-        <point x="28.5" y="17.0"/>
+        <point x="28.5" y="19.0"/>
       </arc>
       <arc head="T4" kind="INPUT" mult-k="0.50009765625" tail="Q10">
-        <point x="47.0" y="17.0"/>
-        <point x="47.0" y="20.0"/>
+        <point x="47.0" y="19.0"/>
+        <point x="47.0" y="22.0"/>
       </arc>
       <arc head="Q1" kind="OUTPUT" tail="T4">
-        <point x="10.0" y="20.0"/>
+        <point x="10.0" y="22.0"/>
       </arc>
       <arc head="T5" kind="INPUT" tail="Q3"/>
       <arc head="Q4" kind="OUTPUT" tail="T5"/>
@@ -313,20 +332,35 @@
       <arc head="T8" kind="INPUT" tail="Q5"/>
       <arc head="T7" kind="INPUT" tail="Q8"/>
       <arc head="Q10" kind="OUTPUT" tail="T7"/>
-      <arc head="Q2" kind="OUTPUT" tail="T8">
-        <point x="47.5" y="11.0"/>
-        <point x="47.5" y="14.5"/>
-        <point x="19.5" y="14.5"/>
-      </arc>
       <arc head="T0" kind="INPUT" tail="Q1">
         <point x="6.0" y="8.5"/>
       </arc>
       <arc head="Q1" kind="OUTPUT" tail="T0">
         <point x="6.0" y="13.0"/>
       </arc>
+      <arc head="copy_T9" kind="INPUT" tail="Q2"/>
+      <arc head="Q6" kind="OUTPUT" tail="copy_T9"/>
+      <arc head="T2" kind="INPUT" tail="Q6"/>
+      <arc head="T11" kind="INPUT" tail="Q6">
+        <point x="26.0" y="8.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="T11">
+        <point x="20.0" y="8.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="T8">
+        <point x="57.0" y="11.0"/>
+        <point x="57.0" y="3.5"/>
+        <point x="18.0" y="3.5"/>
+      </arc>
+      <arc head="T9" kind="INPUT" tail="Q8">
+        <point x="34.5" y="16.0"/>
+      </arc>
+      <arc head="Q10" kind="OUTPUT" tail="T9">
+        <point x="40.0" y="16.0"/>
+      </arc>
     </edges>
   </gspn>
-  <algebra2 align-dx="0" align-dy="30" alignment="CUSTOM" name="process_p_process_q" policy="UNARY_CONJUGATED_ALL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+  <algebra2 align-dx="0" align-dy="30" alignment="CUSTOM" name="process_p_process_q" policy="UNARY_CONJUGATED_ALL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
     <bindings-list/>
     <place-tags/>
     <transition-tags/>
@@ -352,17 +386,23 @@
       <tag name="setWqF2"/>
       <tag name="setWpT1"/>
       <tag name="setWqT2"/>
+      <tag name="isWpT"/>
+      <tag name="isWqT"/>
+      <tag name="isWpF"/>
+      <tag name="isWqF"/>
     </transition-tags>
     <subnet netname="process_p_process_q"/>
     <subnet netname="want_p_want_q"/>
   </algebra2>
-  <algebra2 align-dx="0" align-dy="15" alignment="HORIZONTAL" name="process_p_process_q_want_p_want_q_turn" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="50">
+  <algebra2 align-dx="0" align-dy="15" alignment="HORIZONTAL" name="process_p_process_q_want_p_want_q_turn" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
     <bindings-list/>
     <place-tags/>
     <transition-tags>
       <tag name="isTurnQ1"/>
       <tag name="setTurnP"/>
+      <tag name="setTurnP1"/>
       <tag name="setTurnQ"/>
+      <tag name="setTurnQ1"/>
       <tag name="isTurnQ3"/>
       <tag name="isTurnP2"/>
       <tag name="isTurnQ2"/>
@@ -372,293 +412,7 @@
     <subnet netname="process_p_process_q_want_p_want_q"/>
     <subnet netname="turn"/>
   </algebra2>
-  <gspn name="process_p_process_q_want_p_want_q_turn_readable" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
-    <nodes>
-      <place label-x="1.0" label-y="-1.5" marking="1" name="P1" x="21.0" y="8.0"/>
-      <place label-x="-0.5" label-y="-1.5" name="P2" x="29.0" y="8.0"/>
-      <place label-y="-1.5" name="P3" x="37.0" y="8.0"/>
-      <place label-x="1.0" label-y="-1.5" name="P4" x="44.0" y="8.0"/>
-      <place label-x="0.5" label-y="-1.5" name="P5" x="52.0" y="8.0"/>
-      <place label-x="-1.5" label-y="-1.0" name="P8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="45.0" y="3.0"/>
-      <place label-x="2.0" label-y="0.0" name="P10" x="58.0" y="3.0"/>
-      <place label-x="1.0" label-y="-1.5" marking="1" name="Q1" x="23.0" y="37.0"/>
-      <place label-x="-0.5" label-y="-1.5" name="Q2" x="31.0" y="37.0"/>
-      <place name="Q3" x="39.0" y="37.0"/>
-      <place label-x="0.5" name="Q4" x="46.0" y="37.0"/>
-      <place name="Q5" x="54.0" y="37.0"/>
-      <place label-x="-1.5" label-y="-1.0" name="Q8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="44.0" y="43.0"/>
-      <place name="Q10" x="56.0" y="43.0"/>
-      <place label-x="2.0" label-y="-0.5" name="WpT" x="8.0" y="21.0"/>
-      <place label-x="-2.0" label-y="1.0" marking="1" name="WpF" x="15.0" y="21.0"/>
-      <place label-x="2.0" label-y="1.0" name="WqT" x="66.0" y="20.0"/>
-      <place label-x="-2.0" label-y="1.0" marking="1" name="WqF" x="73.0" y="20.0"/>
-      <place label-x="-1.5" label-y="8.881784197001252E-16" marking="1" name="P" x="45.0" y="20.0"/>
-      <place label-x="1.5" label-y="-8.881784197001252E-16" name="Q" x="37.0" y="20.0"/>
-      <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="17.55" y="8.0"/>
-      <transition label-x="-1.0" label-y="0.5" name="T0_0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="19.55" y="37.0"/>
-      <transition label-x="1.5" label-y="-1.0" name="T1_1" nservers-x="0.5" rotation="5.759586531581287" superpos-x="2.0" superpos-y="0.0" superposition-tags="isWpF" type="EXP" x="20.55" y="19.0"/>
-      <transition label-x="-2.0" label-y="-1.0" name="T4_1" nservers-x="0.5" rotation="0.5235987755982988" superpos-x="-2.5" superpos-y="0.0" superposition-tags="isWpT" type="EXP" x="3.55" y="19.0"/>
-      <transition label-x="1.0" label-y="0.0" name="T5_1" nservers-x="0.5" rotation="5.759586531581287" superpos-x="1.5" superpos-y="-1.0" superposition-tags="setWpT3" type="EXP" x="3.55" y="23.0"/>
-      <transition label-x="-1.5" label-y="0.0" name="T6_1" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-1.5" superpos-y="-1.0" superposition-tags="setWpF3" type="EXP" x="20.55" y="23.0"/>
-      <transition label-x="1.5" label-y="-1.0" name="T1_0_0" nservers-x="0.5" rotation="5.759586531581287" superpos-x="2.0" superpos-y="0.0" superposition-tags="isWqF" type="EXP" x="78.55" y="18.0"/>
-      <transition label-x="-2.0" label-y="-1.0" name="T4_0_0" nservers-x="0.5" rotation="0.5235987755982988" superpos-x="-2.5" superpos-y="0.0" superposition-tags="isWqT" type="EXP" x="61.55" y="18.0"/>
-      <transition label-x="1.0" label-y="0.0" name="T5_0_0" nservers-x="0.5" rotation="5.759586531581287" superpos-x="1.5" superpos-y="-1.0" superposition-tags="setWqT3" type="EXP" x="61.55" y="22.0"/>
-      <transition label-x="-1.5" label-y="0.0" name="T6_0_0" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-1.5" superpos-y="-1.0" superposition-tags="setWqF3" type="EXP" x="78.55" y="22.0"/>
-      <transition label-x="-6.5" label-y="0.5" name="setWqF1_T5_0_plus_T2_0_0" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqF1" type="EXP" x="42.55" y="37.0"/>
-      <transition label-x="-0.5" label-y="2.0" name="setWpF2_T4_plus_T7_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWpF2" type="EXP" x="36.55" y="0.0"/>
-      <transition label-x="-0.5" name="setWpF1_T5_plus_T2_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpF1" type="EXP" x="40.55" y="8.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="setWqT1_T1_0_plus_T3_0_0" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqT1" type="EXP" x="26.55" y="37.0"/>
-      <transition label-x="-0.49999999999999645" label-y="-2.0" name="setWpT2_T8_plus_T8_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT2" type="EXP" x="56.55" y="8.0"/>
-      <transition label-x="-0.5" label-y="-2.0" name="setWqF2_T4_0_plus_T7_0_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWqF2" type="EXP" x="39.55" y="46.0"/>
-      <transition label-y="-2.5" name="setWpT1_T1_plus_T3_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT1" type="EXP" x="25.55" y="8.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="setWqT2_T8_0_plus_T8_0_0" nservers-x="0.5" superpos-y="1.5" superposition-tags="setWqT2" type="EXP" x="59.55" y="37.0"/>
-      <transition label-x="-1.0" name="T4" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setTurnQ1" type="EXP" x="32.55" y="18.0"/>
-      <transition label-x="0.5" name="T5" nservers-x="0.5" rotation="2.356194490192345" superpos-x="2.0" superpos-y="-0.5" superposition-tags="setTurnP1" type="EXP" x="50.55" y="18.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="isTurnQ1_T2_plus_T9" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnQ1" type="EXP" x="33.55" y="8.0"/>
-      <transition label-x="-1.5" label-y="-1.0" name="setTurnP_T7_0_plus_T3_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnP" type="EXP" x="50.55" y="43.0"/>
-      <transition label-x="-1.5" label-y="-1.0" name="setTurnQ_T7_plus_T2_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnQ" type="EXP" x="51.55" y="3.0"/>
-      <transition label-x="0.5" label-y="-0.5" name="isTurnQ3_T6_0_plus_T1" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnQ3" type="EXP" x="51.55" y="37.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="isTurnP2_T6_plus_T7_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnP2" type="EXP" x="48.55" y="8.0"/>
-      <transition label-x="1.5" label-y="-1.0" name="isTurnQ2_T3_0_plus_T10" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnQ2" type="EXP" x="36.55" y="43.0"/>
-      <transition label-x="1.5" label-y="-1.0" name="isTurnP1_T3_plus_T0_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnP1" type="EXP" x="38.55" y="3.0"/>
-      <transition label-x="1.0" label-y="-0.5" name="isTurnP3_T2_0_plus_T8" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnP3" type="EXP" x="35.55" y="37.0"/>
-    </nodes>
-    <edges>
-      <arc head="isTurnQ3_T6_0_plus_T1" kind="INPUT" tail="Q4"/>
-      <arc head="setTurnP_T7_0_plus_T3_1" kind="INPUT" tail="Q8"/>
-      <arc broken="true" head="WpT" kind="OUTPUT" tail="setWpT2_T8_plus_T8_1">
-        <point x="8.5" y="32.0"/>
-      </arc>
-      <arc head="T0" kind="INPUT" tail="P1">
-        <point x="18.0" y="6.5"/>
-      </arc>
-      <arc broken="true" head="isTurnQ1_T2_plus_T9" kind="INPUT" tail="Q">
-        <point x="38.0" y="17.0"/>
-      </arc>
-      <arc broken="true" head="isTurnP3_T2_0_plus_T8" kind="INPUT" tail="P">
-        <point x="46.0" y="15.5"/>
-      </arc>
-      <arc broken="true" head="setWqF2_T4_0_plus_T7_0_0" kind="INPUT" tail="WqT">
-        <point x="67.0" y="9.5"/>
-      </arc>
-      <arc head="isTurnP1_T3_plus_T0_1" kind="INPUT" tail="P2">
-        <point x="30.0" y="4.0"/>
-      </arc>
-      <arc head="Q5" kind="OUTPUT" tail="isTurnQ3_T6_0_plus_T1"/>
-      <arc head="T0_0" kind="INPUT" tail="Q1">
-        <point x="20.0" y="35.5"/>
-      </arc>
-      <arc head="P5" kind="OUTPUT" tail="isTurnP2_T6_plus_T7_1"/>
-      <arc head="WqT" kind="OUTPUT" tail="T5_0_0">
-        <point x="63.0" y="24.5"/>
-      </arc>
-      <arc head="P1" kind="OUTPUT" tail="setWpF2_T4_plus_T7_1">
-        <point x="22.0" y="1.0"/>
-      </arc>
-      <arc head="WqT" kind="OUTPUT" tail="T4_0_0">
-        <point x="63.0" y="17.5"/>
-      </arc>
-      <arc broken="true" head="WpT" kind="OUTPUT" tail="setWpT1_T1_plus_T3_1">
-        <point x="9.0" y="25.5"/>
-      </arc>
-      <arc head="WpF" kind="OUTPUT" tail="T1_1">
-        <point x="20.0" y="18.0"/>
-      </arc>
-      <arc broken="true" head="setWpT2_T8_plus_T8_1" kind="INPUT" tail="WpF">
-        <point x="16.0" y="15.5"/>
-      </arc>
-      <arc head="WpT" kind="OUTPUT" tail="T5_1">
-        <point x="5.0" y="25.5"/>
-      </arc>
-      <arc broken="true" head="WpF" kind="OUTPUT" tail="setWpF1_T5_plus_T2_1">
-        <point x="28.0" y="17.0"/>
-        <point x="16.0" y="28.5"/>
-      </arc>
-      <arc broken="true" head="isTurnQ3_T6_0_plus_T1" kind="INPUT" tail="Q">
-        <point x="38.0" y="17.0"/>
-      </arc>
-      <arc head="Q" kind="OUTPUT" tail="T4">
-        <point x="35.0" y="17.0"/>
-      </arc>
-      <arc head="T1_0_0" kind="INPUT" tail="WqF">
-        <point x="80.5" y="21.0"/>
-      </arc>
-      <arc head="T5_0_0" kind="INPUT" tail="WqT">
-        <point x="61.0" y="21.0"/>
-      </arc>
-      <arc head="T1_1" kind="INPUT" tail="WpF">
-        <point x="22.5" y="22.0"/>
-      </arc>
-      <arc head="setWpF1_T5_plus_T2_1" kind="INPUT" tail="P3"/>
-      <arc head="isTurnQ1_T2_plus_T9" kind="INPUT" tail="P2"/>
-      <arc head="T6_1" kind="INPUT" tail="WpF">
-        <point x="22.5" y="22.0"/>
-      </arc>
-      <arc broken="true" head="setWpF2_T4_plus_T7_1" kind="INPUT" mult-k="0.19944684505462648" tail="WpT">
-        <point x="8.5" y="11.5"/>
-      </arc>
-      <arc head="T6_0_0" kind="INPUT" tail="WqF">
-        <point x="80.5" y="21.0"/>
-      </arc>
-      <arc broken="true" head="isTurnP1_T3_plus_T0_1" kind="INPUT" tail="P">
-        <point x="46.0" y="15.5"/>
-      </arc>
-      <arc head="P4" kind="OUTPUT" tail="setWpF1_T5_plus_T2_1"/>
-      <arc head="isTurnP3_T2_0_plus_T8" kind="INPUT" tail="Q2"/>
-      <arc broken="true" head="P" kind="OUTPUT" tail="setTurnP_T7_0_plus_T3_1">
-        <point x="46.0" y="30.0"/>
-      </arc>
-      <arc broken="true" head="WqF" kind="OUTPUT" tail="setWqF1_T5_0_plus_T2_0_0">
-        <point x="74.0" y="29.5"/>
-        <point x="74.0" y="30.5"/>
-      </arc>
-      <arc head="P3" kind="OUTPUT" tail="isTurnQ1_T2_plus_T9"/>
-      <arc head="T5_1" kind="INPUT" tail="WpT">
-        <point x="3.0" y="22.0"/>
-      </arc>
-      <arc broken="true" head="Q" kind="OUTPUT" tail="isTurnQ1_T2_plus_T9">
-        <point x="38.0" y="23.5"/>
-        <point x="38.0" y="27.5"/>
-      </arc>
-      <arc head="Q1" kind="OUTPUT" tail="setWqF2_T4_0_plus_T7_0_0">
-        <point x="24.0" y="47.0"/>
-      </arc>
-      <arc head="P2" kind="OUTPUT" tail="setWpT1_T1_plus_T3_1"/>
-      <arc broken="true" head="setWqT1_T1_0_plus_T3_0_0" kind="INPUT" tail="WqF">
-        <point x="74.0" y="16.5"/>
-      </arc>
-      <arc broken="true" head="setWpT1_T1_plus_T3_1" kind="INPUT" tail="WpF">
-        <point x="16.0" y="16.5"/>
-      </arc>
-      <arc broken="true" head="isTurnP2_T6_plus_T7_1" kind="INPUT" tail="P">
-        <point x="46.0" y="15.5"/>
-      </arc>
-      <arc head="Q2" kind="OUTPUT" tail="setWqT1_T1_0_plus_T3_0_0"/>
-      <arc broken="true" head="WqF" kind="OUTPUT" tail="setWqF2_T4_0_plus_T7_0_0">
-        <point x="74.0" y="29.5"/>
-      </arc>
-      <arc broken="true" head="setTurnQ_T7_plus_T2_1" kind="INPUT" tail="P">
-        <point x="46.0" y="15.0"/>
-      </arc>
-      <arc broken="true" head="WqT" kind="OUTPUT" tail="setWqT2_T8_0_plus_T8_0_0">
-        <point x="67.0" y="29.5"/>
-      </arc>
-      <arc head="setWqT1_T1_0_plus_T3_0_0" kind="INPUT" tail="Q1"/>
-      <arc head="WqF" kind="OUTPUT" tail="T1_0_0">
-        <point x="78.0" y="17.0"/>
-      </arc>
-      <arc head="isTurnQ2_T3_0_plus_T10" kind="INPUT" tail="Q2">
-        <point x="32.0" y="44.0"/>
-      </arc>
-      <arc broken="true" head="P" kind="OUTPUT" tail="isTurnP2_T6_plus_T7_1">
-        <point x="65.0" y="23.5"/>
-        <point x="46.0" y="27.0"/>
-      </arc>
-      <arc broken="true" head="P" kind="OUTPUT" tail="isTurnP1_T3_plus_T0_1">
-        <point x="46.0" y="30.5"/>
-      </arc>
-      <arc head="setWqF2_T4_0_plus_T7_0_0" kind="INPUT" tail="Q10">
-        <point x="61.0" y="44.0"/>
-        <point x="61.0" y="47.0"/>
-      </arc>
-      <arc head="setWqT2_T8_0_plus_T8_0_0" kind="INPUT" tail="Q5"/>
-      <arc head="WqF" kind="OUTPUT" tail="T6_0_0">
-        <point x="77.5" y="24.5"/>
-      </arc>
-      <arc head="Q1" kind="OUTPUT" tail="T0_0">
-        <point x="20.0" y="40.0"/>
-      </arc>
-      <arc broken="true" head="P" kind="OUTPUT" tail="isTurnP3_T2_0_plus_T8">
-        <point x="44.5" y="26.5"/>
-        <point x="46.0" y="28.0"/>
-      </arc>
-      <arc broken="true" head="WpF" kind="OUTPUT" tail="setWpF2_T4_plus_T7_1">
-        <point x="15.5" y="35.0"/>
-      </arc>
-      <arc head="P10" kind="OUTPUT" tail="setTurnQ_T7_plus_T2_1"/>
-      <arc head="T4" kind="INPUT" tail="Q">
-        <point x="31.5" y="21.0"/>
-      </arc>
-      <arc broken="true" head="setWpF1_T5_plus_T2_1" kind="INPUT" tail="WpT">
-        <point x="9.0" y="6.5"/>
-      </arc>
-      <arc head="setWpT2_T8_plus_T8_1" kind="INPUT" tail="P5"/>
-      <arc head="P2" kind="OUTPUT" tail="setWpT2_T8_plus_T8_1">
-        <point x="59.5" y="9.0"/>
-        <point x="59.5" y="6.0"/>
-        <point x="33.0" y="6.0"/>
-      </arc>
-      <arc head="P8" kind="OUTPUT" tail="isTurnP1_T3_plus_T0_1">
-        <point x="45.5" y="4.0"/>
-      </arc>
-      <arc head="WpF" kind="OUTPUT" tail="T6_1">
-        <point x="19.5" y="25.5"/>
-      </arc>
-      <arc head="P1" kind="OUTPUT" tail="T0">
-        <point x="18.0" y="11.0"/>
-      </arc>
-      <arc broken="true" head="Q" kind="OUTPUT" tail="setTurnQ_T7_plus_T2_1">
-        <point x="38.0" y="28.0"/>
-      </arc>
-      <arc head="T5" kind="INPUT" tail="P">
-        <point x="52.5" y="21.0"/>
-      </arc>
-      <arc head="P" kind="OUTPUT" tail="T5">
-        <point x="49.5" y="17.5"/>
-      </arc>
-      <arc head="Q8" kind="OUTPUT" tail="isTurnQ2_T3_0_plus_T10">
-        <point x="42.5" y="44.0"/>
-      </arc>
-      <arc head="setWpF2_T4_plus_T7_1" kind="INPUT" tail="P10">
-        <point x="59.0" y="1.0"/>
-      </arc>
-      <arc broken="true" head="isTurnQ2_T3_0_plus_T10" kind="INPUT" tail="Q">
-        <point x="38.0" y="16.0"/>
-        <point x="41.5" y="18.0"/>
-      </arc>
-      <arc broken="true" head="Q" kind="OUTPUT" tail="isTurnQ3_T6_0_plus_T1">
-        <point x="38.0" y="27.0"/>
-      </arc>
-      <arc head="Q2" kind="OUTPUT" tail="setWqT2_T8_0_plus_T8_0_0">
-        <point x="61.5" y="38.0"/>
-        <point x="61.5" y="41.5"/>
-        <point x="33.5" y="41.5"/>
-      </arc>
-      <arc head="WpT" kind="OUTPUT" tail="T4_1">
-        <point x="5.0" y="18.5"/>
-      </arc>
-      <arc head="T4_0_0" kind="INPUT" tail="WqT">
-        <point x="61.0" y="21.0"/>
-      </arc>
-      <arc head="setTurnQ_T7_plus_T2_1" kind="INPUT" tail="P8"/>
-      <arc broken="true" head="setTurnP_T7_0_plus_T3_1" kind="INPUT" tail="Q">
-        <point x="38.0" y="13.5"/>
-      </arc>
-      <arc head="isTurnP2_T6_plus_T7_1" kind="INPUT" tail="P4"/>
-      <arc head="setWqF1_T5_0_plus_T2_0_0" kind="INPUT" tail="Q3"/>
-      <arc head="Q3" kind="OUTPUT" tail="isTurnP3_T2_0_plus_T8"/>
-      <arc broken="true" head="WqT" kind="OUTPUT" tail="setWqT1_T1_0_plus_T3_0_0">
-        <point x="67.0" y="25.0"/>
-      </arc>
-      <arc head="Q4" kind="OUTPUT" tail="setWqF1_T5_0_plus_T2_0_0"/>
-      <arc broken="true" head="setWqF1_T5_0_plus_T2_0_0" kind="INPUT" tail="WqT">
-        <point x="42.0" y="6.5"/>
-      </arc>
-      <arc head="T4_1" kind="INPUT" tail="WpT">
-        <point x="3.0" y="22.0"/>
-      </arc>
-      <arc head="setWpT1_T1_plus_T3_1" kind="INPUT" tail="P1"/>
-      <arc broken="true" head="setWqT2_T8_0_plus_T8_0_0" kind="INPUT" tail="WqF">
-        <point x="74.0" y="16.5"/>
-      </arc>
-      <arc head="Q10" kind="OUTPUT" tail="setTurnP_T7_0_plus_T3_1"/>
-      <arc broken="true" head="Q" kind="OUTPUT" tail="isTurnQ2_T3_0_plus_T10">
-        <point x="20.0" y="32.5"/>
-        <point x="38.0" y="28.0"/>
-      </arc>
-    </edges>
-  </gspn>
-  <measures gspn-name="process_p_process_q_want_p_want_q_turn" log-uuid="d34666eb-32d9-4c6a-b1bd-786ca497ec4c" name="Property of system" simplified-UI="false">
+  <measures gspn-name="process_p_process_q_want_p_want_q_turn" log-uuid="cc1b60e2-ad7d-41a2-bfe7-673541ea2eda" name="Property of system" simplified-UI="false">
     <assignments/>
     <rgmedd2/>
     <formulas>
@@ -678,19 +432,19 @@
       </formula>
       <formula comment="Valutazione della mutua esclusione andando a dire che la somma dei token nella sezione critica è sempre minore di 2" comment-shown="true" expr="AG(#Q8+ #P8 &lt; 2)" language="CTL">
         <result-table>
-          <mc-result name="MEASURE1" value="true">
+          <mc-result name="MEASURE0" value="true">
             <bindings/>
           </mc-result>
         </result-table>
       </formula>
       <formula comment="Valutazione della assenza di starvation individuale (prima o poi entro sempre in sez. critica)" comment-shown="true" expr="AG(#P2 == 1 -&gt; AG EF #P8 ==1) &amp;&amp; AG(#Q2 == 1 -&gt; AG EF #Q8 ==1)" language="CTL">
         <result-table>
-          <mc-result name="MEASURE2" value="true">
+          <mc-result name="MEASURE0" value="true">
             <bindings/>
           </mc-result>
         </result-table>
       </formula>
-      <formula comment="Assenza di deadlock come definito nelle slides" comment-shown="true" expr="AG(#P2==1 -&gt; AF #P8==1 ) ||  AG (#Q2==1 -&gt; AF #Q8==1 ) " language="CTL">
+      <formula comment="Assenza di deadlock come definito nelle slides (progresso?)" comment-shown="true" expr="AG (( #P2==1 || #Q2 ==1) -&gt;AG EF (#P8==1 || #Q8==1))" language="CTL">
         <result-table>
           <mc-result name="MEASURE0" value="false">
             <bindings/>
@@ -699,7 +453,309 @@
       </formula>
     </formulas>
   </measures>
+  <gspn name="process_p_process_q_want_p_want_q_turn 1" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="1.0" label-y="-1.5" marking="1" name="P1" x="8.0" y="13.0"/>
+      <place label-x="-0.5" label-y="-1.5" name="P2" x="16.0" y="13.0"/>
+      <place label-y="-1.5" name="P3" x="32.0" y="13.0"/>
+      <place label-x="1.0" label-y="-1.5" name="P4" x="40.0" y="13.0"/>
+      <place label-x="0.5" label-y="-1.5" name="P5" x="47.0" y="13.0"/>
+      <place label-x="-1.5" label-y="-1.0" name="P8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="32.0" y="7.0"/>
+      <place label-x="2.0" label-y="0.0" name="P10" x="45.0" y="7.0"/>
+      <place name="P0" x="24.0" y="13.0"/>
+      <place label-x="1.0" label-y="-1.5" marking="1" name="Q1" x="9.0" y="40.0"/>
+      <place label-x="-1.0" label-y="-1.5" name="Q2" x="17.0" y="40.0"/>
+      <place name="Q3" x="33.0" y="40.0"/>
+      <place label-x="0.5" name="Q4" x="40.0" y="40.0"/>
+      <place name="Q5" x="48.0" y="40.0"/>
+      <place label-x="-1.5" label-y="-1.0" name="Q8" superpos-x="1.0" superpos-y="-1.5" superposition-tags="criticalSection" x="30.0" y="46.0"/>
+      <place name="Q10" x="42.0" y="46.0"/>
+      <place name="P6" x="25.0" y="40.0"/>
+      <place label-x="2.0" label-y="-0.5" name="WpT" x="13.0" y="24.0"/>
+      <place label-x="-2.0" label-y="1.0" marking="1" name="WpF" x="20.0" y="24.0"/>
+      <place label-x="2.0" label-y="-0.5" name="WqT" x="42.0" y="25.0"/>
+      <place label-x="-2.0" label-y="1.0" marking="1" name="WqF" x="49.0" y="25.0"/>
+      <place label-x="-1.5" label-y="8.881784197001252E-16" marking="1" name="P" x="82.0" y="24.0"/>
+      <place label-x="1.5" label-y="-8.881784197001252E-16" name="Q" x="74.0" y="24.0"/>
+      <transition label-x="-1.0" label-y="0.5" name="T0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="4.55" y="13.0"/>
+      <transition label-x="-1.0" label-y="0.5" name="T0_0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.0" superpos-y="-0.5" superposition-tags="nonCrit" type="EXP" x="5.55" y="40.0"/>
+      <transition label-x="1.0" label-y="0.0" name="T5_1" nservers-x="0.5" rotation="5.759586531581287" superpos-x="1.5" superpos-y="-1.0" superposition-tags="setWpT3" type="EXP" x="8.55" y="26.0"/>
+      <transition label-x="-1.5" label-y="0.0" name="T6_1" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-1.5" superpos-y="-1.0" superposition-tags="setWpF3" type="EXP" x="25.55" y="26.0"/>
+      <transition label-x="1.0" label-y="0.0" name="T5_0_0" nservers-x="0.5" rotation="5.759586531581287" superpos-x="1.5" superpos-y="-1.0" superposition-tags="setWqT3" type="EXP" x="37.55" y="27.0"/>
+      <transition label-x="-1.5" label-y="0.0" name="T6_0_0" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-1.5" superpos-y="-1.0" superposition-tags="setWqF3" type="EXP" x="54.55" y="27.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="setWqF1_T5_0_plus_T2_0_0" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqF1" type="EXP" x="37.55" y="40.0"/>
+      <transition label-x="-0.5" label-y="2.0" name="setWpF2_T4_plus_T7_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.0" superposition-tags="setWpF2" type="EXP" x="14.55" y="3.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="setWpF1_T5_plus_T2_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="setWpF1" type="EXP" x="36.55" y="13.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="setWqT1_T1_0_plus_T3_0_0" nservers-x="0.5" superpos-x="0.5" superpos-y="1.5" superposition-tags="setWqT1" type="EXP" x="13.55" y="40.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="setWpT2_T8_plus_T8_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT2" type="EXP" x="52.55" y="13.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="setWqF2_T4_0_plus_T7_0_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.0" superposition-tags="setWqF2" type="EXP" x="24.55" y="51.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="setWpT1_T1_plus_T3_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="setWpT1" type="EXP" x="12.55" y="13.0"/>
+      <transition name="setWqT2_T8_0_plus_T8_0_0" nservers-x="0.5" superpos-y="1.5" superposition-tags="setWqT2" type="EXP" x="53.55" y="40.0"/>
+      <transition label-x="-0.5" label-y="2.5" name="isWpT_copy_T9_plus_T4_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="isWpT" type="EXP" x="21.55" y="40.0"/>
+      <transition label-x="-0.5" label-y="2.5" name="isWqT_T9_plus_T4_0_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="isWqT" type="EXP" x="20.55" y="13.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="isWpF_T3_0_plus_T1_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isWpF" type="EXP" x="22.55" y="46.0"/>
+      <transition label-y="-2.0" name="isWqF_T10_plus_T1_0_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superpos-y="-1.5" superposition-tags="isWqF" type="EXP" x="24.55" y="7.0"/>
+      <transition label-x="-1.0" name="T4" nservers-x="0.5" rotation="0.7853981633974483" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setTurnQ1" type="EXP" x="69.55" y="22.0"/>
+      <transition label-x="0.5" name="T5" nservers-x="0.5" rotation="2.356194490192345" superpos-x="2.0" superpos-y="-0.5" superposition-tags="setTurnP1" type="EXP" x="87.55" y="22.0"/>
+      <transition label-x="1.5" label-y="-1.0" name="isTurnQ1_T2_plus_T9" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-0.5" superpos-y="-1.5" superposition-tags="isTurnQ1" type="EXP" x="28.55" y="13.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="setTurnP_T7_0_plus_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnP" type="EXP" x="36.55" y="46.0"/>
+      <transition label-x="-1.5" label-y="-1.0" name="setTurnQ_T7_plus_T2_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.0" superposition-tags="setTurnQ" type="EXP" x="39.55" y="7.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="isTurnQ3_T6_0_plus_T1" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnQ3" type="EXP" x="44.55" y="40.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="isTurnP2_T6_plus_T7_1" nservers-x="0.5" superpos-y="-1.5" superposition-tags="isTurnP2" type="EXP" x="43.55" y="13.0"/>
+      <transition name="isTurnQ2_T11_plus_T10" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isTurnQ2" type="EXP" x="22.55" y="37.0"/>
+      <transition label-x="2.0" name="isTurnP1_T3_plus_T0_1" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="-1.5" superposition-tags="isTurnP1" type="EXP" x="21.55" y="10.0"/>
+      <transition label-x="1.0" label-y="-0.5" name="isTurnP3_T2_0_plus_T8" nservers-x="0.5" superpos-y="1.5" superposition-tags="isTurnP3" type="EXP" x="29.55" y="40.0"/>
+    </nodes>
+    <edges>
+      <arc head="isTurnQ2_T11_plus_T10" kind="INPUT" tail="P6">
+        <point x="26.0" y="38.0"/>
+      </arc>
+      <arc head="P4" kind="OUTPUT" tail="setWpF1_T5_plus_T2_1"/>
+      <arc head="P2" kind="OUTPUT" tail="isTurnP1_T3_plus_T0_1">
+        <point x="18.5" y="11.0"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P1">
+        <point x="5.0" y="11.5"/>
+      </arc>
+      <arc broken="true" head="WpF" kind="OUTPUT" tail="isWpF_T3_0_plus_T1_1">
+        <point x="25.0" y="21.0"/>
+      </arc>
+      <arc broken="true" head="WpF" kind="OUTPUT" tail="setWpF2_T4_plus_T7_1">
+        <point x="21.0" y="18.0"/>
+      </arc>
+      <arc head="P2" kind="OUTPUT" tail="setWpT2_T8_plus_T8_1">
+        <point x="56.0" y="14.0"/>
+        <point x="56.0" y="18.5"/>
+        <point x="17.0" y="18.5"/>
+      </arc>
+      <arc head="P10" kind="OUTPUT" tail="setTurnQ_T7_plus_T2_1"/>
+      <arc broken="true" head="setWpT2_T8_plus_T8_1" kind="INPUT" tail="WpF">
+        <point x="21.0" y="32.0"/>
+      </arc>
+      <arc head="T6_0_0" kind="INPUT" tail="WqF">
+        <point x="56.5" y="26.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="setWqT1_T1_0_plus_T3_0_0"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1">
+        <point x="6.0" y="38.5"/>
+      </arc>
+      <arc broken="true" head="setWqT2_T8_0_plus_T8_0_0" kind="INPUT" tail="WqF">
+        <point x="50.0" y="33.0"/>
+      </arc>
+      <arc broken="true" head="Q" kind="OUTPUT" tail="setTurnQ_T7_plus_T2_1">
+        <point x="75.0" y="28.0"/>
+      </arc>
+      <arc broken="true" head="WqF" kind="OUTPUT" tail="setWqF2_T4_0_plus_T7_0_0">
+        <point x="50.0" y="19.0"/>
+      </arc>
+      <arc broken="true" head="P" kind="OUTPUT" tail="isTurnP3_T2_0_plus_T8">
+        <point x="95.0" y="29.5"/>
+        <point x="86.0" y="29.5"/>
+      </arc>
+      <arc broken="true" head="setWpF2_T4_plus_T7_1" kind="INPUT" tail="WpT">
+        <point x="14.0" y="18.0"/>
+      </arc>
+      <arc head="P5" kind="OUTPUT" tail="isTurnP2_T6_plus_T7_1"/>
+      <arc broken="true" head="WpT" kind="OUTPUT" tail="setWpT1_T1_plus_T3_1">
+        <point x="14.0" y="28.0"/>
+      </arc>
+      <arc head="Q4" kind="OUTPUT" tail="setWqF1_T5_0_plus_T2_0_0"/>
+      <arc broken="true" head="isTurnP1_T3_plus_T0_1" kind="INPUT" tail="P">
+        <point x="89.5" y="25.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="isTurnQ2_T11_plus_T10">
+        <point x="20.0" y="38.0"/>
+      </arc>
+      <arc head="setWpF2_T4_plus_T7_1" kind="INPUT" tail="P10">
+        <point x="46.0" y="4.0"/>
+      </arc>
+      <arc broken="true" head="Q" kind="OUTPUT" tail="isTurnQ1_T2_plus_T9">
+        <point x="63.0" y="29.5"/>
+        <point x="71.5" y="29.5"/>
+      </arc>
+      <arc head="isTurnP3_T2_0_plus_T8" kind="INPUT" tail="P6"/>
+      <arc broken="true" head="WqT" kind="OUTPUT" tail="isWqT_T9_plus_T4_0_0">
+        <point x="39.0" y="22.5"/>
+      </arc>
+      <arc head="Q8" kind="OUTPUT" tail="isWpF_T3_0_plus_T1_1">
+        <point x="28.5" y="47.0"/>
+      </arc>
+      <arc broken="true" head="setWpF1_T5_plus_T2_1" kind="INPUT" tail="WpT">
+        <point x="14.0" y="22.0"/>
+      </arc>
+      <arc head="setWpT2_T8_plus_T8_1" kind="INPUT" tail="P5"/>
+      <arc broken="true" head="setWpT1_T1_plus_T3_1" kind="INPUT" tail="WpF">
+        <point x="21.0" y="28.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="setWqT2_T8_0_plus_T8_0_0">
+        <point x="57.0" y="41.0"/>
+        <point x="57.0" y="33.5"/>
+        <point x="18.0" y="33.5"/>
+      </arc>
+      <arc head="isTurnQ3_T6_0_plus_T1" kind="INPUT" tail="Q4"/>
+      <arc head="Q1" kind="OUTPUT" tail="T0_0">
+        <point x="6.0" y="43.0"/>
+      </arc>
+      <arc broken="true" head="setWqT1_T1_0_plus_T3_0_0" kind="INPUT" tail="WqF">
+        <point x="50.0" y="29.0"/>
+      </arc>
+      <arc broken="true" head="isWqF_T10_plus_T1_0_0" kind="INPUT" tail="WqF">
+        <point x="56.5" y="26.0"/>
+      </arc>
+      <arc head="Q5" kind="OUTPUT" tail="isTurnQ3_T6_0_plus_T1"/>
+      <arc head="isWqF_T10_plus_T1_0_0" kind="INPUT" tail="P2">
+        <point x="17.0" y="8.0"/>
+      </arc>
+      <arc broken="true" head="WqF" kind="OUTPUT" tail="isWqF_T10_plus_T1_0_0">
+        <point x="54.0" y="22.0"/>
+      </arc>
+      <arc head="WqT" kind="OUTPUT" tail="T5_0_0">
+        <point x="39.0" y="29.5"/>
+      </arc>
+      <arc broken="true" head="setTurnQ_T7_plus_T2_1" kind="INPUT" tail="P">
+        <point x="83.0" y="28.0"/>
+      </arc>
+      <arc head="T5_0_0" kind="INPUT" tail="WqT">
+        <point x="37.0" y="26.0"/>
+      </arc>
+      <arc head="setWqF1_T5_0_plus_T2_0_0" kind="INPUT" tail="Q3"/>
+      <arc broken="true" head="WqF" kind="OUTPUT" tail="setWqF1_T5_0_plus_T2_0_0">
+        <point x="50.0" y="23.0"/>
+        <point x="50.0" y="24.0"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" tail="isWqT_T9_plus_T4_0_0"/>
+      <arc head="P3" kind="OUTPUT" tail="isTurnQ1_T2_plus_T9"/>
+      <arc head="setWqF2_T4_0_plus_T7_0_0" kind="INPUT" tail="Q10">
+        <point x="47.0" y="47.0"/>
+        <point x="47.0" y="52.0"/>
+      </arc>
+      <arc head="P8" kind="OUTPUT" tail="isWqF_T10_plus_T1_0_0"/>
+      <arc head="T4" kind="INPUT" tail="Q">
+        <point x="68.5" y="25.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="P">
+        <point x="89.5" y="25.0"/>
+      </arc>
+      <arc head="P" kind="OUTPUT" tail="T5">
+        <point x="86.5" y="21.5"/>
+      </arc>
+      <arc head="isTurnP2_T6_plus_T7_1" kind="INPUT" tail="P4"/>
+      <arc head="setWpT1_T1_plus_T3_1" kind="INPUT" tail="P1"/>
+      <arc head="setWpF1_T5_plus_T2_1" kind="INPUT" tail="P3"/>
+      <arc head="Q" kind="OUTPUT" tail="T4">
+        <point x="72.0" y="21.0"/>
+      </arc>
+      <arc broken="true" head="P" kind="OUTPUT" tail="setTurnP_T7_0_plus_T3_0">
+        <point x="83.0" y="22.0"/>
+      </arc>
+      <arc broken="true" head="isTurnQ1_T2_plus_T9" kind="INPUT" tail="Q">
+        <point x="59.5" y="25.0"/>
+      </arc>
+      <arc head="setWqT2_T8_0_plus_T8_0_0" kind="INPUT" tail="Q5"/>
+      <arc broken="true" head="setTurnP_T7_0_plus_T3_0" kind="INPUT" tail="Q">
+        <point x="75.0" y="22.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="isTurnP3_T2_0_plus_T8"/>
+      <arc broken="true" head="isTurnQ2_T11_plus_T10" kind="INPUT" tail="Q">
+        <point x="65.5" y="25.0"/>
+        <point x="64.5" y="25.0"/>
+      </arc>
+      <arc broken="true" head="isWqT_T9_plus_T4_0_0" kind="INPUT" tail="WqT">
+        <point x="37.0" y="26.0"/>
+      </arc>
+      <arc head="WqF" kind="OUTPUT" tail="T6_0_0">
+        <point x="53.5" y="29.5"/>
+      </arc>
+      <arc broken="true" head="WpT" kind="OUTPUT" tail="setWpT2_T8_plus_T8_1">
+        <point x="14.0" y="32.0"/>
+      </arc>
+      <arc broken="true" head="WqT" kind="OUTPUT" tail="setWqT2_T8_0_plus_T8_0_0">
+        <point x="43.0" y="33.0"/>
+      </arc>
+      <arc head="T5_1" kind="INPUT" tail="WpT">
+        <point x="8.0" y="25.0"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="setWqF2_T4_0_plus_T7_0_0">
+        <point x="10.0" y="52.0"/>
+      </arc>
+      <arc broken="true" head="P" kind="OUTPUT" tail="isTurnP1_T3_plus_T0_1">
+        <point x="86.0" y="29.5"/>
+      </arc>
+      <arc head="WpF" kind="OUTPUT" tail="T6_1">
+        <point x="24.5" y="28.5"/>
+      </arc>
+      <arc head="setTurnQ_T7_plus_T2_1" kind="INPUT" tail="P8"/>
+      <arc broken="true" head="WpT" kind="OUTPUT" tail="isWpT_copy_T9_plus_T4_1">
+        <point x="10.0" y="21.5"/>
+      </arc>
+      <arc broken="true" head="WpF" kind="OUTPUT" tail="setWpF1_T5_plus_T2_1">
+        <point x="21.0" y="22.0"/>
+        <point x="21.0" y="23.0"/>
+      </arc>
+      <arc broken="true" head="isWpT_copy_T9_plus_T4_1" kind="INPUT" tail="WpT">
+        <point x="8.0" y="25.0"/>
+      </arc>
+      <arc head="isWpF_T3_0_plus_T1_1" kind="INPUT" tail="Q2">
+        <point x="18.0" y="47.0"/>
+      </arc>
+      <arc broken="true" head="isTurnP3_T2_0_plus_T8" kind="INPUT" tail="P">
+        <point x="100.0" y="25.0"/>
+      </arc>
+      <arc broken="true" head="isWpF_T3_0_plus_T1_1" kind="INPUT" tail="WpF">
+        <point x="27.5" y="25.0"/>
+      </arc>
+      <arc head="WpT" kind="OUTPUT" tail="T5_1">
+        <point x="10.0" y="28.5"/>
+      </arc>
+      <arc broken="true" head="P" kind="OUTPUT" tail="isTurnP2_T6_plus_T7_1">
+        <point x="90.0" y="29.5"/>
+        <point x="86.0" y="29.5"/>
+      </arc>
+      <arc broken="true" head="isTurnP2_T6_plus_T7_1" kind="INPUT" tail="P">
+        <point x="95.0" y="25.0"/>
+      </arc>
+      <arc broken="true" head="setWqF2_T4_0_plus_T7_0_0" kind="INPUT" tail="WqT">
+        <point x="43.0" y="19.0"/>
+      </arc>
+      <arc broken="true" head="setWqF1_T5_0_plus_T2_0_0" kind="INPUT" tail="WqT">
+        <point x="43.0" y="23.0"/>
+      </arc>
+      <arc head="isTurnQ1_T2_plus_T9" kind="INPUT" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" tail="setWpF2_T4_plus_T7_1">
+        <point x="9.0" y="4.0"/>
+      </arc>
+      <arc head="T6_1" kind="INPUT" tail="WpF">
+        <point x="27.5" y="25.0"/>
+      </arc>
+      <arc head="setTurnP_T7_0_plus_T3_0" kind="INPUT" tail="Q8"/>
+      <arc head="P1" kind="OUTPUT" tail="T0">
+        <point x="5.0" y="16.0"/>
+      </arc>
+      <arc head="P6" kind="OUTPUT" tail="isWpT_copy_T9_plus_T4_1"/>
+      <arc head="isWqT_T9_plus_T4_0_0" kind="INPUT" tail="P2"/>
+      <arc head="P2" kind="OUTPUT" tail="setWpT1_T1_plus_T3_1"/>
+      <arc head="Q10" kind="OUTPUT" tail="setTurnP_T7_0_plus_T3_0"/>
+      <arc broken="true" head="Q" kind="OUTPUT" tail="isTurnQ2_T11_plus_T10">
+        <point x="67.5" y="29.5"/>
+        <point x="71.5" y="29.5"/>
+      </arc>
+      <arc head="setWqT1_T1_0_plus_T3_0_0" kind="INPUT" tail="Q1"/>
+      <arc broken="true" head="WqT" kind="OUTPUT" tail="setWqT1_T1_0_plus_T3_0_0">
+        <point x="43.0" y="29.0"/>
+      </arc>
+      <arc head="isWpT_copy_T9_plus_T4_1" kind="INPUT" tail="Q2"/>
+      <arc head="isTurnP1_T3_plus_T0_1" kind="INPUT" tail="P0">
+        <point x="25.0" y="11.0"/>
+      </arc>
+      <arc broken="true" head="Q" kind="OUTPUT" tail="isTurnQ3_T6_0_plus_T1">
+        <point x="71.5" y="29.5"/>
+      </arc>
+      <arc broken="true" head="isTurnQ3_T6_0_plus_T1" kind="INPUT" tail="Q">
+        <point x="68.5" y="25.0"/>
+      </arc>
+    </edges>
+  </gspn>
   <resource-list>
-    <document-log uuid="d34666eb-32d9-4c6a-b1bd-786ca497ec4c">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAMV0AOwbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vRFNQTi1Ub29sIiAtbG9hZCAiL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuIiAtcGJhc2lzIC1kZXRlY3QtZXhwIC1wc2ZsIC1ibmQgCnQAsxtbMW0bWzRtTE9BRElORyBQRVRSSSBORVQgL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuIChuZXQvZGVmKS4uLhtbMjJtG1syNG0KdAAPTUFSS0lORyBQQVI6IDAKdAAQUExBQ0VTOiAgICAgIDIwCnQAD1JBVEUgUEFSOiAgICAwCnQAEFRSQU5TSVRJT05TOiAyOAp0AA9NRUFTVVJFUzogICAgMAp0AChMT0FESU5HIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAABCnQAAQp0AB5DT01QVVRJTkcgUExBQ0UgRkxPVyBCQVNJUy4uLgp0ABJNPTI4LCBOPTIwLCBOMD0yMAp0ADlDb21wdXRhdGlvbiBvZiBGbG93IGJhc2lzOiBzdGVwIDEvMjgsIHxLfD0xOCwgcHJvZHVjdHM9MQp0AFMbWzFBICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCnQAUxtbMUFDb21wdXRhdGlvbiBvZiBGbG93IGJhc2lzOiBjb21wbGV0ZWQgaW4gMTMgc3RlcHMsIHxLfD03LiAgICAgICAgICAgICAgICAgICAgICAKdABARk9VTkQgNyBWRUNUT1JTIElOIFRIRSBQTEFDRSBGTE9XIEJBU0lTICg1IHNlbWlmbG93cywgMiBmbG93cykuCnQAAQp0AAEKdAAnQWxsIHBsYWNlcyBhcmUgY292ZXJlZCBieSBzb21lIFAtZmxvdy4KdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAnQVZPSUQgRVhQT05FTlRJQUwgR1JPV1RIIE9GIFNFTUlGTE9XUy4KdAAdQ09NUFVUSU5HIFBMQUNFIFNFTUlGTE9XUy4uLgp0ABJNPTI4LCBOPTIwLCBOMD0yMAp0ACtHZW5lcmF0aW9uIG9mIFNlbWlmbG93czogc3RlcCAxLzI4LCB8S3w9MTgKdABTG1sxQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAp0AFEbWzFBR2VuZXJhdGlvbiBvZiBTZW1pZmxvd3M6IGNvbXBsZXRlZCBpbiAxMyBzdGVwcywgfEt8PTkuICAgICAgICAgICAgICAgICAgICAgIAp0ABlGT1VORCA5IFBMQUNFIFNFTUlGTE9XUy4KdAABCnQAAQp0ACtBbGwgcGxhY2VzIGFyZSBjb3ZlcmVkIGJ5IHNvbWUgUC1zZW1pZmxvdy4KdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAsQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBGUk9NIFAtU0VNSUZMT1dTIC4uLgp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp0AOsbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vRFNQTi1Ub29sIiAtbG9hZCAiL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuIiAtbG9hZC1ibmQgLXRpbWVvdXQgNSAtaWxwLWJuZCAKdACzG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy4xMC9BbGdvcml0bW8gMy4xMC1Qcm9wZXJ0eSBvZiBzeXN0ZW0uc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3R1cm4gKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgMjAKdAAPUkFURSBQQVI6ICAgIDAKdAAQVFJBTlNJVElPTlM6IDI4CnQAD01FQVNVUkVTOiAgICAwCnQAKExPQURJTkcgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0AAEKdAABCnQAFUxPQURJTkcgQk5EIEZJTEUgLi4uCnQAIFNjaGVkdWxlZCB0aW1lb3V0IG9mIDUgc2Vjb25kcy4KdAAlQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBVU0lORyBJTFAgLi4uCnQAGEFsbCBwbGFjZXMgYXJlIGJvdW5kZWQuCnEAfgAkdADOG1swbUVYRUM6ICIvb3B0L2dyZWF0c3BuL2xpYi9hcHAvcG9ydGFibGVfZ3JlYXRzcG4vYmluL1JHTUVERDMiICIvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy4xMC9BbGdvcml0bW8gMy4xMC1Qcm9wZXJ0eSBvZiBzeXN0ZW0uc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3R1cm4iIC1NRVRBIC1DIAp0ACBSYW5kb20gc2VlZHM6IDE2ODc4NzYyNzUgNzIwNDYwCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAARR3JlYXRTUE4vTWVkZGx5Lgp0ADggIENvcHlyaWdodCAoQykgMTk4Ny0yMDE4LCBVbml2ZXJzaXR5IG9mIFRvcmlubywgSXRhbHkuCnQAMSAgU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0ACsgIGJlY2N1dGlAZGkudW5pdG8uaXQgaWYgeW91IGZpbmQgYW55IGJ1Zy4KdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AB9CYXNlZCBvbiBNRURETFkgdmVyc2lvbiAwLjE2LjAKdABGICBDb3B5cmlnaHQgKEMpIDIwMDksIElvd2EgU3RhdGUgVW5pdmVyc2l0eSBSZXNlYXJjaCBGb3VuZGF0aW9uLCBJbmMuCnQAKSAgd2Vic2l0ZTogaHR0cDovL21lZGRseS5zb3VyY2Vmb3JnZS5uZXQKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AClVc2luZyBwZXItZXZlbnQgc2F0dXJhdGlvbiAoc2F0LXByZWdlbikuCnQAG1VzaW5nIGZhc3QgTlNGIGdlbmVyYXRpb24uCnQAElByb2Nlc3MgSUQ6IDM0NzQ1CnQAjk1PREVMIE5BTUU6IC9ob21lL21hcmNvL0Rlc2t0b3AvUHJvZ2V0dG8tdnBjL0FsZ29yaXRtbyAzLjEwL0FsZ29yaXRtbyAzLjEwLVByb3BlcnR5IG9mIHN5c3RlbS5zb2x1dGlvbi9wcm9jZXNzX3BfcHJvY2Vzc19xX3dhbnRfcF93YW50X3FfdHVybgp0AB0gIDIwIHBsYWNlcywgMjggdHJhbnNpdGlvbnMuCnQAJ1VzZWQgTWVtb3J5IGZvciBlbmNvZGluZyBuZXQ6IDU3OTcyOEtCCnQAmE9wZW5pbmcgZmlsZTogL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuLmJuZCBPSy4KdACbT3BlbmluZyBmaWxlOiAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy4xMC9BbGdvcml0bW8gMy4xMC1Qcm9wZXJ0eSBvZiBzeXN0ZW0uc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3R1cm4uaWxwYm5kIE9LLgp0ABBJTlBVVCBBUkNTOiAgMjYKdAAQT1VUUFVUIEFSQ1M6IDI2CnQAD0lOSElCIEFSQ1M6ICAwCnQAEFRFU1QgQVJDUzogICAxOAp0ABBQTEFDRVM6ICAgICAgMjAKdAAQVFJBTlNJVElPTlM6IDI4CnQAD0lOVkFSSUFOVFM6ICA3CnQAD1AtU0VNSUZMT1dTOiA5CnQAFk1BWCBJTlZBUklBTlQgQ0FSRDogMQp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBWQVJJQUJMRSBPUkRFUiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ADxWYXJpYWJsZSBvcmRlciBtZXRob2Q6IE1ldGEtaGV1cmlzdGljIHVzaW5nIHdlaWdodGVkIHNjb3JlLgp0AFEgIE1FVEhPRCAgICAgICAgICAgICAgU0NPUkUgICAgICAgIFNXSVIgICAgICAgU09VUFMgRElTQ09VTlQgIFdFSUdIVCAgICAgICBUSU1FIAp0AFUgIFNMTyAgICAgICAgICAgICAgIDE3MC41NDQgICAgICAgICAxNTIgICAgICAgICAxMDQgICAgICAgIDEgICAxLjEyMiAgICA4LjNlLTA1IHNlYy4KdABVICBTTE8rRm9yY2UgICAgICAgICAgIDg5Ljc2ICAgICAgICAgMTAyICAgICAgICAgIDg0ICAgICAgICAxICAgIDAuODggICAgMy4zZS0wNSBzZWMuCnQAVSAgU0xPLTE2ICAgICAgICAgICAgMTIxLjI5NiAgICAgICAgIDE1MiAgICAgICAgIDEwNCAgICAgICAgMSAgIDAuNzk4ICAgIDUuM2UtMDUgc2VjLgp0AFUgIFNMTy0xNitGb3JjZSAgICAgICA5Mi45MjIgICAgICAgICAxMDIgICAgICAgICAgODQgICAgICAgIDEgICAwLjkxMSAgICAyLjVlLTA1IHNlYy4KdABVICBUT1YyICAgICAgICAgICAgICAxMzkuMDc3ICAgICAgICAgMTUzICAgICAgICAgIDkyICAgICAgICAxICAgMC45MDkgICAgMy41ZS0wNSBzZWMuCnQAVSAgVE9WMitGb3JjZSAgICAgICAgMTI4LjUzOCAgICAgICAgIDExMSAgICAgICAgICA4NSAgICAgICAgMSAgIDEuMTU4ICAgICAgM2UtMDUgc2VjLgp0AFUgIE5PQUNLMiAgICAgICAgICAgIDE3My4wNDMgICAgICAgICAxNTMgICAgICAgICAgODcgICAgICAgIDEgICAxLjEzMSAgICA2LjllLTA1IHNlYy4KdABVICBOT0FDSzIrRm9yY2UgICAgICAgMTEwLjc0ICAgICAgICAgMTEzICAgICAgICAgIDg2ICAgICAgICAxICAgIDAuOTggICAgMi41ZS0wNSBzZWMuCnQAVSAgQUNNICAgICAgICAgICAgICAgMTg5LjA1NyAgICAgICAgIDE4NyAgICAgICAgICA5MyAgICAgICAgMSAgIDEuMDExICAgIDMuN2UtMDUgc2VjLgp0AFUgIEFDTStGb3JjZSAgICAgICAgICAxMzQuMTkgICAgICAgICAxMDUgICAgICAgICAgODMgICAgICAgIDEgICAxLjI3OCAgICAyLjllLTA1IHNlYy4KdABVICBDTTIgICAgICAgICAgICAgICAyMzguNDI1ICAgICAgICAgMTg3ICAgICAgICAgIDkzICAgICAgICAxICAgMS4yNzUgICAgMi4zZS0wNSBzZWMuCnQAVSAgQ00yK0ZvcmNlICAgICAgICAgMTE1LjM5NSAgICAgICAgIDEwNSAgICAgICAgICA4MyAgICAgICAgMSAgIDEuMDk5ICAgIDIuNGUtMDUgc2VjLgp0AFUgIFAgICAgICAgICAgICAgICAgIDM1MS40MTUgICAgICAgICAzMzUgICAgICAgICAxNjcgICAgICAgIDEgICAxLjA0OSAgICAgIDJlLTA1IHNlYy4KdABVICBHUCAgICAgICAgICAgICAgICAxMzguMzk3ICAgICAgICAgMTE5ICAgICAgICAgIDk1ICAgICAgICAxICAgMS4xNjMgICAgNi4zZS0wNSBzZWMuCnQAVSAgR1ArRm9yY2UgICAgICAgICAgIDExOS4yNSAgICAgICAgIDEwNiAgICAgICAgICA4MiAgICAgICAgMSAgIDEuMTI1ICAgIDMuMmUtMDUgc2VjLgp0AD1NZXRhLWhldXJpc3RpYzogc2VsZWN0aW5nIG1ldGhvZCBTTE8rRm9yY2Ugd2l0aCBzY29yZTogODkuNzYKdAApVGltZSB0byBjb21wdXRlIHZhcmlhYmxlIG9yZGVyOiAwLjAwMDgzNAp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PSBTVEFSVCBGSVJJTkcgUlVMRVMgRU5DT0RJTkcgPT09PT09PT09PT09PT09PT09PT09PT09PQp0ACxFbmNvZGVkIDI4IHRyYW5zaXRpb24gaW4gMSBwcmlvcml0eSBncm91cHMuCnQAIVRpbWUgdG8gYnVpbGQgYWxsIE5TRnM6IDAuMDAwNTY4CnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFJFQUNIQUJJTElUWSBTRVQgR0VORVJBVElPTiA9PT09PT09PT09PT09PT09PT09PT09PT09CnQAFVNwbGl0OiBTcGxpdFN1YnRyYWN0CnQAHFJTIGdlbmVyYXRpb24gdGltZTogMC4wMDAyMgp0AB1Db21wdXRpbmcgdmFyaWFibGUgYm91bmRzLi4uCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBNRU1PUlkgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKSBUb3RhbCBNZW1vcnkgVXNlZDogICAgICAgNTc5NzI4IEtCeXRlcy4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gQ1RMIEVWQUxVQVRJT04gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAABCnQAlVByb2Nlc3Npbmc6IChub3QgRSBGIChub3QgKCgobm90IChQMiA9IDEpKSBvciAobm90IEUgRyAobm90IChQOCA9IDEpKSkpIG9yIChub3QgRSBGIChub3QgKChub3QgKFEyID0gMSkpIG9yIChub3QgRSBHIChub3QgKFE4ID0gMSkpKSkpKSkpKSAgLT4gIGJvb2wKdAAJRXZhbDogUDIKdAAUICAg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cQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMd4</document-log>
+    <document-log uuid="cc1b60e2-ad7d-41a2-bfe7-673541ea2eda">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAMV0AOwbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vRFNQTi1Ub29sIiAtbG9hZCAiL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuIiAtcGJhc2lzIC1kZXRlY3QtZXhwIC1wc2ZsIC1ibmQgCnQAsxtbMW0bWzRtTE9BRElORyBQRVRSSSBORVQgL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuIChuZXQvZGVmKS4uLhtbMjJtG1syNG0KdAAPTUFSS0lORyBQQVI6IDAKdAAQUExBQ0VTOiAgICAgIDIyCnQAD1JBVEUgUEFSOiAgICAwCnQAEFRSQU5TSVRJT05TOiAyOAp0AA9NRUFTVVJFUzogICAgMAp0AChMT0FESU5HIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAABCnQAAQp0AB5DT01QVVRJTkcgUExBQ0UgRkxPVyBCQVNJUy4uLgp0ABJNPTI4LCBOPTIyLCBOMD0yMgp0ADlDb21wdXRhdGlvbiBvZiBGbG93IGJhc2lzOiBzdGVwIDEvMjgsIHxLfD0yMCwgcHJvZHVjdHM9MQp0AFMbWzFBICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCnQAUxtbMUFDb21wdXRhdGlvbiBvZiBGbG93IGJhc2lzOiBjb21wbGV0ZWQgaW4gMTUgc3RlcHMsIHxLfD03LiAgICAgICAgICAgICAgICAgICAgICAKdABARk9VTkQgNyBWRUNUT1JTIElOIFRIRSBQTEFDRSBGTE9XIEJBU0lTICg1IHNlbWlmbG93cywgMiBmbG93cykuCnQAAQp0AAEKdAAnQWxsIHBsYWNlcyBhcmUgY292ZXJlZCBieSBzb21lIFAtZmxvdy4KdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAnQVZPSUQgRVhQT05FTlRJQUwgR1JPV1RIIE9GIFNFTUlGTE9XUy4KdAAdQ09NUFVUSU5HIFBMQUNFIFNFTUlGTE9XUy4uLgp0ABJNPTI4LCBOPTIyLCBOMD0yMgp0ACtHZW5lcmF0aW9uIG9mIFNlbWlmbG93czogc3RlcCAxLzI4LCB8S3w9MjAKdABTG1sxQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAp0AFEbWzFBR2VuZXJhdGlvbiBvZiBTZW1pZmxvd3M6IGNvbXBsZXRlZCBpbiAxNSBzdGVwcywgfEt8PTkuICAgICAgICAgICAgICAgICAgICAgIAp0ABlGT1VORCA5IFBMQUNFIFNFTUlGTE9XUy4KdAABCnQAAQp0ACtBbGwgcGxhY2VzIGFyZSBjb3ZlcmVkIGJ5IHNvbWUgUC1zZW1pZmxvdy4KdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAsQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBGUk9NIFAtU0VNSUZMT1dTIC4uLgp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp0AOsbWzBtRVhFQzogIi9vcHQvZ3JlYXRzcG4vbGliL2FwcC9wb3J0YWJsZV9ncmVhdHNwbi9iaW4vRFNQTi1Ub29sIiAtbG9hZCAiL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuIiAtbG9hZC1ibmQgLXRpbWVvdXQgNSAtaWxwLWJuZCAKdACzG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy4xMC9BbGdvcml0bW8gMy4xMC1Qcm9wZXJ0eSBvZiBzeXN0ZW0uc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3R1cm4gKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgMjIKdAAPUkFURSBQQVI6ICAgIDAKdAAQVFJBTlNJVElPTlM6IDI4CnQAD01FQVNVUkVTOiAgICAwCnQAKExPQURJTkcgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0AAEKdAABCnQAFUxPQURJTkcgQk5EIEZJTEUgLi4uCnQAIFNjaGVkdWxlZCB0aW1lb3V0IG9mIDUgc2Vjb25kcy4KdAAlQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBVU0lORyBJTFAgLi4uCnQAGEFsbCBwbGFjZXMgYXJlIGJvdW5kZWQuCnEAfgAkdADOG1swbUVYRUM6ICIvb3B0L2dyZWF0c3BuL2xpYi9hcHAvcG9ydGFibGVfZ3JlYXRzcG4vYmluL1JHTUVERDMiICIvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy4xMC9BbGdvcml0bW8gMy4xMC1Qcm9wZXJ0eSBvZiBzeXN0ZW0uc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3R1cm4iIC1NRVRBIC1DIAp0ACBSYW5kb20gc2VlZHM6IDE2ODc5NTMzNDkgOTU3NjM0CnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAARR3JlYXRTUE4vTWVkZGx5Lgp0ADggIENvcHlyaWdodCAoQykgMTk4Ny0yMDE4LCBVbml2ZXJzaXR5IG9mIFRvcmlubywgSXRhbHkuCnQAMSAgU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0ACsgIGJlY2N1dGlAZGkudW5pdG8uaXQgaWYgeW91IGZpbmQgYW55IGJ1Zy4KdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AB9CYXNlZCBvbiBNRURETFkgdmVyc2lvbiAwLjE2LjAKdABGICBDb3B5cmlnaHQgKEMpIDIwMDksIElvd2EgU3RhdGUgVW5pdmVyc2l0eSBSZXNlYXJjaCBGb3VuZGF0aW9uLCBJbmMuCnQAKSAgd2Vic2l0ZTogaHR0cDovL21lZGRseS5zb3VyY2Vmb3JnZS5uZXQKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AClVc2luZyBwZXItZXZlbnQgc2F0dXJhdGlvbiAoc2F0LXByZWdlbikuCnQAG1VzaW5nIGZhc3QgTlNGIGdlbmVyYXRpb24uCnQAElByb2Nlc3MgSUQ6IDI4NTc1CnQAjk1PREVMIE5BTUU6IC9ob21lL21hcmNvL0Rlc2t0b3AvUHJvZ2V0dG8tdnBjL0FsZ29yaXRtbyAzLjEwL0FsZ29yaXRtbyAzLjEwLVByb3BlcnR5IG9mIHN5c3RlbS5zb2x1dGlvbi9wcm9jZXNzX3BfcHJvY2Vzc19xX3dhbnRfcF93YW50X3FfdHVybgp0AB0gIDIyIHBsYWNlcywgMjggdHJhbnNpdGlvbnMuCnQAJ1VzZWQgTWVtb3J5IGZvciBlbmNvZGluZyBuZXQ6IDQ0OTU4MEtCCnQAmE9wZW5pbmcgZmlsZTogL2hvbWUvbWFyY28vRGVza3RvcC9Qcm9nZXR0by12cGMvQWxnb3JpdG1vIDMuMTAvQWxnb3JpdG1vIDMuMTAtUHJvcGVydHkgb2Ygc3lzdGVtLnNvbHV0aW9uL3Byb2Nlc3NfcF9wcm9jZXNzX3Ffd2FudF9wX3dhbnRfcV90dXJuLmJuZCBPSy4KdACbT3BlbmluZyBmaWxlOiAvaG9tZS9tYXJjby9EZXNrdG9wL1Byb2dldHRvLXZwYy9BbGdvcml0bW8gMy4xMC9BbGdvcml0bW8gMy4xMC1Qcm9wZXJ0eSBvZiBzeXN0ZW0uc29sdXRpb24vcHJvY2Vzc19wX3Byb2Nlc3NfcV93YW50X3Bfd2FudF9xX3R1cm4uaWxwYm5kIE9LLgp0ABBJTlBVVCBBUkNTOiAgMzIKdAAQT1VUUFVUIEFSQ1M6IDMyCnQAD0lOSElCIEFSQ1M6ICAwCnQAEFRFU1QgQVJDUzogICAxOAp0ABBQTEFDRVM6ICAgICAgMjIKdAAQVFJBTlNJVElPTlM6IDI4CnQAD0lOVkFSSUFOVFM6ICA3CnQAD1AtU0VNSUZMT1dTOiA5CnQAFk1BWCBJTlZBUklBTlQgQ0FSRDogMQp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBWQVJJQUJMRSBPUkRFUiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ADxWYXJpYWJsZSBvcmRlciBtZXRob2Q6IE1ldGEtaGV1cmlzdGljIHVzaW5nIHdlaWdodGVkIHNjb3JlLgp0AFEgIE1FVEhPRCAgICAgICAgICAgICAgU0NPUkUgICAgICAgIFNXSVIgICAgICAgU09VUFMgRElTQ09VTlQgIFdFSUdIVCAgICAgICBUSU1FIAp0AFUgIFNMTyAgICAgICAgICAgICAgICA0NzEuMjQgICAgICAgICA0MjAgICAgICAgICAxOTcgICAgICAgIDEgICAxLjEyMiAgICA5LjFlLTA1IHNlYy4KdABVICBTTE8rRm9yY2UgICAgICAgICAgMTUyLjI0ICAgICAgICAgMTczICAgICAgICAgMTQyICAgICAgICAxICAgIDAuODggICAgMy4zZS0wNSBzZWMuCnQAVSAgU0xPLTE2ICAgICAgICAgICAgIDMzNS4xNiAgICAgICAgIDQyMCAgICAgICAgIDE5NyAgICAgICAgMSAgIDAuNzk4ICAgIDUuNWUtMDUgc2VjLgp0AFUgIFNMTy0xNitGb3JjZSAgICAgIDE1Ny42MDMgICAgICAgICAxNzMgICAgICAgICAxNDIgICAgICAgIDEgICAwLjkxMSAgICAyLjNlLTA1IHNlYy4KdABVICBUT1YyICAgICAgICAgICAgICAxOTQuNTI2ICAgICAgICAgMjE0ICAgICAgICAgMTQwICAgICAgICAxICAgMC45MDkgICAgMy40ZS0wNSBzZWMuCnQAVSAgVE9WMitGb3JjZSAgICAgICAgMTQwLjExOCAgICAgICAgIDEyMSAgICAgICAgIDEyMSAgICAgICAgMSAgIDEuMTU4ICAgIDIuNmUtMDUgc2VjLgp0AFUgIE5PQUNLMiAgICAgICAgICAgIDMxMS4wMjUgICAgICAgICAyNzUgICAgICAgICAxNDMgICAgICAgIDEgICAxLjEzMSAgICAyLjdlLTA1IHNlYy4KdABVICBOT0FDSzIrRm9yY2UgICAgICAgMTE4LjU4ICAgICAgICAgMTIxICAgICAgICAgMTIxICAgICAgICAxICAgIDAuOTggICAgMi4zZS0wNSBzZWMuCnQAVSAgQUNNICAgICAgICAgICAgICAgMzA2LjMzMyAgICAgICAgIDMwMyAgICAgICAgIDE0MSAgICAgICAgMSAgIDEuMDExICAgIDQuMmUtMDUgc2VjLgp0AFUgIEFDTStGb3JjZSAgICAgICAgIDE1NC42MzggICAgICAgICAxMjEgICAgICAgICAxMjEgICAgICAgIDEgICAxLjI3OCAgICAyLjVlLTA1IHNlYy4KdABVICBDTTIgICAgICAgICAgICAgICAzODYuMzI1ICAgICAgICAgMzAzICAgICAgICAgMTQxICAgICAgICAxICAgMS4yNzUgICAgMi40ZS0wNSBzZWMuCnQAVSAgQ00yK0ZvcmNlICAgICAgICAgMTMyLjk3OSAgICAgICAgIDEyMSAgICAgICAgIDEyMSAgICAgICAgMSAgIDEuMDk5ICAgIDEuOWUtMDUgc2VjLgp0AFUgIFAgICAgICAgICAgICAgICAgIDQwMS43NjcgICAgICAgICAzODMgICAgICAgICAyMDkgICAgICAgIDEgICAxLjA0OSAgICAxLjhlLTA1IHNlYy4KdABVICBHUCAgICAgICAgICAgICAgICAxNjUuMTQ2ICAgICAgICAgMTQyICAgICAgICAgMTE4ICAgICAgICAxICAgMS4xNjMgICAgNS45ZS0wNSBzZWMuCnQAVSAgR1ArRm9yY2UgICAgICAgICAgMTQyLjg3NSAgICAgICAgIDEyNyAgICAgICAgIDExOCAgICAgICAgMSAgIDEuMTI1ICAgIDMuMWUtMDUgc2VjLgp0AEFNZXRhLWhldXJpc3RpYzogc2VsZWN0aW5nIG1ldGhvZCBOT0FDSzIrRm9yY2Ugd2l0aCBzY29yZTogMTE4LjU4CnQAKVRpbWUgdG8gY29tcHV0ZSB2YXJpYWJsZSBvcmRlcjogMC4wMDA4MTMKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gU1RBUlQgRklSSU5HIFJVTEVTIEVOQ09ESU5HID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAsRW5jb2RlZCAyOCB0cmFuc2l0aW9uIGluIDEgcHJpb3JpdHkgZ3JvdXBzLgp0ACFUaW1lIHRvIGJ1aWxkIGFsbCBOU0ZzOiAwLjAwMDU3OAp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PSBSRUFDSEFCSUxJVFkgU0VUIEdFTkVSQVRJT04gPT09PT09PT09PT09PT09PT09PT09PT09PQp0ABVTcGxpdDogU3BsaXRTdWJ0cmFjdAp0AB1SUyBnZW5lcmF0aW9uIHRpbWU6IDAuMDAwNDgxCnQAHUNvbXB1dGluZyB2YXJpYWJsZSBib3VuZHMuLi4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IE1FTU9SWSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAApIFRvdGFsIE1lbW9yeSBVc2VkOiAgICAgICA0NDk1ODAgS0J5dGVzLgp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBDVEwgRVZBTFVBVElPTiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AAEKdACeUHJvY2Vzc2luZzogKG5vdCBFIEYgKG5vdCAoKChub3QgKFAyID0gMSkpIG9yIChub3QgRSBGIChub3QgRSBGIChQOCA9IDEpKSkpIGFuZCAobm90IEUgRiAobm90ICgobm90IChRMiA9IDEpKSBvciAobm90IEUgRiAobm90IEUgRiAoUTggPSAxKSkpKSkpKSkpICAtPiAgYm9vbAp0AAlFdmFsOiBQMgp0ABQgICAgICAwLjAwMDAwNyBzZWMuCnQAD0V2YWw6IChQMiA9IDEpCnQAHyAgICAgIDAuMDAwMDEzIHNlYy4gIGNhcmQgPSAxNAp0ABVFdmFsOiAobm90IChQMiA9IDEpKQp0AB8gICAgICAwLjAwMDAwNSBzZWMuICBjYXJkID0gNzIKdAAJRXZhbDogUDgKdAAUICAgICAgMC4wMDAwMDIgc2VjLgp0AA9FdmFsOiAoUDggPSAxKQp0AB8gICAgICAwLjAwMDAxMyBzZWMuICBjYXJkID0gMTAKdAATRXZhbDogRSBGIChQOCA9IDEpCnQAMCAgICAgIDExIHN0ZXBzOiAgICAgICAwLjAwMDU2OCBzZWMuICBjYXJkID0gMTI4CnQAGUV2YWw6IChub3QgRSBGIChQOCA9IDEpKQp0AB4gICAgICAwLjAwMDAzMyBzZWMuICBjYXJkID0gMAp0AB1FdmFsOiBFIEYgKG5vdCBFIEYgKFA4ID0gMSkpCnQAHCAgICAgIFtFIEYgRkFMU0VdICBjYXJkID0gMAp0ACNFdmFsOiAobm90IEUgRiAobm90IEUgRiAoUDggPSAxKSkpCnQAIiAgICAgIFtOT1QgRkFMU0VdICBjYXJkID0gODYgKFJTKQp0ADdFdmFsOiAoKG5vdCAoUDIgPSAxKSkgb3IgKG5vdCBFIEYgKG5vdCBFIEYgKFA4ID0gMSkpKSkKdAAkICAgICAgMC4wMDAwMDQgc2VjLiAgY2FyZCA9IDg2IChSUykKdAAJRXZhbDogUTIKdAAUICAgICAgMC4wMDAwMDIgc2VjLgp0AA9FdmFsOiAoUTIgPSAxKQp0AB8gICAgICAwLjAwMDAyMCBzZWMuICBjYXJkID0gMTQKdAAVRXZhbDogKG5vdCAoUTIgPSAxKSkKdAAfICAgICAgMC4wMDAwMjkgc2VjLiAgY2FyZCA9IDcyCnQACUV2YWw6IFE4CnQAFCAgICAgIDAuMDAwMDAxIHNlYy4KdAAPRXZhbDogKFE4ID0gMSkKdAAfICAgICAgMC4wMDAwMjMgc2VjLiAgY2FyZCA9IDEwCnQAE0V2YWw6IEUgRiAoUTggPSAxKQp0ADAgICAgICAxMSBzdGVwczogICAgICAgMC4wMDA2MDIgc2VjLiAgY2FyZCA9IDEyOAp0ABlFdmFsOiAobm90IEUgRiAoUTggPSAxKSkKdAAeICAgICAgMC4wMDAwMDEgc2VjLiAgY2FyZCA9IDAKdAAdRXZhbDogRSBGIChub3QgRSBGIChROCA9IDEpKQp0ABwgICAgICBbRSBGIEZBTFNFXSAgY2FyZCA9IDAKdAAjRXZhbDogKG5vdCBFIEYgKG5vdCBFIEYgKFE4ID0gMSkpKQp0ACIgICAgICBbTk9UIEZBTFNFXSAgY2FyZCA9IDg2IChSUykKdAA3RXZhbDogKChub3QgKFEyID0gMSkpIG9yIChub3QgRSBGIChub3QgRSBGIChROCA9IDEpKSkpCnQAJCAgICAgIDAuMDAwMDE4IHNlYy4gIGNhcmQgPSA4NiAoUlMpCnQAPUV2YWw6IChub3QgKChub3QgKFEyID0gMSkpIG9yIChub3QgRSBGIChub3QgRSBGIChROCA9IDEpKSkpKQp0ABsgICAgICBbTk9UIFRSVUVdICBjYXJkID0gMAp0AEFFdmFsOiBFIEYgKG5vdCAoKG5vdCAoUTIgPSAxKSkgb3IgKG5vdCBFIEYgKG5vdCBFIEYgKFE4ID0gMSkpKSkpCnQAHCAgICAgIFtFIEYgRkFMU0VdICBjYXJkID0gMAp0AEdFdmFsOiAobm90IEUgRiAobm90ICgobm90IChRMiA9IDEpKSBvciAobm90IEUgRiAobm90IEUgRiAoUTggPSAxKSkpKSkpCnQAIiAgICAgIFtOT1QgRkFMU0VdICBjYXJkID0gODYgKFJTKQp0AH5FdmFsOiAoKChub3QgKFAyID0gMSkpIG9yIChub3QgRSBGIChub3QgRSBGIChQOCA9IDEpKSkpIGFuZCAobm90IEUgRiAobm90ICgobm90IChRMiA9IDEpKSBvciAobm90IEUgRiAobm90IEUgRiAoUTggPSAxKSkpKSkpKQp0ACQgICAgICBbVFJVRSBhbmQgZjJdICBjYXJkID0gODYgKFJTKQp0AIRFdmFsOiAobm90ICgoKG5vdCAoUDIgPSAxKSkgb3IgKG5vdCBFIEYgKG5vdCBFIEYgKFA4ID0gMSkpKSkgYW5kIChub3QgRSBGIChub3QgKChub3QgKFEyID0gMSkpIG9yIChub3QgRSBGIChub3QgRSBGIChROCA9IDEpKSkpKSkpKQp0ABsgICAgICBbTk9UIFRSVUVdICBjYXJkID0gMAp0AIhFdmFsOiBFIEYgKG5vdCAoKChub3QgKFAyID0gMSkpIG9yIChub3QgRSBGIChub3QgRSBGIChQOCA9IDEpKSkpIGFuZCAobm90IEUgRiAobm90ICgobm90IChRMiA9IDEpKSBvciAobm90IEUgRiAobm90IEUgRiAoUTggPSAxKSkpKSkpKSkKdAAcICAgICAgW0UgRiBGQUxTRV0gIGNhcmQgPSAwCnQAjkV2YWw6IChub3QgRSBGIChub3QgKCgobm90IChQMiA9IDEpKSBvciAobm90IEUgRiAobm90IEUgRiAoUDggPSAxKSkpKSBhbmQgKG5vdCBFIEYgKG5vdCAoKG5vdCAoUTIgPSAxKSkgb3IgKG5vdCBFIEYgKG5vdCBFIEYgKFE4ID0gMSkpKSkpKSkpKQp0ACIgICAgICBbTk9UIEZBTFNFXSAgY2FyZCA9IDg2IChSUykKdABHLS0tIEFHKCNQMiA9PSAxIC0+IEFHIEVGICNQOCA9PTEpICYmIEFHKCNRMiA9PSAxIC0+IEFHIEVGICNROCA9PTEpIC0tLQp0ABlGb3JtdWxhIG5hbWU6IE1FQVNVUkUwICAKdAAWCUV2YWx1YXRpb246IHRydWUgICAgCnQAJglTYXQtc2V0IGdlbmVyYXRpb24gdGltZTogMC4wMDE0NCBzZWMKdAAfCUV2YWx1YXRpb24gdGltZTogMC4wMDE0NDUgc2VjCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBDVEwgTUVNT1JZID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAeIFJTIG5vZGVzOiAgICAgICAgICAgICAgICAxMTQKdABCIEZvcmVzdChSUykgbm9kZXM6ICAgICAgICAxMjEwIGFjdGl2ZXMsIDEyMTAgcGVhaywgMCBjb21wYWN0aW9ucy4KdAA9IEZvcmVzdChSUykgc2l6ZTogICAgICAgICAzMDAzNCBCeXRlcyBub3csIDMwMDM0IEJ5dGVzIHBlYWsuCnQAHiBQb3RlbnRpYWwgUkcgbm9kZXM6ICAgICAgMjc2CnQAQiBGb3Jlc3QoUkcpIG5vZGVzOiAgICAgICAgMTIyOSBhY3RpdmVzLCAxNDQyIHBlYWssIDAgY29tcGFjdGlvbnMuCnQAPSBGb3Jlc3QoUkcpIHNpemU6ICAgICAgICAgMzU2OTUgQnl0ZXMgbm93LCA0MjAyMiBCeXRlcyBwZWFrLgp0ADwgRm9yZXN0KFJHK3JlYWwpIG5vZGVzOiAgIDQgYWN0aXZlcywgNCBwZWFrLCAwIGNvbXBhY3Rpb25zLgp0ADkgRm9yZXN0KFJHK3JlYWwpIHNpemU6ICAgIDEwOCBCeXRlcyBub3csIDEwOCBCeXRlcyBwZWFrLgp0AAEKdAAET2suCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gVElNRSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAJSBWYXJpYWJsZSBvcmRlciBUaW1lOiAwLjAwMSAgICAgc2VjLgp0ACUgTlNGIGdlbi4gVGltZTogICAgICAgMC4wMDEgICAgIHNlYy4KdAAlIFJTIEdlbmVyYXRpb24gVGltZTogIDAuMDAwICAgICBzZWMuCnQAJSBUb3RhbCBSUyBUaW1lOiAgICAgICAwLjAwMSAgICAgc2VjLgp0ACUgU3RhdGlzdGljcyBUaW1lOiAgICAgMC4wMDAgICAgIHNlYy4KdAAlIENUTCBUaW1lOiAgICAgICAgICAgIDAuMDAyICAgICBzZWMuCnQAJSBUb3RhbCBUaW1lOiAgICAgICAgICAwLjAwNCAgICAgc2VjLgp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnEAfgAkeHNxAH4AAHcEAAAAxXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAFxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3EAfgDHcQB+AMdxAH4Ax3g</document-log>
   </resource-list>
 </project>

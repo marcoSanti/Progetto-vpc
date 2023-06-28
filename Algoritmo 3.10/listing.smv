@@ -11,7 +11,7 @@ ASSIGN
     init(want_q_var) := FALSE;
     init(turno) := p;
 
---assenza di deadloc (inifinitamente spesso passo in l1)
+--assenza di deadlock (inifinitamente spesso passo in l1)
 SPEC AG EF (proc_p.stato=l1) & AG EF (proc_q.stato=l1)
 --mutua esclusione
 SPEC AG ((proc_p.stato=l8 -> proc_q.stato!=l8) | (proc_q.stato=l8 -> proc_p.stato!=l8));
