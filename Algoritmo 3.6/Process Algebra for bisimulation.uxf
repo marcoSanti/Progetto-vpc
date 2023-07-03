@@ -50,8 +50,8 @@ Q3 = set_wantq_false.Q
     <panel_attributes>wantQ (all actions are coactions)
 bg=yellow
 --
-WQ   = is_wantq_false.WQ + set_wantq_true.WQ1
-WQ1 = is_wantq_true.WQ1 + set_wantq_false.WQ 
+__WQ   = is_wantq_false.WQ + set_wantq_true.WQ1__
+__WQ1 = is_wantq_true.WQ1 + set_wantq_false.WQ__
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -66,8 +66,8 @@ WQ1 = is_wantq_true.WQ1 + set_wantq_false.WQ
     <panel_attributes>wantP (all actions are coactions)
 bg=yellow
 --
-WP   = is_wantp_false.WP + set_wantp_true.WP1
-WP1 = is_wantp_true.WP1 + set_wantp_false.WP 
+__WP   = is_wantp_false.WP + set_wantp_true.WP1__
+__WP1 = is_wantp_true.WP1 + set_wantp_false.WP__
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -921,8 +921,7 @@ nonCritP</panel_attributes>
            
              states reachable, wich do not respect all constraints
 
-(Warning: tau symbol is not rendered correctly on the 
-output pdf. All silen actions are surrounded by "(" and ")"</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
