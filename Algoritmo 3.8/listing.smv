@@ -16,7 +16,7 @@ ASSIGN
 SPEC AG(proc_p.stato=l4 -> proc_q.stato!=l4) & AG(proc_q.stato=l4 -> proc_p.stato!=l4);
 
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
-SPEC AG EF (proc_p.stato=l1) & AG EF (proc_q.stato=l1);
+SPEC AG EF (proc_p.stato=l1) | AG EF (proc_q.stato=l1);
 
 --assenza di deadlock come definita nelle slides
 SPEC AG ((proc_p.stato=l2 | proc_q.stato=l2) -> AF (proc_p.stato=l4 | proc_q.stato=l4));

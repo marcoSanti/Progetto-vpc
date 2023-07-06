@@ -11,7 +11,7 @@ ASSIGN
 SPEC AG(proc_p.stato=l3 -> proc_q.stato!=l3) & AG(proc_q.stato=l3 -> proc_p.stato!=l3);
 
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
-SPEC AG EF proc_p.stato=l1 &  AG EF proc_q.stato=l1;
+SPEC AG EF proc_p.stato=l1 |  AG EF proc_q.stato=l1;
 
 --assenza di deadlock come definita nelle slides
 SPEC AG ((proc_p.stato=l2 | proc_q.stato=l2) -> AF (proc_p.stato=l3 | proc_q.stato=l3));
@@ -25,10 +25,7 @@ ASSIGN
     next(stato) :=
         case
             stato = l1: {l1, l2}; --scelta non deterministica per o rimanere non in sezione non critica oppure se procedere a fare richiesta per entrarci
-            stato = l2: case
-                            turno=identita: l3;
-                            TRUE: stato;
-                        esac;
+            stato = l2 & turno=identita: l3;
             stato = l3: l4;
             stato = l4: l1;
             TRUE: stato;

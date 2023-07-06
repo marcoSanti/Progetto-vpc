@@ -11,8 +11,8 @@ ASSIGN
     init(want_q_var) := FALSE;
     init(turno) := p;
 
---assenza di deadlock (inifinitamente spesso passo in l1)
-SPEC AG EF (proc_p.stato=l1) & AG EF (proc_q.stato=l1)
+--assenza di deadlock (almeno uno dei due processi inifinitamente spesso passo in l1)
+SPEC AG EF (proc_p.stato=l1) | AG EF (proc_q.stato=l1)
 
 --mutua esclusione
 SPEC AG ((proc_p.stato=l8 -> proc_q.stato!=l8) & (proc_q.stato=l8 -> proc_p.stato!=l8));
@@ -36,19 +36,16 @@ ASSIGN
                     identita=q & want_p=TRUE: l4;
                     TRUE: l8; --con questo implemento il loop. se non devo rimanere in loop esco a l8
                 esac;
+
             stato=l4: 
                 case
                     identita=p & turno=q: l5;
                     identita=q & turno=p: l5; 
                     TRUE: l3; --se non rispetto la condizione in linea 4 del codice, allora ritotno alla testa del ciclo
                 esac;
-            stato=l5: l6; --set di want_idendita a false
-            stato=l6:
-                case
-                    turno=identita: l7;
-                    TRUE: stato; --attendo il turno uguale alla mia identita'
-                esac;
 
+            stato=l5: l6; --set di want_idendita a false
+            stato=l6 & turno=identita: l7;
             stato=l7: l3; --torno alle testa del ciclo perche' qua finisce il blocco while
             stato=l8:l9; --sezione critica
             stato=l9:l10; --aggiornamento di turno alla altra variabile
