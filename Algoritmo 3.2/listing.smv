@@ -8,12 +8,13 @@ ASSIGN
 
 
  --mutua esclusione
-SPEC AG(proc_p.stato=l3 -> (turno=p & proc_q.stato!=l3)) & AG(proc_q.stato=l3 -> (turno=q & proc_p.stato!=l3));
+SPEC AG(proc_p.stato=l3 -> proc_q.stato!=l3) & AG(proc_q.stato=l3 -> proc_p.stato!=l3);
+
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
-SPEC AF (proc_p.stato=l1 & proc_q.stato=l1);
+SPEC AG EF proc_p.stato=l1 &  AF EG proc_q.stato=l1;
 
 --assenza di deadlock come definita nelle slides
-SPEC AG ( (proc_p.stato=l2 -> AF proc_p.stato=l3 ) | (proc_q.stato=l2 -> AF proc_q.stato=l3 ))
+SPEC AG ((proc_p.stato=l2 | proc_q.stato=l2) -> AF (proc_p.stato=l3 | proc_q.stato=l3));
 
 --template del mio processo in nusmv
 MODULE proc(identita, turno)
@@ -35,8 +36,8 @@ ASSIGN
 
     next(turno):=
                 case --qua vado a vedere in modo esplicito che tipo di turno ho e lo vado a cambiare!
-                    stato=l4 & turno=identita & identita=p: p;
-                    stato=l4 & turno=identita & identita=q: q;
+                    stato=l4 & turno=identita & identita=p: q;
+                    stato=l4 & turno=identita & identita=q: p;
                     TRUE: turno;
                 esac;
 FAIRNESS running; 

@@ -4,25 +4,25 @@ MODULE main
 VAR
     want_p_var: boolean;
     want_q_var: boolean;
-    process_ids: {p,q};
-    proc_p : process proc(p, want_p_var, want_q_var);
-    proc_q : process proc(q, want_p_var, want_q_var);
+
+    proc_p : process proc(want_p_var, want_q_var);
+    proc_q : process proc(want_q_var, want_p_var);
 
 ASSIGN
     init(want_p_var) := FALSE;
     init(want_q_var) := FALSE;
 
  --mutua esclusione
-SPEC AG(proc_p.stato=l4 -> (proc_q.stato!=l4)) & AG(proc_q.stato=l4 -> (proc_p.stato!=l4));
+SPEC AG(proc_p.stato=l4 -> proc_q.stato!=l4) & AG(proc_q.stato=l4 -> proc_p.stato!=l4);
 
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
 SPEC AG EF (proc_p.stato=l1) & AG EF (proc_q.stato=l1);
 
 --assenza di deadlock come definita nelle slides
-SPEC AG ( (proc_p.stato=l2 -> AF proc_p.stato=l4 ) | (proc_q.stato=l2 -> AF proc_q.stato=l4 )) 
+SPEC AG ((proc_p.stato=l2 | proc_q.stato=l2) -> AF (proc_p.stato=l4 | proc_q.stato=l4));
 
 
-MODULE proc(identita, want_p, want_q)
+MODULE proc(want_io, want_altro)
 VAR
     stato : {l1, l2, l3, l4, l5};
 ASSIGN 
@@ -31,29 +31,20 @@ ASSIGN
         case
             stato=l1 : {l1, l2};
             stato=l2 : l3;
-            stato=l3: case
-                        identita=p & want_q=FALSE: l4;
-                        identita=q & want_p=FALSE: l4;
-                        TRUE:stato;
-                      esac;
+            stato=l3 & want_altro=FALSE: l4;
             stato=l4: l5;
             stato=l5: l1;
             TRUE:stato;
         esac;
 
-    next(want_p) :=
+    next(want_io) :=
         case 
-            identita=p & stato=l2: TRUE;
-            identita=p & stato=l5: FALSE;
-            TRUE: want_p;
+            stato=l2: TRUE;
+            stato=l5: FALSE;
+            TRUE: want_io;
         esac;
     
-    next(want_q) :=
-        case 
-            identita=q & stato=l2: TRUE;
-            identita=q & stato=l5: TRUE;
-            TRUE: want_q;
-        esac;
+  
 
 FAIRNESS running; 
 SPEC AG( stato=l3 -> AF stato=l4 );  --assenza di starvation individuale (ovvero se faccio richeista prima o poi nel futuro entro ) 

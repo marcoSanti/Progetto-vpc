@@ -2,10 +2,10 @@ MODULE main
 VAR
     want_p_var: boolean;
     want_q_var: boolean;
-    process_ids: {p,q};
 
-    proc_p: process proc(p, want_p_var, want_q_var);
-    proc_q: process proc(q, want_p_var, want_q_var);
+
+    proc_p: process proc(want_p_var, want_q_var);
+    proc_q: process proc(want_q_var, want_p_var);
 
 ASSIGN
     init(want_p_var):=FALSE;
@@ -15,13 +15,13 @@ ASSIGN
 SPEC AG(proc_p.stato=l3 -> proc_q.stato!=l3) & AG(proc_q.stato=l3 -> proc_p.stato!=l3);
 
 --assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
-SPEC AF (proc_p.stato=l1 | proc_q.stato=l1)
+SPEC AG EF proc_p.stato=l1 &  AG EF proc_q.stato=l1;
 
 --assenza di deadlock come definita nelle slides
-SPEC AG ( (proc_p.stato=l2 -> AF proc_p.stato=l4 ) | (proc_q.stato=l2 -> AF proc_q.stato=l4 )) 
+SPEC AG ((proc_p.stato=l2 | proc_q.stato=l2) -> AF (proc_p.stato=l4 | proc_q.stato=l4));
 
 
-MODULE proc(identita, want_p, want_q)
+MODULE proc( want_io, want_altro)
 VAR 
     stato : {l1, l2, l3, l4, l5}; --l come linea del codice equivalente
 ASSIGN
@@ -29,40 +29,18 @@ ASSIGN
     next(stato) :=
         case
             stato=l1: {l1, l2};
-            stato=l2: --in attesa di altro processo che non vuole entrare in sezione critica
-                case
-                    identita=p & want_q=FALSE: l3;
-                    identita=q & want_p=FALSE: l3;
-                    TRUE: stato;
-                esac;
-            
+            stato=l2 & want_altro=FALSE:l3; --in attesa di altro processo che non vuole entrare in sezione critica
             stato=l3: l4; --sezione critica e qua vado a settare la mia want_ a true
             stato=l4: l5; --sezione critica
             stato=l5: l1; --esco da sezione critica con want_ a false
             TRUE: stato;
         esac;
     
-    next(want_p) :=
-        case
-            identita=p:
-                case    
-                    stato=l3:TRUE; --se in ingresso di sezione critica metto la mia want_ a true
-                    stato=l5: FALSE; --finita la sezione critica mi tolgo dalla richiesta di volerci entrare
-                    TRUE:want_p;
-                esac;
-            TRUE: want_p; --se non sono in uno stato in cui devo aggiornare la variabile non faccio nulla
-        esac;
-
-
-    next(want_q) :=
-        case
-            identita=q:
-                case    
-                    stato=l3:TRUE;
-                    stato=l5: FALSE;
-                    TRUE:want_q;
-                esac;
-            TRUE: want_q;
+    next(want_io) :=
+        case      
+            stato=l3:TRUE; --se in ingresso di sezione critica metto la mia want_ a true
+            stato=l5: FALSE; --finita la sezione critica mi tolgo dalla richiesta di volerci entrare
+            TRUE:want_io;
         esac;
 
 
