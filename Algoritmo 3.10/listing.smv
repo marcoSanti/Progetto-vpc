@@ -13,8 +13,9 @@ ASSIGN
 
 --assenza di deadlock (inifinitamente spesso passo in l1)
 SPEC AG EF (proc_p.stato=l1) & AG EF (proc_q.stato=l1)
+
 --mutua esclusione
-SPEC AG ((proc_p.stato=l8 -> proc_q.stato!=l8) | (proc_q.stato=l8 -> proc_p.stato!=l8));
+SPEC AG ((proc_p.stato=l8 -> proc_q.stato!=l8) & (proc_q.stato=l8 -> proc_p.stato!=l8));
 
 --assenza di deadlock come definita nelle slides
 SPEC AG ( (proc_p.stato=l2 -> AF proc_p.stato=l8 ) | (proc_q.stato=l2 -> AF proc_q.stato=l8 )) 
