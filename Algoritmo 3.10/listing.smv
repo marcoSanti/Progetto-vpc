@@ -18,18 +18,17 @@ SPEC AG EF (proc_p.stato=l1) | AG EF (proc_q.stato=l1)
 SPEC AG ((proc_p.stato=l8 -> proc_q.stato!=l8) & (proc_q.stato=l8 -> proc_p.stato!=l8));
 
 --assenza di deadlock come definita nelle slides
-SPEC AG ( (proc_p.stato=l2 -> AF proc_p.stato=l8 ) | (proc_q.stato=l2 -> AF proc_q.stato=l8 )) 
+SPEC AG ( (proc_p.stato=l3 -> AF proc_p.stato=l8 ) | (proc_q.stato=l3 -> AF proc_q.stato=l8 )) 
 
 
 MODULE proc(identita, want_p, want_q, turno)
 VAR
-    stato : {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10};
+    stato : {l1, l3, l4, l5, l7,l8, l9, l10};
 ASSIGN
     init(stato) := l1;
     next(stato) :=
         case
-            stato=l1 : {l1, l2};
-            stato=l2: l3; -- set want_identita a true
+            stato=l1 : {l1, l3}; --evolvo in l3 impostando want_id a true
             stato=l3: 
                 case
                     identita=p & want_q=TRUE: l4;
@@ -44,47 +43,36 @@ ASSIGN
                     TRUE: l3; --se non rispetto la condizione in linea 4 del codice, allora ritotno alla testa del ciclo
                 esac;
 
-            stato=l5: l6; --set di want_idendita a false
-            stato=l6 & turno=identita: l7;
-            stato=l7: l3; --torno alle testa del ciclo perche' qua finisce il blocco while
-            stato=l8:l9; --sezione critica
-            stato=l9:l10; --aggiornamento di turno alla altra variabile
-            stato=l10: l1; --ricomincio da capo
+            stato=l5 & turno=identita: l7; --set di want_idendita a false e ritorno a testa del ciclo
+
+            stato=l7: l3;
+            stato=l8: l9; --sezione critica
+            stato=l9: l1; --aggiornamento di turno alla altra variabile
+           
             TRUE: stato;
         esac;
 
     next(want_p) :=
         case
-            identita=p:
-                case
-                    stato=l2 | stato=l7: TRUE;
-                    stato=l5 | stato=l10: FALSE;
-                    TRUE: want_p;
-                esac;
-            TRUE:want_p;
+            identita=p & (stato=l3 | stato=l7): TRUE;
+            identita=p & (stato=l5 | stato=l9): FALSE;
+            TRUE: want_p;
         esac;
 
     next(want_q) :=
         case
-            identita=q:
-                case
-                    stato=l2 | stato=l7: TRUE;
-                    stato=l5 | stato=l10: FALSE;
-                    TRUE: want_q;
-                esac;
-            TRUE:want_q;
+            identita=q & (stato=l3 | stato=l7): TRUE;
+            identita=q & (stato=l5 | stato=l9): FALSE;
+            TRUE: want_q;
         esac;
 
     next(turno) :=
         case
-            stato=l9:
-            case
-                identita=p: q;
-                identita=q: p;
-                TRUE:turno;
-            esac;
+            stato=l8 & identita=p: q;
+            stato=l8 & identita=q: p;
             TRUE:turno;
         esac;
+
 FAIRNESS running;
 --assenza di starvation individuale (ovvero il processo continua a procedere nella sua evoluzione quando richiede di entrare in sezione critica)
-SPEC AG(stato=l2 -> AF stato=l8);
+SPEC AG(stato=l3 -> AF stato=l8);
