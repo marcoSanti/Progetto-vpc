@@ -1,0 +1,51 @@
+--QUA HO LE PROPRIETÀ VERIFICATE COME SU GREATSPN
+
+MODULE main
+VAR
+    want_p_var: boolean;
+    want_q_var: boolean;
+
+
+    proc_p: process proc(want_p_var, want_q_var);
+    proc_q: process proc(want_q_var, want_p_var);
+
+ASSIGN
+    init(want_p_var):=FALSE;
+    init(want_q_var):=FALSE;
+
+ --mutua esclusione
+SPEC AG(proc_p.stato=l4 -> proc_q.stato!=l4) & AG(proc_q.stato=l4 -> proc_p.stato!=l4);
+
+--assenza di deadlock (ovvero almeno un processo continua nella sua esecuzione per fare evolvere il sistema)
+SPEC AG EF proc_p.stato=l1 |  AG EF proc_q.stato=l1;
+
+--assenza di deadlock come definita nelle slides
+SPEC AG ((proc_p.stato=l3 | proc_q.stato=l3) -> AF (proc_p.stato=l4 | proc_q.stato=l4));
+
+
+MODULE proc( want_io, want_altro)
+VAR 
+    stato : {l1, l3, l4}; --l come linea del codice equivalente
+ASSIGN
+    init(stato) := l1;
+    next(stato) :=
+        case
+            stato=l1: l3; --evolvo in l3, andando a settare want_io a true
+            stato=l3 & want_altro=FALSE:{l3, l4}; --attendo che want_altro sia falso
+            stato=l4: l1; --sezione critica. prossimo stato è uscita dalla sez. critica
+            TRUE: stato;
+        esac;
+    
+    next(want_io) :=
+        case      
+            stato=l1:TRUE; --setto want_io a true 
+            stato=l4: FALSE; --se sono in l4 (sez crica), il next step sarà l1 e quindi setto a falso want_io
+            TRUE:want_io;
+        esac;
+
+
+FAIRNESS running; 
+SPEC AG( stato=l3 -> AF stato=l4 );  --assenza di starvation individuale (ovvero se faccio richeista prima o poi nel futuro entro ) 
+
+
+

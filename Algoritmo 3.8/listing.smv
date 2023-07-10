@@ -43,7 +43,6 @@ ASSIGN
             stato=l5: FALSE;
             TRUE: want_io;
         esac;
-    
   
 
 FAIRNESS running; 
